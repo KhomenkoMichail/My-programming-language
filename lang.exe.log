@@ -1,0 +1,1034 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF8F3E2D3E3 в функции strncmp(). Попытка прочесть данные по адресу 0x0000000000000009 в модуле C:\WINDOWS\System32\ucrtbase.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF76171F830 (64-bit), Flags: Cmdre0, Thread: 0x6F6C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF8F3E2D3E3 in C:\WINDOWS\System32\ucrtbase.dll: strncmp()
+
+# 2 0x00007FF7616F3D72 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: getTokenType() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:69:
+
+     67:     assert(*bufPos);
+     68: 
+=>   69:     if (tokenIsNumber(bufPos))
+     70:         return typeNumber;
+     71: 
+
+# 3 0x00007FF7616F3C2A in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:43:
+
+     41:         }
+     42: 
+=>   43:         nodeType_t tokenType = getTokenType(&bufPos);
+     44: 
+     45:         if (tokenType == typeError) {
+
+# 4 0x00007FF7616C16EC in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:9:
+
+      7: int main(void) {
+      8: 
+=>    9:     lexicalAnalysis("program.txt");
+     10: 
+     11: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec  5 2025 21:16:13, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec  5 2025 21:16:19
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF8F3E2D3E3 в функции strncmp(). Попытка прочесть данные по адресу 0x0000000000000009 в модуле C:\WINDOWS\System32\ucrtbase.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF76171F830 (64-bit), Flags: Cmdre0, Thread: 0x6F6C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF8F3E2D3E3 in C:\WINDOWS\System32\ucrtbase.dll: strncmp()
+
+# 2 0x00007FF7616F3D72 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: getTokenType() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:69:
+
+     67:     assert(*bufPos);
+     68: 
+=>   69:     if (tokenIsNumber(bufPos))
+     70:         return typeNumber;
+     71: 
+
+# 3 0x00007FF7616F3C2A in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:43:
+
+     41:         }
+     42: 
+=>   43:         nodeType_t tokenType = getTokenType(&bufPos);
+     44: 
+     45:         if (tokenType == typeError) {
+
+# 4 0x00007FF7616C16EC in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:9:
+
+      7: int main(void) {
+      8: 
+=>    9:     lexicalAnalysis("program.txt");
+     10: 
+     11: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec  5 2025 21:16:13, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec  5 2025 21:16:19
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF8F3E2D3A3 в функции strncmp(). Попытка прочесть данные по адресу NULL в модуле C:\WINDOWS\System32\ucrtbase.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF6A7A8F830 (64-bit), Flags: Cmdre0, Thread: 0x5560 (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF8F3E2D3A3 in C:\WINDOWS\System32\ucrtbase.dll: strncmp()
+
+# 2 0x00007FF6A7A6445B in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: processToken() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:141:
+
+    139:             return processOperator(bufPos, curLine);
+    140:         case typeNumber:
+=>  141:             return processNumber(bufPos, curLine);
+    142:         case typeIdentifier:
+    143:             return processIdentifier(bufPos, curLine);
+
+# 3 0x00007FF6A7A63C84 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:50:
+
+     48:         }
+     49: 
+=>   50:         nodeArray[numOfNodes] = processToken(&bufPos, tokenType, curLine);
+     51: 
+     52:         if (!(nodeArray[numOfNodes])) {
+
+# 4 0x00007FF6A7A316EC in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:9:
+
+      7: int main(void) {
+      8: 
+=>    9:     lexicalAnalysis("program.txt");
+     10: 
+     11: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec  5 2025 21:24:11, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec  5 2025 21:24:19
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF8F3E2D3A3 в функции strncmp(). Попытка прочесть данные по адресу NULL в модуле C:\WINDOWS\System32\ucrtbase.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF6A7A8F830 (64-bit), Flags: Cmdre0, Thread: 0x5560 (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF8F3E2D3A3 in C:\WINDOWS\System32\ucrtbase.dll: strncmp()
+
+# 2 0x00007FF6A7A6445B in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: processToken() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:141:
+
+    139:             return processOperator(bufPos, curLine);
+    140:         case typeNumber:
+=>  141:             return processNumber(bufPos, curLine);
+    142:         case typeIdentifier:
+    143:             return processIdentifier(bufPos, curLine);
+
+# 3 0x00007FF6A7A63C84 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:50:
+
+     48:         }
+     49: 
+=>   50:         nodeArray[numOfNodes] = processToken(&bufPos, tokenType, curLine);
+     51: 
+     52:         if (!(nodeArray[numOfNodes])) {
+
+# 4 0x00007FF6A7A316EC in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:9:
+
+      7: int main(void) {
+      8: 
+=>    9:     lexicalAnalysis("program.txt");
+     10: 
+     11: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec  5 2025 21:24:11, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec  5 2025 21:24:19
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF8F3E2D3A3 в функции strncmp(). Попытка прочесть данные по адресу NULL в модуле C:\WINDOWS\System32\ucrtbase.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF7EA4BF830 (64-bit), Flags: Cmdre0, Thread: 0x4810 (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF8F3E2D3A3 in C:\WINDOWS\System32\ucrtbase.dll: strncmp()
+
+# 2 0x00007FF7EA49445B in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: processToken() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:141:
+
+    139:             return processOperator(bufPos, curLine);
+    140:         case typeNumber:
+=>  141:             return processNumber(bufPos, curLine);
+    142:         case typeIdentifier:
+    143:             return processIdentifier(bufPos, curLine);
+
+# 3 0x00007FF7EA493C84 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:50:
+
+     48:         }
+     49: 
+=>   50:         nodeArray[numOfNodes] = processToken(&bufPos, tokenType, curLine);
+     51: 
+     52:         if (!(nodeArray[numOfNodes])) {
+
+# 4 0x00007FF7EA4616EC in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:9:
+
+      7: int main(void) {
+      8: 
+=>    9:     lexicalAnalysis("program.txt");
+     10: 
+     11: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec  5 2025 21:33:48, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec  5 2025 21:33:59
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF8F3E2D3A3 в функции strncmp(). Попытка прочесть данные по адресу NULL в модуле C:\WINDOWS\System32\ucrtbase.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF7EA4BF830 (64-bit), Flags: Cmdre0, Thread: 0x4810 (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF8F3E2D3A3 in C:\WINDOWS\System32\ucrtbase.dll: strncmp()
+
+# 2 0x00007FF7EA49445B in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: processToken() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:141:
+
+    139:             return processOperator(bufPos, curLine);
+    140:         case typeNumber:
+=>  141:             return processNumber(bufPos, curLine);
+    142:         case typeIdentifier:
+    143:             return processIdentifier(bufPos, curLine);
+
+# 3 0x00007FF7EA493C84 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:50:
+
+     48:         }
+     49: 
+=>   50:         nodeArray[numOfNodes] = processToken(&bufPos, tokenType, curLine);
+     51: 
+     52:         if (!(nodeArray[numOfNodes])) {
+
+# 4 0x00007FF7EA4616EC in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:9:
+
+      7: int main(void) {
+      8: 
+=>    9:     lexicalAnalysis("program.txt");
+     10: 
+     11: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec  5 2025 21:33:48, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec  5 2025 21:33:59
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF8F3E2D3A3 в функции strncmp(). Попытка прочесть данные по адресу NULL в модуле C:\WINDOWS\System32\ucrtbase.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF6A663F830 (64-bit), Flags: Cmdre0, Thread: 0x67AC (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF8F3E2D3A3 in C:\WINDOWS\System32\ucrtbase.dll: strncmp()
+
+# 2 0x00007FF6A661445B in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: processToken() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:141:
+
+    139:             return processOperator(bufPos, curLine);
+    140:         case typeNumber:
+=>  141:             return processNumber(bufPos, curLine);
+    142:         case typeIdentifier:
+    143:             return processIdentifier(bufPos, curLine);
+
+# 3 0x00007FF6A6613C84 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:50:
+
+     48:         }
+     49: 
+=>   50:         nodeArray[numOfNodes] = processToken(&bufPos, tokenType, curLine);
+     51: 
+     52:         if (!(nodeArray[numOfNodes])) {
+
+# 4 0x00007FF6A65E16EC in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:9:
+
+      7: int main(void) {
+      8: 
+=>    9:     lexicalAnalysis("program.txt");
+     10: 
+     11: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec  5 2025 21:34:46, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec  5 2025 21:34:54
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF8F3E2D3A3 в функции strncmp(). Попытка прочесть данные по адресу NULL в модуле C:\WINDOWS\System32\ucrtbase.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF6A663F830 (64-bit), Flags: Cmdre0, Thread: 0x67AC (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF8F3E2D3A3 in C:\WINDOWS\System32\ucrtbase.dll: strncmp()
+
+# 2 0x00007FF6A661445B in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: processToken() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:141:
+
+    139:             return processOperator(bufPos, curLine);
+    140:         case typeNumber:
+=>  141:             return processNumber(bufPos, curLine);
+    142:         case typeIdentifier:
+    143:             return processIdentifier(bufPos, curLine);
+
+# 3 0x00007FF6A6613C84 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:50:
+
+     48:         }
+     49: 
+=>   50:         nodeArray[numOfNodes] = processToken(&bufPos, tokenType, curLine);
+     51: 
+     52:         if (!(nodeArray[numOfNodes])) {
+
+# 4 0x00007FF6A65E16EC in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:9:
+
+      7: int main(void) {
+      8: 
+=>    9:     lexicalAnalysis("program.txt");
+     10: 
+     11: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec  5 2025 21:34:46, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec  5 2025 21:34:54
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF8F3E2D3A3 в функции strncmp(). Попытка прочесть данные по адресу NULL в модуле C:\WINDOWS\System32\ucrtbase.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF73E7DF830 (64-bit), Flags: Cmdre0, Thread: 0x43E8 (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF8F3E2D3A3 in C:\WINDOWS\System32\ucrtbase.dll: strncmp()
+
+# 2 0x00007FF73E7B445B in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: processToken() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:140:
+
+    138:             return processOperator(bufPos, curLine);
+    139:         case typeNumber:
+=>  140:             return processNumber(bufPos, curLine);
+    141:         case typeIdentifier:
+    142:             return processIdentifier(bufPos, curLine);
+
+# 3 0x00007FF73E7B3C90 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:51:
+
+     49:         }
+     50: 
+=>   51:         nodeArray[numOfNodes] = processToken(&bufPos, tokenType, curLine);
+     52: 
+     53:         if (!(nodeArray[numOfNodes])) {
+
+# 4 0x00007FF73E7816EC in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:9:
+
+      7: int main(void) {
+      8: 
+=>    9:     lexicalAnalysis("program.txt");
+     10: 
+     11: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec  5 2025 21:36:36, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec  5 2025 21:36:44
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF8F3E2D3A3 в функции strncmp(). Попытка прочесть данные по адресу NULL в модуле C:\WINDOWS\System32\ucrtbase.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF73E7DF830 (64-bit), Flags: Cmdre0, Thread: 0x43E8 (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF8F3E2D3A3 in C:\WINDOWS\System32\ucrtbase.dll: strncmp()
+
+# 2 0x00007FF73E7B445B in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: processToken() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:140:
+
+    138:             return processOperator(bufPos, curLine);
+    139:         case typeNumber:
+=>  140:             return processNumber(bufPos, curLine);
+    141:         case typeIdentifier:
+    142:             return processIdentifier(bufPos, curLine);
+
+# 3 0x00007FF73E7B3C90 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:51:
+
+     49:         }
+     50: 
+=>   51:         nodeArray[numOfNodes] = processToken(&bufPos, tokenType, curLine);
+     52: 
+     53:         if (!(nodeArray[numOfNodes])) {
+
+# 4 0x00007FF73E7816EC in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:9:
+
+      7: int main(void) {
+      8: 
+=>    9:     lexicalAnalysis("program.txt");
+     10: 
+     11: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec  5 2025 21:36:36, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec  5 2025 21:36:44
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF8F3E2D3E3 в функции strncmp(). Попытка прочесть данные по адресу 0x00000005501FFC90 в модуле C:\WINDOWS\System32\ucrtbase.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF79473F830 (64-bit), Flags: Cmdre0, Thread: 0x5A94 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF8F3E2D3E3 in C:\WINDOWS\System32\ucrtbase.dll: strncmp()
+
+# 2 0x00007FF794713D72 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: getTokenType() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:68:
+
+     66:     assert(*bufPos);
+     67: 
+=>   68:     if (tokenIsNumber(bufPos))
+     69:         return typeNumber;
+     70: 
+
+# 3 0x00007FF794713C36 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:44:
+
+     42:         }
+     43: 
+=>   44:         nodeType_t tokenType = getTokenType(&bufPos);
+     45: 
+     46:         if (tokenType == typeError) {
+
+# 4 0x00007FF7946E16EC in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:9:
+
+      7: int main(void) {
+      8: 
+=>    9:     lexicalAnalysis("program.txt");
+     10: 
+     11: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec  5 2025 21:47:09, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec  5 2025 21:47:14
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF8F3E2D3E3 в функции strncmp(). Попытка прочесть данные по адресу 0x00000005501FFC90 в модуле C:\WINDOWS\System32\ucrtbase.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF79473F830 (64-bit), Flags: Cmdre0, Thread: 0x5A94 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF8F3E2D3E3 in C:\WINDOWS\System32\ucrtbase.dll: strncmp()
+
+# 2 0x00007FF794713D72 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: getTokenType() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:68:
+
+     66:     assert(*bufPos);
+     67: 
+=>   68:     if (tokenIsNumber(bufPos))
+     69:         return typeNumber;
+     70: 
+
+# 3 0x00007FF794713C36 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:44:
+
+     42:         }
+     43: 
+=>   44:         nodeType_t tokenType = getTokenType(&bufPos);
+     45: 
+     46:         if (tokenType == typeError) {
+
+# 4 0x00007FF7946E16EC in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:9:
+
+      7: int main(void) {
+      8: 
+=>    9:     lexicalAnalysis("program.txt");
+     10: 
+     11: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec  5 2025 21:47:09, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec  5 2025 21:47:14
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF8F3E2D3E3 в функции strncmp(). Попытка прочесть данные по адресу 0x00000005C97FFA60 в модуле C:\WINDOWS\System32\ucrtbase.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF79473F830 (64-bit), Flags: Cmdre0, Thread: 0x8C4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF8F3E2D3E3 in C:\WINDOWS\System32\ucrtbase.dll: strncmp()
+
+# 2 0x00007FF794713D72 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: getTokenType() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:68:
+
+     66:     assert(*bufPos);
+     67: 
+=>   68:     if (tokenIsNumber(bufPos))
+     69:         return typeNumber;
+     70: 
+
+# 3 0x00007FF794713C36 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:44:
+
+     42:         }
+     43: 
+=>   44:         nodeType_t tokenType = getTokenType(&bufPos);
+     45: 
+     46:         if (tokenType == typeError) {
+
+# 4 0x00007FF7946E16EC in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:9:
+
+      7: int main(void) {
+      8: 
+=>    9:     lexicalAnalysis("program.txt");
+     10: 
+     11: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec  5 2025 21:47:09, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec  5 2025 21:47:21
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF8F3E2D3E3 в функции strncmp(). Попытка прочесть данные по адресу 0x00000005C97FFA60 в модуле C:\WINDOWS\System32\ucrtbase.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF79473F830 (64-bit), Flags: Cmdre0, Thread: 0x8C4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF8F3E2D3E3 in C:\WINDOWS\System32\ucrtbase.dll: strncmp()
+
+# 2 0x00007FF794713D72 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: getTokenType() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:68:
+
+     66:     assert(*bufPos);
+     67: 
+=>   68:     if (tokenIsNumber(bufPos))
+     69:         return typeNumber;
+     70: 
+
+# 3 0x00007FF794713C36 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:44:
+
+     42:         }
+     43: 
+=>   44:         nodeType_t tokenType = getTokenType(&bufPos);
+     45: 
+     46:         if (tokenType == typeError) {
+
+# 4 0x00007FF7946E16EC in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:9:
+
+      7: int main(void) {
+      8: 
+=>    9:     lexicalAnalysis("program.txt");
+     10: 
+     11: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec  5 2025 21:47:09, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec  5 2025 21:47:21
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF8F3D7430F в функции _stdio_common_vfprintf_s(). Попытка прочесть данные по адресу 0x00000005321FFA80 в модуле C:\WINDOWS\System32\ucrtbase.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF6F2A7F830 (64-bit), Flags: Cmdre0, Thread: 0x3ADC (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF8F3D7430F in C:\WINDOWS\System32\ucrtbase.dll: _stdio_common_vfprintf_s()
+# 2 0x00007FF8F3D7550D in C:\WINDOWS\System32\ucrtbase.dll: fputs()
+# 3 0x00007FF8F3D752EB in C:\WINDOWS\System32\ucrtbase.dll: fputs()
+# 4 0x00007FF8F3D74A7F in C:\WINDOWS\System32\ucrtbase.dll: fputs()
+# 5 0x00007FF8F3D74722 in C:\WINDOWS\System32\ucrtbase.dll: _stdio_common_vfprintf()
+# 6 0x00007FF8F3D74673 in C:\WINDOWS\System32\ucrtbase.dll: _stdio_common_vfprintf()
+# 7 0x00007FF6F2A5F6A0 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: printf()
+
+# 8 0x00007FF6F2A54056 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: tokenIsNumber() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:97:
+
+     95: 
+     96:     for (int i = NUM_OF_NUMBERS; i >= 0; i--) {
+=>   97:         printf("\"%s\" == %lld\n", (numbersArray[i]).pronunciation, (numbersArray[i]).length);
+     98:         //if (numLen >= (int)(numbersArray[i]).length)
+     99:             if (!strncmp(curPos, (numbersArray[i]).pronunciation, (numbersArray[i]).length))
+
+# 9 0x00007FF6F2A53D72 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: getTokenType() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:68:
+
+     66:     assert(*bufPos);
+     67: 
+=>   68:     if (tokenIsNumber(bufPos))
+     69:         return typeNumber;
+     70: 
+
+#10 0x00007FF6F2A53C36 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:44:
+
+     42:         }
+     43: 
+=>   44:         nodeType_t tokenType = getTokenType(&bufPos);
+     45: 
+     46:         if (tokenType == typeError) {
+
+#11 0x00007FF6F2A216EC in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:9:
+
+      7: int main(void) {
+      8: 
+=>    9:     lexicalAnalysis("program.txt");
+     10: 
+     11: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec  5 2025 21:52:09, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec  5 2025 21:52:16
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF8F3D7430F в функции _stdio_common_vfprintf_s(). Попытка прочесть данные по адресу 0x00000005321FFA80 в модуле C:\WINDOWS\System32\ucrtbase.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF6F2A7F830 (64-bit), Flags: Cmdre0, Thread: 0x3ADC (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF8F3D7430F in C:\WINDOWS\System32\ucrtbase.dll: _stdio_common_vfprintf_s()
+# 2 0x00007FF8F3D7550D in C:\WINDOWS\System32\ucrtbase.dll: fputs()
+# 3 0x00007FF8F3D752EB in C:\WINDOWS\System32\ucrtbase.dll: fputs()
+# 4 0x00007FF8F3D74A7F in C:\WINDOWS\System32\ucrtbase.dll: fputs()
+# 5 0x00007FF8F3D74722 in C:\WINDOWS\System32\ucrtbase.dll: _stdio_common_vfprintf()
+# 6 0x00007FF8F3D74673 in C:\WINDOWS\System32\ucrtbase.dll: _stdio_common_vfprintf()
+# 7 0x00007FF6F2A5F6A0 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: printf()
+
+# 8 0x00007FF6F2A54056 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: tokenIsNumber() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:97:
+
+     95: 
+     96:     for (int i = NUM_OF_NUMBERS; i >= 0; i--) {
+=>   97:         printf("\"%s\" == %lld\n", (numbersArray[i]).pronunciation, (numbersArray[i]).length);
+     98:         //if (numLen >= (int)(numbersArray[i]).length)
+     99:             if (!strncmp(curPos, (numbersArray[i]).pronunciation, (numbersArray[i]).length))
+
+# 9 0x00007FF6F2A53D72 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: getTokenType() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:68:
+
+     66:     assert(*bufPos);
+     67: 
+=>   68:     if (tokenIsNumber(bufPos))
+     69:         return typeNumber;
+     70: 
+
+#10 0x00007FF6F2A53C36 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:44:
+
+     42:         }
+     43: 
+=>   44:         nodeType_t tokenType = getTokenType(&bufPos);
+     45: 
+     46:         if (tokenType == typeError) {
+
+#11 0x00007FF6F2A216EC in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:9:
+
+      7: int main(void) {
+      8: 
+=>    9:     lexicalAnalysis("program.txt");
+     10: 
+     11: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec  5 2025 21:52:09, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec  5 2025 21:52:16
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF61257F830 (64-bit), Flags: Cmdre0, Thread: 0x5904 (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF61253310C in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: (anonymous namespace)::TX::_txError() at C:/Users/Admin/Downloads/CodeBlocks/TX/TXLib.h:11090
+# 1 0x00007FF612533674 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: (anonymous namespace)::TX::_txOnSignal() at C:/Users/Admin/Downloads/CodeBlocks/TX/TXLib.h:11171
+# 2 0x00007FF8F3E01989 in C:\WINDOWS\System32\ucrtbase.dll: raise()
+# 3 0x00007FF8F3DE4AB1 in C:\WINDOWS\System32\ucrtbase.dll: abort()
+# 4 0x00007FF8F3DA1049 in C:\WINDOWS\System32\ucrtbase.dll: isctype_l()
+# 5 0x00007FF8F3E02AE1 in C:\WINDOWS\System32\ucrtbase.dll: assert()
+
+# 6 0x00007FF612554D59 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: fprintfLexAnalysisDump() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:248:
+
+    246: void fprintfLexAnalysisDump (FILE* dumpFile, char* bufPos, node_t** nodeArray, size_t numOfNodes) {
+    247:     assert(bufPos);
+=>  248:     assert(*bufPos);
+    249:     assert(dumpFile);
+    250:     assert(nodeArray);
+
+# 7 0x00007FF612553BDC in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/parserFunctions.cpp:32:
+
+     30: 
+     31:         FILE* dumpFile = fopen("lexDump.txt", "a");
+=>   32:         fprintfLexAnalysisDump (dumpFile, bufPos, nodeArray, numOfNodes);
+     33:         fclose(dumpFile);
+     34: 
+
+# 8 0x00007FF6125216EC in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:9:
+
+      7: int main(void) {
+      8: 
+=>    9:     lexicalAnalysis("program.txt");
+     10: 
+     11: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec  6 2025 12:50:13, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec  6 2025 12:50:21
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------

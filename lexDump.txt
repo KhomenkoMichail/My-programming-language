@@ -1,0 +1,191 @@
+current buffer position: -->>wuahh + ) ( Misha x ah-wyoorg ah x
+
+number of nodes == 0
+current buffer position: -->>+ ) ( Misha x ah-wyoorg ah x
+
+number of nodes == 1
+[0] == operator {8}
+current buffer position: -->>) ( Misha x ah-wyoorg ah x
+
+number of nodes == 2
+[0] == operator {8}
+[1] == operator {1}
+current buffer position: -->>( Misha x ah-wyoorg ah x
+
+number of nodes == 3
+[0] == operator {8}
+[1] == operator {1}
+[2] == operator {7}
+current buffer position: -->>Misha x ah-wyoorg ah x
+
+number of nodes == 4
+[0] == operator {8}
+[1] == operator {1}
+[2] == operator {7}
+[3] == operator {6}
+current buffer position: -->>x ah-wyoorg ah x
+
+number of nodes == 5
+[0] == operator {8}
+[1] == operator {1}
+[2] == operator {7}
+[3] == operator {6}
+[4] == identifier "Misha" {210682767799}
+current buffer position: -->>ah-wyoorg ah x
+
+number of nodes == 6
+[0] == operator {8}
+[1] == operator {1}
+[2] == operator {7}
+[3] == operator {6}
+[4] == identifier "Misha" {210682767799}
+[5] == identifier "x" {177693}
+current buffer position: -->>ah x
+
+number of nodes == 7
+[0] == operator {8}
+[1] == operator {1}
+[2] == operator {7}
+[3] == operator {6}
+[4] == identifier "Misha" {210682767799}
+[5] == identifier "x" {177693}
+[6] == number {5}
+current buffer position: -->>x
+
+number of nodes == 8
+[0] == operator {8}
+[1] == operator {1}
+[2] == operator {7}
+[3] == operator {6}
+[4] == identifier "Misha" {210682767799}
+[5] == identifier "x" {177693}
+[6] == number {5}
+[7] == number {1}
+current buffer position: -->>wuahh + ) ( Misha x ah-wyoorg`ah`ah-wyoorg x
+
+number of nodes == 0
+current buffer position: -->>+ ) ( Misha x ah-wyoorg`ah`ah-wyoorg x
+
+number of nodes == 1
+[0] == operator {8}
+current buffer position: -->>) ( Misha x ah-wyoorg`ah`ah-wyoorg x
+
+number of nodes == 2
+[0] == operator {8}
+[1] == operator {1}
+current buffer position: -->>( Misha x ah-wyoorg`ah`ah-wyoorg x
+
+number of nodes == 3
+[0] == operator {8}
+[1] == operator {1}
+[2] == operator {7}
+current buffer position: -->>Misha x ah-wyoorg`ah`ah-wyoorg x
+
+number of nodes == 4
+[0] == operator {8}
+[1] == operator {1}
+[2] == operator {7}
+[3] == operator {6}
+current buffer position: -->>x ah-wyoorg`ah`ah-wyoorg x
+
+number of nodes == 5
+[0] == operator {8}
+[1] == operator {1}
+[2] == operator {7}
+[3] == operator {6}
+[4] == identifier "Misha" {210682767799}
+current buffer position: -->>ah-wyoorg`ah`ah-wyoorg x
+
+number of nodes == 6
+[0] == operator {8}
+[1] == operator {1}
+[2] == operator {7}
+[3] == operator {6}
+[4] == identifier "Misha" {210682767799}
+[5] == identifier "x" {177693}
+current buffer position: -->>x
+
+number of nodes == 7
+[0] == operator {8}
+[1] == operator {1}
+[2] == operator {7}
+[3] == operator {6}
+[4] == identifier "Misha" {210682767799}
+[5] == identifier "x" {177693}
+[6] == number {515}
+current buffer position: -->>wuahh + ) ( Misha x ~ah-wyoorg`ah`ah-wyoorg x
+
+number of nodes == 0
+current buffer position: -->>+ ) ( Misha x ~ah-wyoorg`ah`ah-wyoorg x
+
+number of nodes == 1
+[0] == operator {8}
+current buffer position: -->>) ( Misha x ~ah-wyoorg`ah`ah-wyoorg x
+
+number of nodes == 2
+[0] == operator {8}
+[1] == operator {1}
+current buffer position: -->>( Misha x ~ah-wyoorg`ah`ah-wyoorg x
+
+number of nodes == 3
+[0] == operator {8}
+[1] == operator {1}
+[2] == operator {7}
+current buffer position: -->>Misha x ~ah-wyoorg`ah`ah-wyoorg x
+
+number of nodes == 4
+[0] == operator {8}
+[1] == operator {1}
+[2] == operator {7}
+[3] == operator {6}
+current buffer position: -->>x ~ah-wyoorg`ah`ah-wyoorg x
+
+number of nodes == 5
+[0] == operator {8}
+[1] == operator {1}
+[2] == operator {7}
+[3] == operator {6}
+[4] == identifier "Misha" {210682767799}
+current buffer position: -->>~ah-wyoorg`ah`ah-wyoorg x
+
+number of nodes == 6
+[0] == operator {8}
+[1] == operator {1}
+[2] == operator {7}
+[3] == operator {6}
+[4] == identifier "Misha" {210682767799}
+[5] == identifier "x" {177693}
+current buffer position: -->>x
+
+number of nodes == 7
+[0] == operator {8}
+[1] == operator {1}
+[2] == operator {7}
+[3] == operator {6}
+[4] == identifier "Misha" {210682767799}
+[5] == identifier "x" {177693}
+[6] == number {-515}
+current buffer position: -->>ah-ah x Misha
+
+number of nodes == 0
+current buffer position: -->>x Misha
+
+number of nodes == 1
+[0] == number {2}
+current buffer position: -->>Misha
+
+number of nodes == 2
+[0] == number {2}
+[1] == identifier "x" {177693}
+current buffer position: -->>ah-ah x Misha
+
+number of nodes == 0
+current buffer position: -->>x Misha
+
+number of nodes == 1
+[0] == number {2}
+current buffer position: -->>Misha
+
+number of nodes == 2
+[0] == number {2}
+[1] == identifier "x" {177693}
