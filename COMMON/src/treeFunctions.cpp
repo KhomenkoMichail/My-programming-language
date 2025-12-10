@@ -5,9 +5,9 @@
 
 #pragma GCC diagnostic ignored "-Wredundant-tags"
 
-#include "structsAndConsts.h"
-#include "treeFunctions.h"
-#include "structAccessFunctions.h"
+#include "../include/structsAndConsts.h"
+#include "../include/treeFunctions.h"
+#include "../include/structAccessFunctions.h"
 
 int fprintfTreeGraphDump (tree_t* tree, const char* textGraphFileName) {
     assert(tree);
@@ -74,24 +74,24 @@ int fprintfNodeGraph (node_t* node, int rank, FILE* graphFile, size_t* nodesPass
     }
 
     if(*nodeType(node) == typeOperator) {
-        #include "operatorsArray.h"
+        #include "../include/operatorsArray.h"
 
         size_t numOfOp = 0;
         for (numOfOp = 0; numOfOp < NUM_OF_OPERATORS; numOfOp++)
             if ((operatorsArray[numOfOp]).opCode == (nodeValue(node))->opCode)
                 break;
 
-        fprintf(graphFile, "    node0x%p [rank = %d, label = \"{ <addr>0x%p| type: %s| val = %s | PARENT\\n 0x%p|{<left>LEFT\\n %s| <right>RIGHT\\n %s}}\", style = filled, fillcolor = \"#d1e6ffff\", color = black];\n",
-                node, rank, node, typeName, (operatorsArray[numOfOp]).opName, *nodeParent(node), leftPtr, rightPtr);
+        fprintf(graphFile, "    node0x%p [rank = %d, label = \"{ <addr>type: %s| val = %s|{<left>LEFT| <right>RIGHT}}\", style = filled, fillcolor = \"%s\", color = black];\n",
+                node, rank, typeName, (operatorsArray[numOfOp]).opCLangName, (operatorsArray[numOfOp]).dumpColor);
     }
 
     else if (*nodeType(node) == typeIdentifier)
-        fprintf(graphFile, "    node0x%p [rank = %d, label = \"{ <addr>0x%p| type: %s| val = %s | PARENT\\n 0x%p|{<left>LEFT\\n %s| <right>RIGHT\\n %s}}\", style = filled, fillcolor = \"#f3d2f0ff\", color = black];\n",
-                node, rank, node, typeName, ((nodeValue(node))->id).identifierName, *nodeParent(node), leftPtr, rightPtr);
+        fprintf(graphFile, "    node0x%p [rank = %d, label = \"{ <addr>type: %s| val = %s|{<left>LEFT| <right>RIGHT}}\", style = filled, fillcolor = \"#f3d2f0ff\", color = black];\n",
+                node, rank, typeName, ((nodeValue(node))->id).identifierName);
 
     else
-        fprintf(graphFile, "    node0x%p [rank = %d, label = \"{ <addr>0x%p| type: %s| val = %d | PARENT\\n 0x%p|{<left>LEFT\\n %s| <right>RIGHT\\n %s}}\", style = filled, fillcolor = \"#d1e6ffff\", color = black];\n",
-                node, rank, node, typeName, (nodeValue(node))->constValue, *nodeParent(node), leftPtr, rightPtr);
+        fprintf(graphFile, "    node0x%p [rank = %d, label = \"{ <addr>type: %s| val = %d|{<left>LEFT| <right>RIGHT}}\", style = filled, fillcolor = \"#d1e6ffff\", color = black];\n",
+                node, rank, typeName, (nodeValue(node))->constValue);
 
     node_t** left = nodeLeft(node);
     if((left != NULL) && (*left != NULL) && !(_txIsBadReadPtr(*left)))
@@ -199,7 +199,7 @@ void createGraphImageForDump (struct tree_t* tree, FILE* dumpFile, const char* n
     char graphvizCallCommand[STR_SIZE] = {};
     snprintf(graphvizCallCommand, sizeof(graphvizCallCommand), "dot -Tpng %s -o DUMPS/graph%d.png", nameOfTextGraphFile, graphImageCounter);
     system(graphvizCallCommand);
-    fprintf(dumpFile, "Image:\n <img src=DUMPS/graph%d.png width=1000px>\n", graphImageCounter);
+    fprintf(dumpFile, "Image:\n <img src=graph%d.png width=1000px>\n", graphImageCounter);
 
 }
 

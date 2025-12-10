@@ -1476,3 +1476,85 @@ Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
 Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF79D6F172B в функции main() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp на строке 19. Попытка прочесть данные по адресу 0x0000000000000010 в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF79D7C8050 (64-bit), Flags: Cmdre0, Thread: 0xBB8 (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF79D6F172B in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:19:
+
+     17:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     18: 
+=>   19:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+     20: 
+     21:     if (programTree.rootNode)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 10 2025 17:00:12, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 10 2025 17:03:16
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF79D6F172B в функции main() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp на строке 19. Попытка прочесть данные по адресу 0x0000000000000010 в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF79D7C8050 (64-bit), Flags: Cmdre0, Thread: 0xBB8 (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF79D6F172B in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:19:
+
+     17:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     18: 
+=>   19:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+     20: 
+     21:     if (programTree.rootNode)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 10 2025 17:00:12, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 10 2025 17:03:16
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------

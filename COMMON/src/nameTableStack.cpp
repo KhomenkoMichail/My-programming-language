@@ -7,11 +7,10 @@
 
 #pragma GCC diagnostic ignored "-Wredundant-tags"
 
-
-#include "nameTableConsts.h"
-#include "structsAndConsts.h"
-#include "nameTableStack.h"
-#include "helpingFunctions.h"
+#include "../include/nameTableConsts.h"
+#include "../include/structsAndConsts.h"
+#include "../include/nameTableStack.h"
+#include "../include/helpingFunctions.h"
 
 const stackElement_t POISON = NULL;
 const int MAX_CAPACITY = 100000000;

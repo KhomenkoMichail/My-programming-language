@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "structsAndConsts.h"
-#include "parserFunctions.h"
-#include "syntacticAnalysis.h"
-#include "treeFunctions.h"
+#include "../../COMMON/include/structsAndConsts.h"
+#include "../../COMMON/include/treeFunctions.h"
+
+#include "../include/lexicalAnalysis.h"
+#include "../include/syntacticAnalysis.h"
+#include "../include/saveTreeInFile.h"
 
 
 int main(void) {

@@ -1,0 +1,21 @@
+main() [
+    a wuahh ah!
+    b wuahh ~a-oo-ah`ah`muwaa-yourg!
+
+
+    b wuahh a bacca b!
+    factorial (a, b)!
+]!
+
+factorial (n, p) [
+
+    dip wuahh n  muaarga m!
+
+    yaag(dip bacca 5) [
+        dip wuahh n muaarga m!
+        dip wuahh n muaarga m!
+    ]!
+
+    ruow ~a-oo-ah`ah`muwaa-yourg!
+
+]!

@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <assert.h>
 
-#include "nameTableConsts.h"
-#include "structsAndConsts.h"
-#include "structAccessFunctions.h"
-#include "syntacticAnalysis.h"
-#include "nameTableStack.h"
-#include "nameTableStack.h"
-#include "DSL.h"
+#include "../../COMMON/include/nameTableConsts.h"
+#include "../../COMMON/include/structsAndConsts.h"
+#include "../../COMMON/include/structAccessFunctions.h"
+#include "../../COMMON/include/nameTableStack.h"
+
+#include "../include/syntacticAnalysis.h"
+#include "../include/DSL.h"
 
 void syntaxError (tree_t* tree, node_t** nodeArr, size_t* curNodeNum, const char* funcName) {
     assert(nodeArr);

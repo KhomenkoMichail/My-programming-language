@@ -3,10 +3,11 @@
 #include <strings.h>
 #include <ctype.h>
 
-#include "structsAndConsts.h"
-#include "structAccessfunctions.h"
-#include "helpingFunctions.h"
-#include "parserFunctions.h"
+#include "../../COMMON/include/structsAndConsts.h"
+#include "../../COMMON/include/structAccessfunctions.h"
+#include "../../COMMON/include/helpingFunctions.h"
+
+#include "../include/lexicalAnalysis.h"
 
 struct lexAnalysisResult* lexicalAnalysis (const char* nameOfProgramFile) {
     assert(nameOfProgramFile);
@@ -17,7 +18,7 @@ struct lexAnalysisResult* lexicalAnalysis (const char* nameOfProgramFile) {
         return NULL;
     }
 
-    FILE* dumpFile1 = fopen("lexDump.txt", "w"); //FIXME
+    FILE* dumpFile1 = fopen("DUMPS/lexDump.txt", "w"); //FIXME
     fclose(dumpFile1);
 
 
@@ -26,6 +27,7 @@ struct lexAnalysisResult* lexicalAnalysis (const char* nameOfProgramFile) {
 
     char* bufPos = bufferStart;
     size_t curLine = 1;
+
 
     size_t numOfNodes = 0;
     for ( ; *bufPos != '\0'; numOfNodes++) {
@@ -94,7 +96,7 @@ int tokenIsNumber (char** bufPos) {
     if (*curPos == '~')
         curPos++;
 
-    #include "numbersArray.h"
+    #include "../include/numbersArray.h"
 
     for (int i = NUM_OF_NUMBERS - 1; i >= 0; i--)
             if (!strncmp(curPos, (numbersArray[i]).pronunciation, (numbersArray[i]).length))
@@ -111,7 +113,7 @@ int tokenIsOperator (char** bufPos) {
     if (ispunct(**bufPos))
         return 1;
 
-    #include "operatorsArray.h"
+    #include "../../COMMON/include/operatorsArray.h"
 
     for (size_t i = 0; i < NUM_OF_OPERATORS; i++)
         if (!strncmp(*bufPos, ((operatorsArray[i]).opName), ((operatorsArray[i]).opLength)))
@@ -155,7 +157,7 @@ node_t* processOperator(char** bufPos, size_t curLine) {
     assert(bufPos);
     assert(*bufPos);
 
-    #include "operatorsArray.h"
+    #include "../../COMMON/include/operatorsArray.h"
 
     operatorCode_t operCode = opUNKNOWN;
 
@@ -166,7 +168,7 @@ node_t* processOperator(char** bufPos, size_t curLine) {
             break;
         }
 
-    if (!operCode) {
+    if (operCode == opUNKNOWN) {
         printf("Error! Unable to recognize an operator \"%s\"!\n", *bufPos);
         return NULL;
     }

@@ -31,32 +31,32 @@ enum nodeType_t {
 };
 
 enum operatorCode_t {
-    opUNKNOWN = 0,
-    opADD = 1,
-    opSUB = 2,
-    opMUL = 3,
-    opDIV = 4,
-    opSEPARATOR = 5,
-    opBRACK_ON = 6,
-    opBRACK_OFF = 7,
-    opASSIGN = 8,
-    opWHILE = 9,
-    opIF = 10,
-    opIN = 11,
-    opOUT = 12,
-    opRET = 13,
-    opHLT = 14,
-    opSQRT = 15,
-    opCOMMA = 16,
-    opUNITED_ON = 18,
-    opUNITED_OFF = 19,
-    opQUOTES = 20,
-    opEQUAL = 21,
-    opBELOW = 22,
-    opABOVE = 23,
-    opNOT_EQUAL = 24,
-    opE_BELOW = 25,
-    opE_ABOVE = 26,
+    opUNKNOWN = -1,
+    opADD = 0,
+    opSUB = 1,
+    opMUL = 2,
+    opDIV = 3,
+    opSEPARATOR = 4,
+    opBRACK_ON = 5,
+    opBRACK_OFF = 6,
+    opASSIGN = 7,
+    opWHILE = 8,
+    opIF = 9,
+    opIN = 10,
+    opOUT = 11,
+    opRET = 12,
+    opHLT = 13,
+    opSQRT = 14,
+    opCOMMA = 15,
+    opUNITED_ON = 16,
+    opUNITED_OFF = 17,
+    opQUOTES = 18,
+    opEQUAL = 19,
+    opBELOW = 20,
+    opABOVE = 21,
+    opNOT_EQUAL = 22,
+    opE_BELOW = 23,
+    opE_ABOVE = 24,
 };
 
 union nodeValue_t {
@@ -119,7 +119,7 @@ struct operatorInfo {
     operatorCode_t opCode;
     size_t opLength;
 
-    const char* opDumpName;
+    const char* opCLangName;
     const char* dumpColor;
 };
 

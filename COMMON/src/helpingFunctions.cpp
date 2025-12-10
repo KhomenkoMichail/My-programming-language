@@ -5,8 +5,8 @@
 #include <sys/stat.h>
 #include <math.h>
 
-#include "structsAndConsts.h"
-#include "helpingFunctions.h"
+#include "../include/structsAndConsts.h"
+#include "../include/helpingFunctions.h"
 
 char* copyFileContent (const char* nameOfFile) {
     assert(nameOfFile);

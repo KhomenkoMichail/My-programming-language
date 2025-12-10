@@ -1,8 +1,8 @@
 #include <assert.h>
 #include <stdio.h>
 
-#include "structsAndConsts.h"
-#include "structAccessFunctions.h"
+#include "../include/structsAndConsts.h"
+#include "../include/structAccessFunctions.h"
 
 node_t** nodeParent (node_t* node) {
     assert(node);
