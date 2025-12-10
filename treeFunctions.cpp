@@ -44,9 +44,9 @@ int fprintfNodeGraph (node_t* node, int rank, FILE* graphFile, size_t* nodesPass
     assert(node);
     assert(graphFile);
 
-    (*nodesPassed) += 1;
-    if (*nodesPassed > treeSize)
-        return tooManyRecursiveCalls;
+    //(*nodesPassed) += 1;
+    //if (*nodesPassed > treeSize)
+    //    return tooManyRecursiveCalls;
 
     char leftPtr[STR_SIZE] = "NULL";
     if (*(nodeLeft(node)) != NULL)
@@ -86,8 +86,8 @@ int fprintfNodeGraph (node_t* node, int rank, FILE* graphFile, size_t* nodesPass
     }
 
     else if (*nodeType(node) == typeIdentifier)
-        fprintf(graphFile, "    node0x%p [rank = %d, label = \"{ <addr>0x%p| type: %s| val = %llu | PARENT\\n 0x%p|{<left>LEFT\\n %s| <right>RIGHT\\n %s}}\", style = filled, fillcolor = \"#d1e6ffff\", color = black];\n",
-                node, rank, node, typeName, ((nodeValue(node))->id).identifierHash, *nodeParent(node), leftPtr, rightPtr);
+        fprintf(graphFile, "    node0x%p [rank = %d, label = \"{ <addr>0x%p| type: %s| val = %s | PARENT\\n 0x%p|{<left>LEFT\\n %s| <right>RIGHT\\n %s}}\", style = filled, fillcolor = \"#f3d2f0ff\", color = black];\n",
+                node, rank, node, typeName, ((nodeValue(node))->id).identifierName, *nodeParent(node), leftPtr, rightPtr);
 
     else
         fprintf(graphFile, "    node0x%p [rank = %d, label = \"{ <addr>0x%p| type: %s| val = %d | PARENT\\n 0x%p|{<left>LEFT\\n %s| <right>RIGHT\\n %s}}\", style = filled, fillcolor = \"#d1e6ffff\", color = black];\n",
@@ -108,9 +108,9 @@ int fprintfNodeLinksForGraph (node_t* node, FILE* graphFile, size_t* nodesPassed
     assert(node);
     assert(graphFile);
 
-    (*nodesPassed) += 1;
-    if (*nodesPassed > treeSize)
-        return tooManyRecursiveCalls;
+    //(*nodesPassed) += 1;
+    //if (*nodesPassed > treeSize)
+    //    return tooManyRecursiveCalls;
 
     node_t** left = nodeLeft(node);
     if((left != NULL) && (*left != NULL) && !(_txIsBadReadPtr(*left))) {
@@ -171,11 +171,11 @@ void treeDump (struct tree_t* tree, struct dump* dumpInfo, const char* message) 
     fprintf(dumpFile, "Tree size == %llu\n", *treeSize(tree));
     fprintf(dumpFile, "ErrorCode == %d\n", tree->errorCode);
 
-    fprintf(dumpFile, "number of variables == %llu\n", tree->identifierArrSize);
-    for (size_t numOfVar = 0; numOfVar < tree->identifierArrSize; numOfVar++)
-        fprintf(dumpFile, "var[%llu] == \"%s\"; value == [%lf]; hash == %llu\n", numOfVar,
-        (tree->identifierArr[numOfVar]).identifierName, (tree->identifierArr[numOfVar]).identifierValue,
-        (tree->identifierArr[numOfVar]).identifierHash);
+    //fprintf(dumpFile, "number of variables == %llu\n", tree->identifierArrSize);
+    //for (size_t numOfVar = 0; numOfVar < tree->identifierArrSize; numOfVar++)
+    //    fprintf(dumpFile, "var[%llu] == \"%s\"; value == [%lf]; hash == %llu\n", numOfVar,
+    //    (tree->identifierArr[numOfVar]).identifierName, (tree->identifierArr[numOfVar]).identifierValue,
+    //    (tree->identifierArr[numOfVar]).identifierHash);
 
     createGraphImageForDump (tree, dumpFile, nameOfTextGraphFile);
 
@@ -206,9 +206,9 @@ void createGraphImageForDump (struct tree_t* tree, FILE* dumpFile, const char* n
 int nodeVerifier (node_t* node, int* errorCode, size_t* nodesPassed, size_t treeSize) {
     assert(node);
 
-    (*nodesPassed) += 1;
-    if (*nodesPassed > treeSize)
-        return tooManyRecursiveCalls;
+    //(*nodesPassed) += 1;
+    //if (*nodesPassed > treeSize)
+    //    return tooManyRecursiveCalls;
 
     if (_txIsBadReadPtr(*nodeRight(node)) && (*nodeRight(node) != NULL))
         (*errorCode) |= badRight;

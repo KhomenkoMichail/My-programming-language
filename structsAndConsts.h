@@ -1,9 +1,9 @@
 #ifndef STRUCTS_AND_CONSTS_H
 #define STRUCTS_AND_CONSTS_H
 
-const size_t NUM_OF_PROGRAM_NODES = 128;
+#include "nameTableConsts.h"
 
-const size_t STR_SIZE = 64;
+const size_t NUM_OF_PROGRAM_NODES = 128;
 
 const size_t NUM_OF_IDENTIFIERS = 256;
 
@@ -14,6 +14,8 @@ const size_t NODE_DESCRIPTION_SIZE = 64;
 const size_t MAX_TREE_SIZE = 500;
 
 const size_t COMMAND_LENGTH = 512;
+
+const size_t STR_SIZE = 64;
 
 struct shyriiwookNum {
     const char* pronunciation;
@@ -45,18 +47,23 @@ enum operatorCode_t {
     opRET = 13,
     opHLT = 14,
     opSQRT = 15,
-};
-
-struct identifier {
-    unsigned long long identifierHash;
-    char* idName;
+    opCOMMA = 16,
+    opUNITED_ON = 18,
+    opUNITED_OFF = 19,
+    opQUOTES = 20,
+    opEQUAL = 21,
+    opBELOW = 22,
+    opABOVE = 23,
+    opNOT_EQUAL = 24,
+    opE_BELOW = 25,
+    opE_ABOVE = 26,
 };
 
 union nodeValue_t {
     operatorCode_t opCode;
     int constValue;
-    //unsigned long long identifierHash; //FIXME
-    struct identifier id;
+
+    struct identifierInfo id;
 };
 
 struct node_t {
@@ -78,19 +85,12 @@ struct lexAnalysisResult {
     size_t numOfNodes;
 };
 
-struct identifierInfo {
-    char identifierName[STR_SIZE];
-    double identifierValue;
-    unsigned long long identifierHash;
-};
-
 struct tree_t {
     node_t* rootNode;
     size_t size;
 
-    identifierInfo* identifierArr;
-    size_t identifierArrSize;
-    size_t numOfIdentifies;
+    stack_t* nameTableStack;
+    size_t currentScopeLevel;
 
     int errorCode;
 };
@@ -111,13 +111,16 @@ enum treeErr_t {
     badLeft = 0x02,
     badRight = 0x04,
     tooManyRecursiveCalls = 0x08,
+    treeSyntaxError = 0x10,
 };
 
 struct operatorInfo {
     const char* opName;
     operatorCode_t opCode;
     size_t opLength;
-};
 
+    const char* opDumpName;
+    const char* dumpColor;
+};
 
 #endif

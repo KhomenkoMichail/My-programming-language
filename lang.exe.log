@@ -1032,3 +1032,447 @@ Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
 Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF760D31720 в функции main() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp на строке 17. Попытка прочесть данные по адресу 0x0000000000000008 в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF760E08050 (64-bit), Flags: Cmdre0, Thread: 0x4B0C (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF760D31720 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:17:
+
+     15:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     16: 
+=>   17:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray);
+     18:     treeDump (&programTree, &dumpInfo, "programTree");
+     19: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 10 2025 11:35:20, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 10 2025 11:35:30
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF760D31720 в функции main() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp на строке 17. Попытка прочесть данные по адресу 0x0000000000000008 в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF760E08050 (64-bit), Flags: Cmdre0, Thread: 0x4B0C (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF760D31720 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:17:
+
+     15:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     16: 
+=>   17:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray);
+     18:     treeDump (&programTree, &dumpInfo, "programTree");
+     19: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 10 2025 11:35:20, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 10 2025 11:35:30
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF783018050 (64-bit), Flags: Cmdre0, Thread: 0x1A0C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF782F88BFC in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: (anonymous namespace)::TX::_txError() at C:/Users/Admin/Downloads/CodeBlocks/TX/TXLib.h:11090
+# 1 0x00007FF782F89164 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: (anonymous namespace)::TX::_txOnSignal() at C:/Users/Admin/Downloads/CodeBlocks/TX/TXLib.h:11171
+# 2 0x00007FF8F3E01989 in C:\WINDOWS\System32\ucrtbase.dll: raise()
+# 3 0x00007FF8F3DE4AB1 in C:\WINDOWS\System32\ucrtbase.dll: abort()
+# 4 0x00007FF8F3DA1049 in C:\WINDOWS\System32\ucrtbase.dll: isctype_l()
+# 5 0x00007FF8F3E02AE1 in C:\WINDOWS\System32\ucrtbase.dll: assert()
+
+# 6 0x00007FF782F71502 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: createGraphImageForDump() at C:/Users/Admin/Desktop/prodva/My-programming-language/treeFunctions.cpp:192:
+
+    190:     assert(tree);
+    191:     assert(dumpFile);
+=>  192:     assert(nameOfTextGraphFile);
+    193: 
+    194:     static int graphImageCounter = 0;
+
+# 7 0x00007FF782F71419 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: treeDump() at C:/Users/Admin/Desktop/prodva/My-programming-language/treeFunctions.cpp:180:
+
+    178:     //    (tree->identifierArr[numOfVar]).identifierHash);
+    179: 
+=>  180:     createGraphImageForDump (tree, dumpFile, nameOfTextGraphFile);
+    181: 
+    182:     if (fclose(dumpFile) != 0) {
+
+# 8 0x00007FF782F4174B in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:18:
+
+     16: 
+     17:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray);
+=>   18:     treeDump (&programTree, &dumpInfo, "programTree");
+     19: 
+     20:     deleteTree (&programTree);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 10 2025 11:40:08, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 10 2025 11:40:15
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF738818050 (64-bit), Flags: Cmdre0, Thread: 0x7618 (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF738788BFC in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: (anonymous namespace)::TX::_txError() at C:/Users/Admin/Downloads/CodeBlocks/TX/TXLib.h:11090
+# 1 0x00007FF738789164 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: (anonymous namespace)::TX::_txOnSignal() at C:/Users/Admin/Downloads/CodeBlocks/TX/TXLib.h:11171
+# 2 0x00007FF8F3E01989 in C:\WINDOWS\System32\ucrtbase.dll: raise()
+# 3 0x00007FF8F3DE4AB1 in C:\WINDOWS\System32\ucrtbase.dll: abort()
+# 4 0x00007FF8F3DA1049 in C:\WINDOWS\System32\ucrtbase.dll: isctype_l()
+# 5 0x00007FF8F3E02AE1 in C:\WINDOWS\System32\ucrtbase.dll: assert()
+
+# 6 0x00007FF738771502 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: createGraphImageForDump() at C:/Users/Admin/Desktop/prodva/My-programming-language/treeFunctions.cpp:192:
+
+    190:     assert(tree);
+    191:     assert(dumpFile);
+=>  192:     assert(nameOfTextGraphFile);
+    193: 
+    194:     static int graphImageCounter = 0;
+
+# 7 0x00007FF738771419 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: treeDump() at C:/Users/Admin/Desktop/prodva/My-programming-language/treeFunctions.cpp:180:
+
+    178:     //    (tree->identifierArr[numOfVar]).identifierHash);
+    179: 
+=>  180:     createGraphImageForDump (tree, dumpFile, nameOfTextGraphFile);
+    181: 
+    182:     if (fclose(dumpFile) != 0) {
+
+# 8 0x00007FF73874174B in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:18:
+
+     16: 
+     17:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray);
+=>   18:     treeDump (&programTree, &dumpInfo, "programTree");
+     19: 
+     20:     deleteTree (&programTree);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 10 2025 11:43:04, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 10 2025 11:43:14
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF729478050 (64-bit), Flags: Cmdre0, Thread: 0xE3C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF7293E8BFC in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: (anonymous namespace)::TX::_txError() at C:/Users/Admin/Downloads/CodeBlocks/TX/TXLib.h:11090
+# 1 0x00007FF7293E9164 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: (anonymous namespace)::TX::_txOnSignal() at C:/Users/Admin/Downloads/CodeBlocks/TX/TXLib.h:11171
+# 2 0x00007FF8F3E01989 in C:\WINDOWS\System32\ucrtbase.dll: raise()
+# 3 0x00007FF8F3DE4AB1 in C:\WINDOWS\System32\ucrtbase.dll: abort()
+# 4 0x00007FF8F3DA1049 in C:\WINDOWS\System32\ucrtbase.dll: isctype_l()
+# 5 0x00007FF8F3E02AE1 in C:\WINDOWS\System32\ucrtbase.dll: assert()
+
+# 6 0x00007FF7293D0989 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: fprintfNodeGraph() at C:/Users/Admin/Desktop/prodva/My-programming-language/treeFunctions.cpp:44:
+
+     42: 
+     43: int fprintfNodeGraph (node_t* node, int rank, FILE* graphFile, size_t* nodesPassed, size_t treeSize) {
+=>   44:     assert(node);
+     45:     assert(graphFile);
+     46: 
+
+# 7 0x00007FF7293D0881 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: fprintfTreeGraphDump() at C:/Users/Admin/Desktop/prodva/My-programming-language/treeFunctions.cpp:29:
+
+     27: 
+     28:     size_t graphNodesMade = 0;
+=>   29:     fprintfNodeGraph(*treeRoot(tree), 0, graphFile, &graphNodesMade, *treeSize(tree));
+     30:     size_t graphLinksMade = 0;
+     31:     fprintfNodeLinksForGraph(*treeRoot(tree), graphFile, &graphLinksMade, *treeSize(tree));
+
+# 8 0x00007FF7293D1521 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: createGraphImageForDump() at C:/Users/Admin/Desktop/prodva/My-programming-language/treeFunctions.cpp:197:
+
+    195:     graphImageCounter++;
+    196: 
+=>  197:     fprintfTreeGraphDump(tree, nameOfTextGraphFile);
+    198: 
+    199:     char graphvizCallCommand[STR_SIZE] = {};
+
+# 9 0x00007FF7293D1419 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: treeDump() at C:/Users/Admin/Desktop/prodva/My-programming-language/treeFunctions.cpp:180:
+
+    178:     //    (tree->identifierArr[numOfVar]).identifierHash);
+    179: 
+=>  180:     createGraphImageForDump (tree, dumpFile, nameOfTextGraphFile);
+    181: 
+    182:     if (fclose(dumpFile) != 0) {
+
+#10 0x00007FF7293A1756 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:20:
+
+     18: 
+     19:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray);
+=>   20:     treeDump (&programTree, &dumpInfo, "programTree");
+     21: 
+     22:     deleteTree (&programTree);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 10 2025 11:44:53, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 10 2025 11:45:29
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF672DB8050 (64-bit), Flags: Cmdre0, Thread: 0x571C (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF672D28C0C in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: (anonymous namespace)::TX::_txError() at C:/Users/Admin/Downloads/CodeBlocks/TX/TXLib.h:11090
+# 1 0x00007FF672D29174 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: (anonymous namespace)::TX::_txOnSignal() at C:/Users/Admin/Downloads/CodeBlocks/TX/TXLib.h:11171
+# 2 0x00007FF8F3E01989 in C:\WINDOWS\System32\ucrtbase.dll: raise()
+# 3 0x00007FF8F3DE4AB1 in C:\WINDOWS\System32\ucrtbase.dll: abort()
+# 4 0x00007FF8F3DA1049 in C:\WINDOWS\System32\ucrtbase.dll: isctype_l()
+# 5 0x00007FF8F3E02AE1 in C:\WINDOWS\System32\ucrtbase.dll: assert()
+
+# 6 0x00007FF672D11A1C in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: deleteNode() at C:/Users/Admin/Desktop/prodva/My-programming-language/treeFunctions.cpp:267:
+
+    265: 
+    266: int deleteNode(tree_t* tree, node_t* node) {
+=>  267:     assert(node);
+    268:     assert(tree);
+    269: 
+
+# 7 0x00007FF672D11B94 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: deleteTree() at C:/Users/Admin/Desktop/prodva/My-programming-language/treeFunctions.cpp:290:
+
+    288:     node_t* rootNode = *treeRoot(tree);
+    289: 
+=>  290:     deleteNode(tree, rootNode);
+    291: 
+    292:     return noErrors;
+
+# 8 0x00007FF672CE176B in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:24:
+
+     22:         treeDump (&programTree, &dumpInfo, "programTree");
+     23: 
+=>   24:     deleteTree (&programTree);
+     25: 
+     26:     free(lexResult->programBuffer);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 10 2025 11:48:21, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 10 2025 11:48:28
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF78E6D5022 в функции getProgramTree() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/syntacticAnalysis.cpp на строке 59. Попытка прочесть данные по адресу NULL в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF78E778050 (64-bit), Flags: Cmdre0, Thread: 0x7E70 (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF78E6D5022 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: getProgramTree() at C:/Users/Admin/Desktop/prodva/My-programming-language/syntacticAnalysis.cpp:59:
+
+     57: 
+     58: 
+=>   59:     while (NODE_IS_ID) {
+     60:         node_t* secondOperator = NULL;
+     61: 
+
+# 1 0x00007FF78E6A173B in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:19:
+
+     17:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     18: 
+=>   19:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray);
+     20: 
+     21:     if (programTree.rootNode)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 10 2025 12:10:19, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 10 2025 12:10:24
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF78E6D5022 в функции getProgramTree() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/syntacticAnalysis.cpp на строке 59. Попытка прочесть данные по адресу NULL в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF78E778050 (64-bit), Flags: Cmdre0, Thread: 0x7E70 (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF78E6D5022 in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: getProgramTree() at C:/Users/Admin/Desktop/prodva/My-programming-language/syntacticAnalysis.cpp:59:
+
+     57: 
+     58: 
+=>   59:     while (NODE_IS_ID) {
+     60:         node_t* secondOperator = NULL;
+     61: 
+
+# 1 0x00007FF78E6A173B in C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/main.cpp:19:
+
+     17:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     18: 
+=>   19:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray);
+     20: 
+     21:     if (programTree.rootNode)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 10 2025 12:10:19, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 10 2025 12:10:24
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\lang.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------

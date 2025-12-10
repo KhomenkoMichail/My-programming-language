@@ -1,12 +1,27 @@
-struct operatorInfo operatorsArray[] ={ { "+",      opADD,       sizeof("+") - 1     },
-                                        { "-",      opSUB,       sizeof("-") - 1     },
-                                        { "*",      opMUL,       sizeof("*") - 1     },
-                                        { "/",      opDIV,       sizeof("/") - 1     },
-                                        { "!",      opSEPARATOR, sizeof("!") - 1     },
-                                        { "(",      opBRACK_ON,    sizeof("(") - 1     },
-                                        { ")",      opBRACK_OFF,    sizeof(")") - 1     },
-                                        { "wuahh",  opASSIGN,    sizeof("wuahh") - 1 }, //=
-                                        { "awa",    opWHILE,     sizeof("awa") - 1   }, //while
-                                        { "yaag",   opIF,        sizeof("yaag") - 1  } }; //if
+struct operatorInfo operatorsArray[] ={ { "bacca",     opADD,         sizeof("bacca") - 1,      "+",     "#f75e5eff" },
+                                        { "muawa",     opSUB,         sizeof("muawa") - 1,      "-",     "#559cf3ff" },
+                                        { "muaarga",   opMUL,         sizeof("muaarga") - 1,    "*",     "#f39c22ff" },
+                                        { "yukshin",   opDIV,         sizeof("yukshin") - 1,    "/",     "#a775edff" },
+                                        { "!",         opSEPARATOR,   sizeof("!") - 1,          ";",     "#eceef0ff" },
+                                        { "(",         opBRACK_ON,    sizeof("(") - 1,          "(",     "#eceef0ff" },
+                                        { ")",         opBRACK_OFF,   sizeof(")") - 1,          ")",     "#eceef0ff" },
+                                        { "wuahh",     opASSIGN,      sizeof("wuahh") - 1,      "=",     "#5eeb5eff" },
+                                        { "awa",       opWHILE,       sizeof("awa") - 1,        "while", "#e6d1ffff" },
+                                        { "yaag",      opIF,          sizeof("yaag") - 1,       "if",    "#d1ffecff" },
+                                        { "haaag",     opIN,          sizeof("haaag") - 1,      "in",    "#3686e6ff" },
+                                        { "lanna",     opOUT,         sizeof("lanna") - 1,      "out",   "#ff880aff" },
+                                        { "ruow",      opRET,         sizeof("ruow") - 1,       "ret",   "#00ddffff" },
+                                        { "mu",        opHLT,         sizeof("mu") - 1,         "hlt",   "#f42424ff" },
+                                        { "agaahaa",   opSQRT,        sizeof("agaahaa") - 1,    "sqrt",  "#f668e5ff" },
+                                        { ",",         opCOMMA,       sizeof(",") - 1,          ",",     "#eceef0ff" },
+                                        { "[",         opUNITED_ON,   sizeof("[") - 1,          "{",     "#eceef0ff" },
+                                        { "]",         opUNITED_OFF,  sizeof("]") - 1,          "}",     "#eceef0ff" },
+                                        { "\"",        opQUOTES,      sizeof("\"") - 1,         "\"",    "#eceef0ff" },
+                                        { "uma",       opEQUAL,       sizeof("uma") - 1,        "==",    "#efde9dff" },
+                                        { "issh",      opBELOW,       sizeof("issh") - 1,       "<",     "#efde9dff" },
+                                        { "kerri",     opABOVE,       sizeof("kerri") - 1,      ">",     "#efde9dff" },
+                                        { "muawa-uma", opNOT_EQUAL,   sizeof("muawa-uma") - 1,  "!=",    "#efde9dff" },
+                                        { "issh-uma",  opE_BELOW,     sizeof("issh-uma") - 1,   "<=",    "#efde9dff" },
+                                        { "kerri-uma", opE_ABOVE,     sizeof("kerri-uma") - 1,  ">=",    "#efde9dff" }, };
 
 const size_t NUM_OF_OPERATORS = sizeof(operatorsArray) / sizeof(operatorInfo);

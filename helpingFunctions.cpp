@@ -66,10 +66,10 @@ int bsearchHashComparator(const void* firstParam, const void* secondParam) {
     assert(firstParam);
     assert(secondParam);
 
-    const unsigned long long* labelHash = (const unsigned long long*)firstParam;
+    const unsigned long long* idHash = (const unsigned long long*)firstParam;
     const struct identifierInfo* searchedVariable = (const struct identifierInfo*)secondParam;
 
-    return (int)(*labelHash - searchedVariable->identifierHash);
+    return (int)(*idHash - searchedVariable->identifierHash);
 }
 
 unsigned long long getStringHash(const char* string) {

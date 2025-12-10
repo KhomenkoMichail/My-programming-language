@@ -1,191 +1,3243 @@
-current buffer position: -->>wuahh + ) ( Misha x ah-wyoorg ah x
+current buffer position: -->>main() {
+    a wuahh ah!
+    b wuahh ~a-oo-ah`ah`muwaa-yourg!
+
+
+    b wuahh a + b!
+    factorial (a, b)!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
 
 number of nodes == 0
-current buffer position: -->>+ ) ( Misha x ah-wyoorg ah x
+-----------------------------------------------------------
+
+
+current buffer position: -->>() {
+    a wuahh ah!
+    b wuahh ~a-oo-ah`ah`muwaa-yourg!
+
+
+    b wuahh a + b!
+    factorial (a, b)!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
 
 number of nodes == 1
-[0] == operator {8}
-current buffer position: -->>) ( Misha x ah-wyoorg ah x
+[0] == identifier "main" {6385467242}
+-----------------------------------------------------------
+
+
+current buffer position: -->>) {
+    a wuahh ah!
+    b wuahh ~a-oo-ah`ah`muwaa-yourg!
+
+
+    b wuahh a + b!
+    factorial (a, b)!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
 
 number of nodes == 2
-[0] == operator {8}
-[1] == operator {1}
-current buffer position: -->>( Misha x ah-wyoorg ah x
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+-----------------------------------------------------------
+
+
+current buffer position: -->>{
+    a wuahh ah!
+    b wuahh ~a-oo-ah`ah`muwaa-yourg!
+
+
+    b wuahh a + b!
+    factorial (a, b)!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
 
 number of nodes == 3
-[0] == operator {8}
-[1] == operator {1}
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
 [2] == operator {7}
-current buffer position: -->>Misha x ah-wyoorg ah x
+-----------------------------------------------------------
+
+
+current buffer position: -->>a wuahh ah!
+    b wuahh ~a-oo-ah`ah`muwaa-yourg!
+
+
+    b wuahh a + b!
+    factorial (a, b)!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
 
 number of nodes == 4
-[0] == operator {8}
-[1] == operator {1}
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
 [2] == operator {7}
-[3] == operator {6}
-current buffer position: -->>x ah-wyoorg ah x
+[3] == operator {18}
+-----------------------------------------------------------
+
+
+current buffer position: -->>wuahh ah!
+    b wuahh ~a-oo-ah`ah`muwaa-yourg!
+
+
+    b wuahh a + b!
+    factorial (a, b)!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
 
 number of nodes == 5
-[0] == operator {8}
-[1] == operator {1}
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
 [2] == operator {7}
-[3] == operator {6}
-[4] == identifier "Misha" {210682767799}
-current buffer position: -->>ah-wyoorg ah x
+[3] == operator {18}
+[4] == identifier "a" {177670}
+-----------------------------------------------------------
+
+
+current buffer position: -->>ah!
+    b wuahh ~a-oo-ah`ah`muwaa-yourg!
+
+
+    b wuahh a + b!
+    factorial (a, b)!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
 
 number of nodes == 6
-[0] == operator {8}
-[1] == operator {1}
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
 [2] == operator {7}
-[3] == operator {6}
-[4] == identifier "Misha" {210682767799}
-[5] == identifier "x" {177693}
-current buffer position: -->>ah x
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+-----------------------------------------------------------
+
+
+current buffer position: -->>!
+    b wuahh ~a-oo-ah`ah`muwaa-yourg!
+
+
+    b wuahh a + b!
+    factorial (a, b)!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
 
 number of nodes == 7
-[0] == operator {8}
-[1] == operator {1}
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
 [2] == operator {7}
-[3] == operator {6}
-[4] == identifier "Misha" {210682767799}
-[5] == identifier "x" {177693}
-[6] == number {5}
-current buffer position: -->>x
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+-----------------------------------------------------------
+
+
+current buffer position: -->>b wuahh ~a-oo-ah`ah`muwaa-yourg!
+
+
+    b wuahh a + b!
+    factorial (a, b)!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
 
 number of nodes == 8
-[0] == operator {8}
-[1] == operator {1}
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
 [2] == operator {7}
-[3] == operator {6}
-[4] == identifier "Misha" {210682767799}
-[5] == identifier "x" {177693}
-[6] == number {5}
-[7] == number {1}
-current buffer position: -->>wuahh + ) ( Misha x ah-wyoorg`ah`ah-wyoorg x
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+-----------------------------------------------------------
 
-number of nodes == 0
-current buffer position: -->>+ ) ( Misha x ah-wyoorg`ah`ah-wyoorg x
 
-number of nodes == 1
-[0] == operator {8}
-current buffer position: -->>) ( Misha x ah-wyoorg`ah`ah-wyoorg x
+current buffer position: -->>wuahh ~a-oo-ah`ah`muwaa-yourg!
 
-number of nodes == 2
-[0] == operator {8}
-[1] == operator {1}
-current buffer position: -->>( Misha x ah-wyoorg`ah`ah-wyoorg x
 
-number of nodes == 3
-[0] == operator {8}
-[1] == operator {1}
+    b wuahh a + b!
+    factorial (a, b)!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 9
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
 [2] == operator {7}
-current buffer position: -->>Misha x ah-wyoorg`ah`ah-wyoorg x
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+-----------------------------------------------------------
 
-number of nodes == 4
-[0] == operator {8}
-[1] == operator {1}
+
+current buffer position: -->>~a-oo-ah`ah`muwaa-yourg!
+
+
+    b wuahh a + b!
+    factorial (a, b)!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 10
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
 [2] == operator {7}
-[3] == operator {6}
-current buffer position: -->>x ah-wyoorg`ah`ah-wyoorg x
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+-----------------------------------------------------------
 
-number of nodes == 5
-[0] == operator {8}
-[1] == operator {1}
+
+current buffer position: -->>!
+
+
+    b wuahh a + b!
+    factorial (a, b)!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 11
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
 [2] == operator {7}
-[3] == operator {6}
-[4] == identifier "Misha" {210682767799}
-current buffer position: -->>ah-wyoorg`ah`ah-wyoorg x
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+-----------------------------------------------------------
 
-number of nodes == 6
-[0] == operator {8}
-[1] == operator {1}
+
+current buffer position: -->>b wuahh a + b!
+    factorial (a, b)!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 12
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
 [2] == operator {7}
-[3] == operator {6}
-[4] == identifier "Misha" {210682767799}
-[5] == identifier "x" {177693}
-current buffer position: -->>x
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+-----------------------------------------------------------
 
-number of nodes == 7
-[0] == operator {8}
-[1] == operator {1}
+
+current buffer position: -->>wuahh a + b!
+    factorial (a, b)!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 13
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
 [2] == operator {7}
-[3] == operator {6}
-[4] == identifier "Misha" {210682767799}
-[5] == identifier "x" {177693}
-[6] == number {515}
-current buffer position: -->>wuahh + ) ( Misha x ~ah-wyoorg`ah`ah-wyoorg x
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+-----------------------------------------------------------
 
-number of nodes == 0
-current buffer position: -->>+ ) ( Misha x ~ah-wyoorg`ah`ah-wyoorg x
 
-number of nodes == 1
-[0] == operator {8}
-current buffer position: -->>) ( Misha x ~ah-wyoorg`ah`ah-wyoorg x
+current buffer position: -->>a + b!
+    factorial (a, b)!
+}!
 
-number of nodes == 2
-[0] == operator {8}
-[1] == operator {1}
-current buffer position: -->>( Misha x ~ah-wyoorg`ah`ah-wyoorg x
+factorial (n, p) {
 
-number of nodes == 3
-[0] == operator {8}
-[1] == operator {1}
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 14
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
 [2] == operator {7}
-current buffer position: -->>Misha x ~ah-wyoorg`ah`ah-wyoorg x
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+-----------------------------------------------------------
 
-number of nodes == 4
-[0] == operator {8}
-[1] == operator {1}
+
+current buffer position: -->>+ b!
+    factorial (a, b)!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 15
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
 [2] == operator {7}
-[3] == operator {6}
-current buffer position: -->>x ~ah-wyoorg`ah`ah-wyoorg x
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+-----------------------------------------------------------
 
-number of nodes == 5
-[0] == operator {8}
-[1] == operator {1}
+
+current buffer position: -->>b!
+    factorial (a, b)!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 16
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
 [2] == operator {7}
-[3] == operator {6}
-[4] == identifier "Misha" {210682767799}
-current buffer position: -->>~ah-wyoorg`ah`ah-wyoorg x
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+-----------------------------------------------------------
 
-number of nodes == 6
-[0] == operator {8}
-[1] == operator {1}
+
+current buffer position: -->>!
+    factorial (a, b)!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 17
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
 [2] == operator {7}
-[3] == operator {6}
-[4] == identifier "Misha" {210682767799}
-[5] == identifier "x" {177693}
-current buffer position: -->>x
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+-----------------------------------------------------------
 
-number of nodes == 7
-[0] == operator {8}
-[1] == operator {1}
+
+current buffer position: -->>factorial (a, b)!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 18
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
 [2] == operator {7}
-[3] == operator {6}
-[4] == identifier "Misha" {210682767799}
-[5] == identifier "x" {177693}
-[6] == number {-515}
-current buffer position: -->>ah-ah x Misha
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+-----------------------------------------------------------
 
-number of nodes == 0
-current buffer position: -->>x Misha
 
-number of nodes == 1
-[0] == number {2}
-current buffer position: -->>Misha
+current buffer position: -->>(a, b)!
+}!
 
-number of nodes == 2
-[0] == number {2}
-[1] == identifier "x" {177693}
-current buffer position: -->>ah-ah x Misha
+factorial (n, p) {
 
-number of nodes == 0
-current buffer position: -->>x Misha
+    dip wuahh n*m!
 
-number of nodes == 1
-[0] == number {2}
-current buffer position: -->>Misha
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
 
-number of nodes == 2
-[0] == number {2}
-[1] == identifier "x" {177693}
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 19
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+-----------------------------------------------------------
+
+
+current buffer position: -->>a, b)!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 20
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+-----------------------------------------------------------
+
+
+current buffer position: -->>, b)!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 21
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+-----------------------------------------------------------
+
+
+current buffer position: -->>b)!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 22
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+-----------------------------------------------------------
+
+
+current buffer position: -->>)!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 23
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+-----------------------------------------------------------
+
+
+current buffer position: -->>!
+}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 24
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+-----------------------------------------------------------
+
+
+current buffer position: -->>}!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 25
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+-----------------------------------------------------------
+
+
+current buffer position: -->>!
+
+factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 26
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+-----------------------------------------------------------
+
+
+current buffer position: -->>factorial (n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 27
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+-----------------------------------------------------------
+
+
+current buffer position: -->>(n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 28
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+-----------------------------------------------------------
+
+
+current buffer position: -->>n, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 29
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+-----------------------------------------------------------
+
+
+current buffer position: -->>, p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 30
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+-----------------------------------------------------------
+
+
+current buffer position: -->>p) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 31
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+-----------------------------------------------------------
+
+
+current buffer position: -->>) {
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 32
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+-----------------------------------------------------------
+
+
+current buffer position: -->>{
+
+    dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 33
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+-----------------------------------------------------------
+
+
+current buffer position: -->>dip wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 34
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+-----------------------------------------------------------
+
+
+current buffer position: -->>wuahh n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 35
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+-----------------------------------------------------------
+
+
+current buffer position: -->>n*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 36
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+-----------------------------------------------------------
+
+
+current buffer position: -->>*m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 37
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+-----------------------------------------------------------
+
+
+current buffer position: -->>m!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 38
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+-----------------------------------------------------------
+
+
+current buffer position: -->>!
+
+    yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 39
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+-----------------------------------------------------------
+
+
+current buffer position: -->>yaag(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 40
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+-----------------------------------------------------------
+
+
+current buffer position: -->>(dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 41
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+-----------------------------------------------------------
+
+
+current buffer position: -->>dip + 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 42
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+-----------------------------------------------------------
+
+
+current buffer position: -->>+ 5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 43
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+-----------------------------------------------------------
+
+
+current buffer position: -->>5) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 44
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+[43] == operator {1}
+-----------------------------------------------------------
+
+
+current buffer position: -->>) {
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 45
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+[43] == operator {1}
+[44] == identifier "5" {177626}
+-----------------------------------------------------------
+
+
+current buffer position: -->>{
+        dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 46
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+[43] == operator {1}
+[44] == identifier "5" {177626}
+[45] == operator {7}
+-----------------------------------------------------------
+
+
+current buffer position: -->>dip wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 47
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+[43] == operator {1}
+[44] == identifier "5" {177626}
+[45] == operator {7}
+[46] == operator {18}
+-----------------------------------------------------------
+
+
+current buffer position: -->>wuahh n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 48
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+[43] == operator {1}
+[44] == identifier "5" {177626}
+[45] == operator {7}
+[46] == operator {18}
+[47] == identifier "dip" {193489474}
+-----------------------------------------------------------
+
+
+current buffer position: -->>n*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 49
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+[43] == operator {1}
+[44] == identifier "5" {177626}
+[45] == operator {7}
+[46] == operator {18}
+[47] == identifier "dip" {193489474}
+[48] == operator {8}
+-----------------------------------------------------------
+
+
+current buffer position: -->>*m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 50
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+[43] == operator {1}
+[44] == identifier "5" {177626}
+[45] == operator {7}
+[46] == operator {18}
+[47] == identifier "dip" {193489474}
+[48] == operator {8}
+[49] == identifier "n" {177683}
+-----------------------------------------------------------
+
+
+current buffer position: -->>m!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 51
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+[43] == operator {1}
+[44] == identifier "5" {177626}
+[45] == operator {7}
+[46] == operator {18}
+[47] == identifier "dip" {193489474}
+[48] == operator {8}
+[49] == identifier "n" {177683}
+[50] == operator {3}
+-----------------------------------------------------------
+
+
+current buffer position: -->>!
+        dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 52
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+[43] == operator {1}
+[44] == identifier "5" {177626}
+[45] == operator {7}
+[46] == operator {18}
+[47] == identifier "dip" {193489474}
+[48] == operator {8}
+[49] == identifier "n" {177683}
+[50] == operator {3}
+[51] == identifier "m" {177682}
+-----------------------------------------------------------
+
+
+current buffer position: -->>dip wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 53
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+[43] == operator {1}
+[44] == identifier "5" {177626}
+[45] == operator {7}
+[46] == operator {18}
+[47] == identifier "dip" {193489474}
+[48] == operator {8}
+[49] == identifier "n" {177683}
+[50] == operator {3}
+[51] == identifier "m" {177682}
+[52] == operator {5}
+-----------------------------------------------------------
+
+
+current buffer position: -->>wuahh n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 54
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+[43] == operator {1}
+[44] == identifier "5" {177626}
+[45] == operator {7}
+[46] == operator {18}
+[47] == identifier "dip" {193489474}
+[48] == operator {8}
+[49] == identifier "n" {177683}
+[50] == operator {3}
+[51] == identifier "m" {177682}
+[52] == operator {5}
+[53] == identifier "dip" {193489474}
+-----------------------------------------------------------
+
+
+current buffer position: -->>n*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 55
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+[43] == operator {1}
+[44] == identifier "5" {177626}
+[45] == operator {7}
+[46] == operator {18}
+[47] == identifier "dip" {193489474}
+[48] == operator {8}
+[49] == identifier "n" {177683}
+[50] == operator {3}
+[51] == identifier "m" {177682}
+[52] == operator {5}
+[53] == identifier "dip" {193489474}
+[54] == operator {8}
+-----------------------------------------------------------
+
+
+current buffer position: -->>*m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 56
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+[43] == operator {1}
+[44] == identifier "5" {177626}
+[45] == operator {7}
+[46] == operator {18}
+[47] == identifier "dip" {193489474}
+[48] == operator {8}
+[49] == identifier "n" {177683}
+[50] == operator {3}
+[51] == identifier "m" {177682}
+[52] == operator {5}
+[53] == identifier "dip" {193489474}
+[54] == operator {8}
+[55] == identifier "n" {177683}
+-----------------------------------------------------------
+
+
+current buffer position: -->>m!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 57
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+[43] == operator {1}
+[44] == identifier "5" {177626}
+[45] == operator {7}
+[46] == operator {18}
+[47] == identifier "dip" {193489474}
+[48] == operator {8}
+[49] == identifier "n" {177683}
+[50] == operator {3}
+[51] == identifier "m" {177682}
+[52] == operator {5}
+[53] == identifier "dip" {193489474}
+[54] == operator {8}
+[55] == identifier "n" {177683}
+[56] == operator {3}
+-----------------------------------------------------------
+
+
+current buffer position: -->>!
+    }!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 58
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+[43] == operator {1}
+[44] == identifier "5" {177626}
+[45] == operator {7}
+[46] == operator {18}
+[47] == identifier "dip" {193489474}
+[48] == operator {8}
+[49] == identifier "n" {177683}
+[50] == operator {3}
+[51] == identifier "m" {177682}
+[52] == operator {5}
+[53] == identifier "dip" {193489474}
+[54] == operator {8}
+[55] == identifier "n" {177683}
+[56] == operator {3}
+[57] == identifier "m" {177682}
+-----------------------------------------------------------
+
+
+current buffer position: -->>}!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 59
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+[43] == operator {1}
+[44] == identifier "5" {177626}
+[45] == operator {7}
+[46] == operator {18}
+[47] == identifier "dip" {193489474}
+[48] == operator {8}
+[49] == identifier "n" {177683}
+[50] == operator {3}
+[51] == identifier "m" {177682}
+[52] == operator {5}
+[53] == identifier "dip" {193489474}
+[54] == operator {8}
+[55] == identifier "n" {177683}
+[56] == operator {3}
+[57] == identifier "m" {177682}
+[58] == operator {5}
+-----------------------------------------------------------
+
+
+current buffer position: -->>!
+
+    ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 60
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+[43] == operator {1}
+[44] == identifier "5" {177626}
+[45] == operator {7}
+[46] == operator {18}
+[47] == identifier "dip" {193489474}
+[48] == operator {8}
+[49] == identifier "n" {177683}
+[50] == operator {3}
+[51] == identifier "m" {177682}
+[52] == operator {5}
+[53] == identifier "dip" {193489474}
+[54] == operator {8}
+[55] == identifier "n" {177683}
+[56] == operator {3}
+[57] == identifier "m" {177682}
+[58] == operator {5}
+[59] == operator {19}
+-----------------------------------------------------------
+
+
+current buffer position: -->>ret ~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 61
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+[43] == operator {1}
+[44] == identifier "5" {177626}
+[45] == operator {7}
+[46] == operator {18}
+[47] == identifier "dip" {193489474}
+[48] == operator {8}
+[49] == identifier "n" {177683}
+[50] == operator {3}
+[51] == identifier "m" {177682}
+[52] == operator {5}
+[53] == identifier "dip" {193489474}
+[54] == operator {8}
+[55] == identifier "n" {177683}
+[56] == operator {3}
+[57] == identifier "m" {177682}
+[58] == operator {5}
+[59] == operator {19}
+[60] == operator {5}
+-----------------------------------------------------------
+
+
+current buffer position: -->>~a-oo-ah`ah`muwaa-yourg!
+
+}!
+
+number of nodes == 62
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+[43] == operator {1}
+[44] == identifier "5" {177626}
+[45] == operator {7}
+[46] == operator {18}
+[47] == identifier "dip" {193489474}
+[48] == operator {8}
+[49] == identifier "n" {177683}
+[50] == operator {3}
+[51] == identifier "m" {177682}
+[52] == operator {5}
+[53] == identifier "dip" {193489474}
+[54] == operator {8}
+[55] == identifier "n" {177683}
+[56] == operator {3}
+[57] == identifier "m" {177682}
+[58] == operator {5}
+[59] == operator {19}
+[60] == operator {5}
+[61] == operator {13}
+-----------------------------------------------------------
+
+
+current buffer position: -->>!
+
+}!
+
+number of nodes == 63
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+[43] == operator {1}
+[44] == identifier "5" {177626}
+[45] == operator {7}
+[46] == operator {18}
+[47] == identifier "dip" {193489474}
+[48] == operator {8}
+[49] == identifier "n" {177683}
+[50] == operator {3}
+[51] == identifier "m" {177682}
+[52] == operator {5}
+[53] == identifier "dip" {193489474}
+[54] == operator {8}
+[55] == identifier "n" {177683}
+[56] == operator {3}
+[57] == identifier "m" {177682}
+[58] == operator {5}
+[59] == operator {19}
+[60] == operator {5}
+[61] == operator {13}
+[62] == number {-317}
+-----------------------------------------------------------
+
+
+current buffer position: -->>}!
+
+number of nodes == 64
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+[43] == operator {1}
+[44] == identifier "5" {177626}
+[45] == operator {7}
+[46] == operator {18}
+[47] == identifier "dip" {193489474}
+[48] == operator {8}
+[49] == identifier "n" {177683}
+[50] == operator {3}
+[51] == identifier "m" {177682}
+[52] == operator {5}
+[53] == identifier "dip" {193489474}
+[54] == operator {8}
+[55] == identifier "n" {177683}
+[56] == operator {3}
+[57] == identifier "m" {177682}
+[58] == operator {5}
+[59] == operator {19}
+[60] == operator {5}
+[61] == operator {13}
+[62] == number {-317}
+[63] == operator {5}
+-----------------------------------------------------------
+
+
+current buffer position: -->>!
+
+number of nodes == 65
+[0] == identifier "main" {6385467242}
+[1] == operator {6}
+[2] == operator {7}
+[3] == operator {18}
+[4] == identifier "a" {177670}
+[5] == operator {8}
+[6] == number {1}
+[7] == operator {5}
+[8] == identifier "b" {177671}
+[9] == operator {8}
+[10] == number {-317}
+[11] == operator {5}
+[12] == identifier "b" {177671}
+[13] == operator {8}
+[14] == identifier "a" {177670}
+[15] == operator {1}
+[16] == identifier "b" {177671}
+[17] == operator {5}
+[18] == identifier "factorial" {249887917765824666}
+[19] == operator {6}
+[20] == identifier "a" {177670}
+[21] == operator {16}
+[22] == identifier "b" {177671}
+[23] == operator {7}
+[24] == operator {5}
+[25] == operator {19}
+[26] == operator {5}
+[27] == identifier "factorial" {249887917765824666}
+[28] == operator {6}
+[29] == identifier "n" {177683}
+[30] == operator {16}
+[31] == identifier "p" {177685}
+[32] == operator {7}
+[33] == operator {18}
+[34] == identifier "dip" {193489474}
+[35] == operator {8}
+[36] == identifier "n" {177683}
+[37] == operator {3}
+[38] == identifier "m" {177682}
+[39] == operator {5}
+[40] == operator {10}
+[41] == operator {6}
+[42] == identifier "dip" {193489474}
+[43] == operator {1}
+[44] == identifier "5" {177626}
+[45] == operator {7}
+[46] == operator {18}
+[47] == identifier "dip" {193489474}
+[48] == operator {8}
+[49] == identifier "n" {177683}
+[50] == operator {3}
+[51] == identifier "m" {177682}
+[52] == operator {5}
+[53] == identifier "dip" {193489474}
+[54] == operator {8}
+[55] == identifier "n" {177683}
+[56] == operator {3}
+[57] == identifier "m" {177682}
+[58] == operator {5}
+[59] == operator {19}
+[60] == operator {5}
+[61] == operator {13}
+[62] == number {-317}
+[63] == operator {5}
+[64] == operator {19}
+-----------------------------------------------------------
+
+

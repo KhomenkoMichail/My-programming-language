@@ -17,12 +17,15 @@ struct lexAnalysisResult* lexicalAnalysis (const char* nameOfProgramFile) {
         return NULL;
     }
 
+    FILE* dumpFile1 = fopen("lexDump.txt", "w"); //FIXME
+    fclose(dumpFile1);
+
 
     node_t** nodeArray = (node_t**)calloc(NUM_OF_PROGRAM_NODES, sizeof(node_t*));
     size_t sizeOfNodeArr = NUM_OF_PROGRAM_NODES;
 
     char* bufPos = bufferStart;
-    size_t curLine = 0;
+    size_t curLine = 1;
 
     size_t numOfNodes = 0;
     for ( ; *bufPos != '\0'; numOfNodes++) {
@@ -199,7 +202,7 @@ node_t* processNumber(char** bufPos, size_t curLine) {
         (*bufPos)++;
     }
 
-    while (**bufPos != ' ') {
+    while (**bufPos != ' ' && **bufPos != '!') {
         int curNum = NUM_OF_NUMBERS -1;
         for ( ; curNum >= 0; curNum--) {
                 if (!strncmp(*bufPos, (numbersArray[curNum]).pronunciation, (numbersArray[curNum]).length)) {
@@ -229,11 +232,15 @@ node_t* processIdentifier(char** bufPos, size_t curLine) {
     if (sscanf(*bufPos, "%[a-zA-Z0-9]%n", identifier, &identifierLen)) {
 
         unsigned long long identifierHash = getStringHash(identifier);
-        node_t* newNode = newNodeCtor(typeIdentifier, {.id = {identifierHash, *bufPos}}, curLine);
+        //node_t* newNode = newNodeCtor(typeIdentifier, {.id = {identifierHash, *bufPos}}, curLine); //FIXME
+        nodeValue_t value;
+        value.id.identifierHash = identifierHash;
+        value.id.identifierName = strdup(identifier); // NOTE may cause problems
+        node_t* newNode = newNodeCtor(typeIdentifier, value, curLine);
 
         (*bufPos) += identifierLen;
-        **bufPos = '\0';
-        (*bufPos)++;
+        //**bufPos = '\0';
+        //(*bufPos)++;
 
         return newNode;
     }
@@ -262,7 +269,7 @@ void fprintfLexAnalysisDump (FILE* dumpFile, char* bufPos, node_t** nodeArray, s
                 fprintf(dumpFile, "number {%d}\n", ((nodeArray[i])->value).constValue);
                 break;
             case typeIdentifier:
-                fprintf(dumpFile, "identifier \"%s\" {%lld}\n", ((nodeArray[i])->value).id.idName,
+                fprintf(dumpFile, "identifier \"%s\" {%lld}\n", ((nodeArray[i])->value).id.identifierName,
                                                     ((nodeArray[i])->value).id.identifierHash);
                 break;
             case typeError:
@@ -270,4 +277,6 @@ void fprintfLexAnalysisDump (FILE* dumpFile, char* bufPos, node_t** nodeArray, s
                 break;
         }
     }
+
+    fprintf(dumpFile, "-----------------------------------------------------------\n\n\n");
 }
