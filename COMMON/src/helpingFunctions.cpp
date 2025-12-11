@@ -52,11 +52,11 @@ unsigned int getSizeOfFile (int fileDescriptor) {
 void skipSpaces(char** bufPos, size_t* curLine) {
     assert(bufPos);
     assert(*bufPos);
-    assert(curLine);
 
     while (**bufPos == ' ' || **bufPos == '\t' || **bufPos == '\n') {
         if (**bufPos == '\n')
-            (*curLine)++;
+            if(curLine)
+                (*curLine)++;
 
         (*bufPos)++;
     }

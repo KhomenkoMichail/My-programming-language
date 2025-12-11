@@ -21,4 +21,6 @@ int deleteTree (tree_t* tree);
 
 int deleteNode(tree_t* tree, node_t* node);
 
+node_t* newNodeCtor(nodeType_t curType, nodeValue_t curValue, size_t curLine);
+
 #endif

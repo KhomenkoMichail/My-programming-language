@@ -62,7 +62,7 @@ int fprintfNodeGraph (node_t* node, int rank, FILE* graphFile, size_t* nodesPass
             typeName = "OP";
             break;
         case typeIdentifier:
-            typeName = "VAR";
+            typeName = "ID";
             break;
         case typeNumber:
             typeName = "NUM";
@@ -197,7 +197,7 @@ void createGraphImageForDump (struct tree_t* tree, FILE* dumpFile, const char* n
     fprintfTreeGraphDump(tree, nameOfTextGraphFile);
 
     char graphvizCallCommand[STR_SIZE] = {};
-    snprintf(graphvizCallCommand, sizeof(graphvizCallCommand), "dot -Tpng %s -o frontend/DUMPS/graph%d.png", nameOfTextGraphFile, graphImageCounter); //FIXME
+    snprintf(graphvizCallCommand, sizeof(graphvizCallCommand), "dot -Tpng %s -o backend/DUMPS/graph%d.png", nameOfTextGraphFile, graphImageCounter); //FIXME
     system(graphvizCallCommand);
     fprintf(dumpFile, "Image:\n <img src=graph%d.png width=1000px>\n", graphImageCounter);
 
@@ -291,3 +291,17 @@ int deleteTree (tree_t* tree) {
 
     return noErrors;
 }
+
+
+node_t* newNodeCtor(nodeType_t curType, nodeValue_t curValue, size_t curLine) {
+
+    node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+
+    *nodeType(newNode) = curType;
+    *nodeValue(newNode) = curValue;
+
+    *nodeLine(newNode) = curLine;
+
+    return newNode;
+}
+

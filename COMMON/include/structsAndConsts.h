@@ -1,6 +1,9 @@
 #ifndef STRUCTS_AND_CONSTS_H
 #define STRUCTS_AND_CONSTS_H
 
+#include <cstddef>
+#include <sys/types.h>
+
 #include "nameTableConsts.h"
 
 const size_t NUM_OF_PROGRAM_NODES = 128;

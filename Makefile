@@ -11,13 +11,26 @@ common_cpp = COMMON/src/helpingFunctions.cpp COMMON/src/nameTableStack.cpp COMMO
 front_cpp = frontend/src/main.cpp frontend/src/lexicalAnalysis.cpp frontend/src/syntacticAnalysis.cpp frontend/src/saveTreeInFile.cpp
 
 # Файлы frontend
-front_all = frontend/include/DSL.h frontend/include/lexicalAnalysis.h frontend/include/syntacticAnalysis.h frontend/include/saveTreeInFile.h $(proc_cpp)
+front_all = frontend/include/DSL.h frontend/include/lexicalAnalysis.h frontend/include/syntacticAnalysis.h frontend/include/saveTreeInFile.h
+
+# Файлы .cpp для сборки backend
+back_cpp = backend/src/backendMain.cpp backend/src/backendTreeCtor.cpp
+
+# Файлы backend
+back_all = backend/include/backendTreeCtor.h
 
 # Компиляция frontend
 build-f: $(front_all) $(common_cpp) $(common_all)
 	@echo -------------------------------------------------------------------------
 	g++ $(front_cpp) $(common_cpp) $(flags) -o frontend/build/frontend.exe
 
-# Запуск assembler
+# Компиляция backend
+build-b: $(back_all) $(common_cpp) $(common_all)
+	@echo -------------------------------------------------------------------------
+	g++ $(back_cpp) $(common_cpp) $(flags) -o backend/build/backend.exe
+
 run-f:
 	./frontend/build/frontend.exe
+
+run-b:
+	./backend/build/frontend.exe

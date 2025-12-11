@@ -11,7 +11,7 @@
 
 int main(int argc, const char* argv[]) {
 
-    if (argc != 3) return printf("Usage: %s source_file destination_file\n", argv[0]), 1;
+    if (argc != 3) return printf("Usage: %s source.txt destination.txt\n", argv[0]), 1;
 
     const char* inputFile = argv[1];
     const char* outputFile = argv[2];

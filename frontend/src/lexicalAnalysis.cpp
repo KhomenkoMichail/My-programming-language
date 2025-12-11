@@ -6,6 +6,7 @@
 #include "../../COMMON/include/structsAndConsts.h"
 #include "../../COMMON/include/structAccessfunctions.h"
 #include "../../COMMON/include/helpingFunctions.h"
+#include "../../COMMON/include/treeFunctions.h"
 
 #include "../include/lexicalAnalysis.h"
 
@@ -170,18 +171,6 @@ node_t* processOperator(char** bufPos, size_t curLine) {
     return newNodeCtor(typeOperator, {.opCode = operCode}, curLine);
 }
 
-node_t* newNodeCtor(nodeType_t curType, nodeValue_t curValue, size_t curLine) {
-
-    node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
-
-    *nodeType(newNode) = curType;
-    *nodeValue(newNode) = curValue;
-
-    *nodeLine(newNode) = curLine;
-
-    return newNode;
-}
-
 node_t* processNumber(char** bufPos, size_t curLine) {
     assert(bufPos);
     assert(*bufPos);
@@ -231,7 +220,7 @@ node_t* processIdentifier(char** bufPos, size_t curLine) {
 
         nodeValue_t value;
         value.id.identifierHash = identifierHash;
-        value.id.identifierName = strdup(identifier); // NOTE may cause problems
+        value.id.identifierName = strdup(identifier);
         node_t* newNode = newNodeCtor(typeIdentifier, value, curLine);
 
         (*bufPos) += identifierLen;
