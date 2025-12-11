@@ -3,7 +3,7 @@
 
 void syntaxError (tree_t* tree, node_t** nodeArr, size_t* curNodeNum, const char* funcName);
 
-node_t* getProgramTree (tree_t* tree, node_t** nodeArr, size_t numOfNodes);
+node_t* getProgramTree (tree_t* tree, lexAnalysisResult* lexResult);
 
 node_t* getFunction (tree_t* tree, node_t** nodeArr, size_t* curNodeNum);
 
@@ -32,5 +32,15 @@ node_t* getBracketExpressionNodes (tree_t* tree, node_t** nodeArr, size_t* curNo
 node_t* getSQRTnode(tree_t* tree, node_t** nodeArr, size_t* curNodeNum);
 
 node_t* getVarIDNode (tree_t* tree, node_t** nodeArr, size_t* curNodeNum);
+
+node_t* getOpInit(tree_t* tree, node_t** nodeArr, size_t* curNodeNum);
+
+node_t* getFuncParam (tree_t* tree, node_t** nodeArr, size_t* curNodeNum);
+
+int getFunctionsDeclarations(tree_t* tree, node_t** nodeArr, size_t* curNodeNum);
+
+int checkAllFunctionsHaveBodies (tree_t* tree);
+
+
 
 #endif

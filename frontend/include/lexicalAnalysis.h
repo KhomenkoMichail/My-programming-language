@@ -23,4 +23,6 @@ node_t* processIdentifier (char** bufPos, size_t curLine);
 
 void fprintfLexAnalysisDump (FILE* dumpFile, char* bufPos, node_t** nodeArray, size_t numOfNodes);
 
+void skipComments(char** bufPos, size_t* curLine);
+
 #endif

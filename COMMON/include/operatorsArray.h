@@ -22,6 +22,7 @@ struct operatorInfo operatorsArray[] ={ { "bacca",     opADD,         sizeof("ba
                                         { "kerri",     opABOVE,       sizeof("kerri") - 1,      ">",     "#efde9dff" },
                                         { "muawa-uma", opNOT_EQUAL,   sizeof("muawa-uma") - 1,  "!=",    "#efde9dff" },
                                         { "issh-uma",  opE_BELOW,     sizeof("issh-uma") - 1,   "<=",    "#efde9dff" },
-                                        { "kerri-uma", opE_ABOVE,     sizeof("kerri-uma") - 1,  ">=",    "#efde9dff" }, };
+                                        { "kerri-uma", opE_ABOVE,     sizeof("kerri-uma") - 1,  ">=",    "#efde9dff" },
+                                        { "wyaaaaaa",  opINIT,        sizeof("wyaaaaaa") - 1,   "decl",  "#c278e1ff"} };
 
 const size_t NUM_OF_OPERATORS = sizeof(operatorsArray) / sizeof(operatorInfo);

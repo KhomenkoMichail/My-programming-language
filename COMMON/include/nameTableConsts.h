@@ -9,6 +9,16 @@ enum idType_t {
     idFUNC = 2,
 };
 
+struct funcInfo_t {
+    size_t paramCount;
+    int haveBody;
+};
+
+union idInfo_t {
+    funcInfo_t funcInfo;
+    size_t varAddress;
+};
+
 struct identifierInfo {
     const char* identifierName;
     unsigned long long identifierHash;
@@ -16,7 +26,7 @@ struct identifierInfo {
     idType_t idType;
 
     size_t scopeLevel;
-    size_t paramCount;
+    idInfo_t idInfo;
 };
 
 struct nameTable_t {

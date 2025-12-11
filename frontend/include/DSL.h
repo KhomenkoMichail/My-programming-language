@@ -5,7 +5,7 @@
 
 #define NODE_IS_OP (nodeArr[*curNodeNum])->type == typeOperator
 
-#define NODE_IS_ID (nodeArr[*curNodeNum])->type == typeIdentifier
+#define NODE_IS_ID ((nodeArr[*curNodeNum])->type == typeIdentifier)
 
 #define NODE_IS_COMPARE (NODE_IS_OP_(opEQUAL) || NODE_IS_OP_(opBELOW) || NODE_IS_OP_(opABOVE)|| NODE_IS_OP_(opNOT_EQUAL) || NODE_IS_OP_(opE_BELOW) || NODE_IS_OP_(opE_ABOVE))
 

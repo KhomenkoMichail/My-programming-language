@@ -18,10 +18,6 @@ struct lexAnalysisResult* lexicalAnalysis (const char* nameOfProgramFile) {
         return NULL;
     }
 
-    FILE* dumpFile1 = fopen("DUMPS/lexDump.txt", "w"); //FIXME
-    fclose(dumpFile1);
-
-
     node_t** nodeArray = (node_t**)calloc(NUM_OF_PROGRAM_NODES, sizeof(node_t*));
     size_t sizeOfNodeArr = NUM_OF_PROGRAM_NODES;
 
@@ -32,10 +28,7 @@ struct lexAnalysisResult* lexicalAnalysis (const char* nameOfProgramFile) {
     size_t numOfNodes = 0;
     for ( ; *bufPos != '\0'; numOfNodes++) {
         skipSpaces(&bufPos, &curLine);
-
-        FILE* dumpFile = fopen("lexDump.txt", "a");
-        fprintfLexAnalysisDump (dumpFile, bufPos, nodeArray, numOfNodes);
-        fclose(dumpFile);
+        skipComments(&bufPos, &curLine);
 
         if (numOfNodes > sizeOfNodeArr) {
             sizeOfNodeArr *= 2;
@@ -61,6 +54,7 @@ struct lexAnalysisResult* lexicalAnalysis (const char* nameOfProgramFile) {
         }
 
         skipSpaces(&bufPos, &curLine);
+        skipComments(&bufPos, &curLine);
     }
 
     struct lexAnalysisResult* result = (struct lexAnalysisResult*)calloc(1, sizeof(struct lexAnalysisResult));
@@ -192,7 +186,7 @@ node_t* processNumber(char** bufPos, size_t curLine) {
     assert(bufPos);
     assert(*bufPos);
 
-    #include "numbersArray.h"
+    #include "../include/numbersArray.h"
 
     int sign = 1;
     int value = 0;
@@ -204,7 +198,7 @@ node_t* processNumber(char** bufPos, size_t curLine) {
         (*bufPos)++;
     }
 
-    while (**bufPos != ' ' && **bufPos != '!') {
+    while (**bufPos != ' ' && !ispunct(**bufPos)) {
         int curNum = NUM_OF_NUMBERS -1;
         for ( ; curNum >= 0; curNum--) {
                 if (!strncmp(*bufPos, (numbersArray[curNum]).pronunciation, (numbersArray[curNum]).length)) {
@@ -234,15 +228,13 @@ node_t* processIdentifier(char** bufPos, size_t curLine) {
     if (sscanf(*bufPos, "%[a-zA-Z0-9]%n", identifier, &identifierLen)) {
 
         unsigned long long identifierHash = getStringHash(identifier);
-        //node_t* newNode = newNodeCtor(typeIdentifier, {.id = {identifierHash, *bufPos}}, curLine); //FIXME
+
         nodeValue_t value;
         value.id.identifierHash = identifierHash;
         value.id.identifierName = strdup(identifier); // NOTE may cause problems
         node_t* newNode = newNodeCtor(typeIdentifier, value, curLine);
 
         (*bufPos) += identifierLen;
-        //**bufPos = '\0';
-        //(*bufPos)++;
 
         return newNode;
     }
@@ -281,4 +273,40 @@ void fprintfLexAnalysisDump (FILE* dumpFile, char* bufPos, node_t** nodeArray, s
     }
 
     fprintf(dumpFile, "-----------------------------------------------------------\n\n\n");
+}
+
+void skipComments(char** bufPos, size_t* curLine) {
+    assert(bufPos);
+    assert(*bufPos);
+    assert(curLine);
+
+    while (**bufPos) {
+        if (**bufPos == '/' && *(*bufPos + 1) == '/') {
+            while (**bufPos && **bufPos != '\n') {
+                (*bufPos)++;
+            }
+            if (**bufPos == '\n') {
+                (*bufPos)++;
+                (*curLine)++;
+                continue;
+            }
+        }
+        else if (**bufPos == '/' && *(*bufPos + 1) == '*') {
+            (*bufPos) += 2;
+            while (**bufPos) {
+                if (**bufPos == '\n') {
+                    (*curLine)++;
+                }
+                else if (**bufPos == '*' && *(*bufPos + 1) == '/') {
+                    (*bufPos) += 2;
+                    break;
+                }
+                (*bufPos)++;
+            }
+            continue;
+        }
+        else {
+            break;
+        }
+    }
 }

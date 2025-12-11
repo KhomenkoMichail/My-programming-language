@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
+#include <string.h>
 
 #include "../../COMMON/include/nameTableConsts.h"
 #include "../../COMMON/include/structsAndConsts.h"
@@ -37,15 +38,25 @@ void syntaxError (tree_t* tree, node_t** nodeArr, size_t* curNodeNum, const char
     printf("Is unexpected.\n");
 }
 
-node_t* getProgramTree (tree_t* tree, node_t** nodeArr, size_t numOfNodes) {
+node_t* getProgramTree (tree_t* tree, lexAnalysisResult* lexResult) {
     assert(tree);
-    assert(nodeArr);
+    assert(lexResult);
+
+    node_t** nodeArr = lexResult->nodesArray;
+    size_t numOfNodes = lexResult->numOfNodes;
 
     size_t nodeNum = 0;
     size_t* curNodeNum = &nodeNum;
 
+    initNameTables(tree);
+
     if (tree->errorCode)
         return NULL;
+
+    while (NODE_IS_OP_(opINIT)) {
+        if (getFunctionsDeclarations(tree, nodeArr, curNodeNum))
+            return NULL;
+    }
 
     node_t* firstOperator = NULL;
     if (NODE_IS_ID)
@@ -56,7 +67,7 @@ node_t* getProgramTree (tree_t* tree, node_t** nodeArr, size_t numOfNodes) {
     }
 
 
-    while (nodeNum < numOfNodes - 1) { // NOTE may cause prblm
+    while (nodeNum < numOfNodes - 1) {
         node_t* secondOperator = NULL;
 
         secondOperator = getFunction(tree, nodeArr, curNodeNum);
@@ -66,7 +77,10 @@ node_t* getProgramTree (tree_t* tree, node_t** nodeArr, size_t numOfNodes) {
         *nodeRight(linkNode) = secondOperator;
 
         firstOperator = linkNode;
-    }//FIXME проверить что прочитали все
+    }
+
+    if (checkAllFunctionsHaveBodies (tree))
+        return NULL;
 
     return firstOperator;
 }
@@ -84,29 +98,52 @@ node_t* getFunction (tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
         return NULL;
     }
 
-    node_t* funcNode = nodeArr[*curNodeNum]; //FIXME nametable
+    node_t* funcNode = nodeArr[*curNodeNum];
+    const char* funcName = (funcNode->value).id.identifierName;
+
+    identifierInfo* funcId = findIdInAllScopes(tree, funcName);
+    if (!funcId && strcmp(funcName, MAIN_FUNCTION)) {
+        printf("ERROR! No previous declaration for func \"%s\".\n", funcName);
+        tree->errorCode |= treeNameTableError;
+        return NULL;
+    }
     (*curNodeNum)++;
 
+    size_t numOfFuncParamsExpected = 0;
+    if (funcId) {
+        numOfFuncParamsExpected = funcId->idInfo.funcInfo.paramCount;
+        funcId->idInfo.funcInfo.haveBody = 1;
+    }
+
+    size_t curNumOfParams = 0;
+
     CHECK_THE_NODE_IS_(opBRACK_ON);
+    enterNewScope(tree);
 
     node_t* funcParam = NULL;
     if (NODE_IS_ID) {
-        funcParam = (nodeArr[*curNodeNum]); //FIXME nametable
-        (*curNodeNum)++;
+        funcParam = getFuncParam (tree, nodeArr, curNodeNum);
+        curNumOfParams++;
     }
 
 
     while(NODE_IS_OP_(opCOMMA)) {
-
+        node_t* nodeComma = (nodeArr[*curNodeNum]);
         (*curNodeNum)++;
-        node_t* secondParam = nodeArr[*curNodeNum]; //FIXME nametable
 
-        node_t* nodeComma = (nodeArr[*curNodeNum - 1]);
+        node_t* secondParam = getFuncParam (tree, nodeArr, curNodeNum);
+        curNumOfParams++;
+
         *nodeLeft(nodeComma) = funcParam;
         *nodeRight(nodeComma) = secondParam;
 
-        (*curNodeNum)++; //FIXME
         funcParam = nodeComma;
+    }
+
+    if (numOfFuncParamsExpected != curNumOfParams) {
+        printf("Error! Incorrect number of func params of func \"%s\".\n", funcName);
+        syntaxError(tree, nodeArr, curNodeNum, __func__);
+        return NULL;
     }
 
     *nodeLeft(funcNode) = funcParam;
@@ -114,6 +151,7 @@ node_t* getFunction (tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
     CHECK_THE_NODE_IS_(opBRACK_OFF);
 
     *nodeRight(funcNode) = getOperator(tree, nodeArr, curNodeNum);
+    exitScope(tree);
 
     return funcNode;
 }
@@ -142,6 +180,8 @@ node_t* getOperator (tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
                 return nodeArr[*curNodeNum];
             case opUNITED_ON:
                 return getOpUnited(tree, nodeArr, curNodeNum);
+            case opINIT:
+                return getOpInit(tree, nodeArr, curNodeNum);
             case opUNKNOWN:
             case opADD:
             case opSUB:
@@ -218,7 +258,7 @@ node_t* getOpInOrOut(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
 
     CHECK_THE_NODE_IS_(opQUOTES);
 
-    *nodeLeft(newNode) = getVarIDNode(tree, nodeArr, curNodeNum); //FIXME
+    *nodeLeft(newNode) = getVarIDNode(tree, nodeArr, curNodeNum);
 
     CHECK_THE_NODE_IS_(opQUOTES);
     CHECK_THE_NODE_IS_(opSEPARATOR);
@@ -266,13 +306,11 @@ node_t* getOpUnited(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
         }
     }
 
+    enterNewScope(tree);
+
     node_t* firstOperator = NULL;
-    //if (NODE_IS_OP)
-        firstOperator = getOperator(tree, nodeArr, curNodeNum);
-    /*else {
-        syntaxError(tree, nodeArr, curNodeNum, __func__);
-        return NULL;
-    }*/
+
+    firstOperator = getOperator(tree, nodeArr, curNodeNum);
 
 
     while (!(NODE_IS_OP_(opUNITED_OFF))) {
@@ -289,6 +327,8 @@ node_t* getOpUnited(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
 
     CHECK_THE_NODE_IS_(opUNITED_OFF);
     CHECK_THE_NODE_IS_(opSEPARATOR);
+
+    exitScope(tree);
 
     return firstOperator;
 }
@@ -320,31 +360,54 @@ node_t* getCall(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
         return NULL;
 
     node_t* funcNode = nodeArr[*curNodeNum];
+    const char* funcName = (funcNode->value).id.identifierName;
+
+    identifierInfo* funcInfo = findIdInAllScopes(tree, funcName);
+
+    if ((!funcInfo) || (funcInfo->idType != idFUNC)) {
+        printf("Undeclared function: %s\n", funcName);
+        syntaxError(tree, nodeArr, curNodeNum, __func__);
+        return NULL;
+    }
+
+    size_t numOfFuncParams = funcInfo->idInfo.funcInfo.paramCount;
+
     (*curNodeNum)++;
 
     CHECK_THE_NODE_IS_(opBRACK_ON);
 
     node_t* funcParam = NULL;
-    if (NODE_IS_ID)
-        funcParam = getVarIDNode(tree, nodeArr, curNodeNum); //FIXME nametable
+    size_t numOfCallParams = 0;
+
+    if (NODE_IS_ID) {
+        funcParam = getVarIDNode(tree, nodeArr, curNodeNum);
+        numOfCallParams++;
+    }
 
     while(NODE_IS_OP_(opCOMMA)) {
 
         (*curNodeNum)++;
-        node_t* secondParam = getVarIDNode(tree, nodeArr, curNodeNum); //FIXME nametable
+        node_t* secondParam = getVarIDNode(tree, nodeArr, curNodeNum);
 
         node_t* nodeComma = (nodeArr[*curNodeNum - 2]);
         *nodeLeft(nodeComma) = funcParam;
         *nodeRight(nodeComma) = secondParam;
 
-        //(*curNodeNum)++; //FIXME
         funcParam = nodeComma;
+        numOfCallParams++;
     }
 
     *nodeLeft(funcNode) = funcParam;
 
     CHECK_THE_NODE_IS_(opBRACK_OFF);
     CHECK_THE_NODE_IS_(opSEPARATOR);
+
+    if (numOfCallParams != numOfFuncParams) {
+        printf("Error! Incorrect number of func params of func \"%s\".\n", funcName);
+        syntaxError(tree, nodeArr, curNodeNum, __func__);
+        return NULL;
+    }
+
 
     return funcNode;
 }
@@ -478,20 +541,170 @@ node_t* getSQRTnode(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
     return sqrtNode;
 }
 
-node_t* getVarIDNode (tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
+node_t* getVarIDNode(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
     assert(tree);
     assert(nodeArr);
     assert(curNodeNum);
 
+    if (tree->errorCode)
+        return NULL;
+
     node_t* newNode = nodeArr[*curNodeNum];
+    const char* varName = (newNode->value).id.identifierName;
+
+    identifierInfo* idInfo = findIdInAllScopes(tree, varName);
+    if (!idInfo) {
+        printf("Undeclared identifier: %s\n", varName);
+        syntaxError(tree, nodeArr, curNodeNum, __func__);
+        return NULL;
+    }
 
     (*curNodeNum)++;
-
     return newNode;
 }
 
-//getFuncIDNode //NOTE
-//getVarIDNode  //NOTE
+node_t* getOpInit(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
+    assert(tree);
+    assert(nodeArr);
+    assert(curNodeNum);
 
+    if (tree->errorCode)
+        return NULL;
 
-//NOTE skip comments
+    (*curNodeNum)++;
+
+     if (!NODE_IS_ID) {
+        syntaxError(tree, nodeArr, curNodeNum, __func__);
+        return NULL;
+    }
+
+    node_t* idNode = nodeArr[*curNodeNum];
+    const char* idName = (idNode->value).id.identifierName;
+
+    if (findIdInTable ((tree->nameTableStack->data)[(tree->nameTableStack->size) - 1], idName)) {
+        printf("Error! Redeclaration of identifier \"%s\".\n", idName);
+        syntaxError(tree, nodeArr, curNodeNum, __func__);
+        return NULL;
+    };
+
+    identifierInfo* newId = addIdToCurrentScope(tree, idName, idVAR);
+
+    if (!newId) {
+        printf("Failed to add identifier %s to name table\n", idName);
+        tree->errorCode |= treeNameTableError;
+        return NULL;
+    }
+
+    (*curNodeNum)++;
+
+    if (!NODE_IS_OP_(opASSIGN)) {
+        syntaxError(tree, nodeArr, curNodeNum, __func__);
+        return NULL;
+    }
+
+    node_t* assignNode = nodeArr[*curNodeNum];
+    (*curNodeNum)++;
+
+    *nodeLeft(assignNode) = idNode;
+    *nodeRight(assignNode) = getExpressionNode(tree, nodeArr, curNodeNum);
+
+    CHECK_THE_NODE_IS_(opSEPARATOR);
+
+    return assignNode;
+}
+
+int getFunctionsDeclarations(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
+    assert(tree);
+    assert(nodeArr);
+    assert(curNodeNum);
+
+    if (tree->errorCode)
+        return 1;
+
+    (*curNodeNum)++;
+
+    if (!NODE_IS_ID) {
+        syntaxError(tree, nodeArr, curNodeNum, __func__);
+        return 1;
+    }
+
+    node_t* funcNode = nodeArr[*curNodeNum];
+    const char* funcName = (funcNode->value).id.identifierName;
+
+    identifierInfo* newFunc = addIdToCurrentScope(tree, funcName, idFUNC);
+
+    if (!newFunc) {
+        printf("Failed to add identifier %s to name table\n", funcName);
+        tree->errorCode |= treeNameTableError;
+        return 1;
+    }
+
+    (*curNodeNum)++;
+    CHECK_THE_NODE_IS_(opBRACK_ON);
+
+    size_t numOfParams = 0;
+
+    if (NODE_IS_ID) {
+        numOfParams++;
+        (*curNodeNum)++;
+    }
+
+    while(NODE_IS_OP_(opCOMMA)) {
+        (*curNodeNum)++;
+
+        if (NODE_IS_ID) {
+            numOfParams++;
+            (*curNodeNum)++;
+        }
+        else {
+            syntaxError(tree, nodeArr, curNodeNum, __func__);
+            return 1;
+        }
+    }
+
+    newFunc->idInfo.funcInfo.paramCount = numOfParams;
+
+    CHECK_THE_NODE_IS_(opBRACK_OFF);
+    CHECK_THE_NODE_IS_(opSEPARATOR);
+
+    return 0;
+}
+
+node_t* getFuncParam (tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
+    assert(tree);
+    assert(nodeArr);
+    assert(curNodeNum);
+
+    node_t* paramNode = nodeArr[*curNodeNum];
+    const char* paramName = paramNode->value.id.identifierName;
+
+    identifierInfo* paramId = addIdToCurrentScope(tree, paramName, idVAR);
+    if (!paramId) {
+        printf("Failed to add parameter %s to name table\n", paramName);
+        tree->errorCode |= treeNameTableError;
+        exitScope(tree);
+        return NULL;
+    }
+
+    (*curNodeNum)++;
+
+    return paramNode;
+}
+
+int checkAllFunctionsHaveBodies (tree_t* tree) {
+    assert(tree);
+
+    int funcsWithoutBodies = 0;
+
+    nameTable_t* globalTable = tree->nameTableStack->data[0];
+    size_t globalTableSize = globalTable->size;
+
+    for (size_t curId = 0; curId < globalTableSize; curId++)
+        if ((globalTable->idArray)[curId].idType == idFUNC)
+            if ((globalTable->idArray)[curId].idInfo.funcInfo.haveBody == 0) {
+                funcsWithoutBodies++;
+                printf("Error! undefined reference to func `%s'\n", (globalTable->idArray)[curId].identifierName);
+            }
+
+    return funcsWithoutBodies;
+}

@@ -1,0 +1,1562 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF7B768172B в функции main() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp на строке 21. Попытка прочесть данные по адресу 0x0000000000000010 в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF7B7758050 (64-bit), Flags: Cmdre0, Thread: 0xAB4 (Main), GetLastError(): 2 (РќРµ СѓРґР°РµС‚СЃСЏ РЅР°Р№С‚Рё СѓРєР°Р·Р°РЅРЅС‹Р№ С„Р°Р№Р»), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF7B768172B in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:21:
+
+     19:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     20: 
+=>   21:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+     22: 
+     23:     if (programTree.rootNode)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 10 2025 20:01:17, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 10 2025 20:01:45
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF7B768172B в функции main() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp на строке 21. Попытка прочесть данные по адресу 0x0000000000000010 в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF7B7758050 (64-bit), Flags: Cmdre0, Thread: 0xAB4 (Main), GetLastError(): 2 (РќРµ СѓРґР°РµС‚СЃСЏ РЅР°Р№С‚Рё СѓРєР°Р·Р°РЅРЅС‹Р№ С„Р°Р№Р»), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF7B768172B in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:21:
+
+     19:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     20: 
+=>   21:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+     22: 
+     23:     if (programTree.rootNode)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 10 2025 20:01:17, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 10 2025 20:01:45
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF7660D172B в функции main() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp на строке 21. Попытка прочесть данные по адресу 0x0000000000000010 в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF7661A8050 (64-bit), Flags: Cmdre0, Thread: 0x68A8 (Main), GetLastError(): 2 (РќРµ СѓРґР°РµС‚СЃСЏ РЅР°Р№С‚Рё СѓРєР°Р·Р°РЅРЅС‹Р№ С„Р°Р№Р»), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF7660D172B in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:21:
+
+     19:     struct lexAnalysisResult* lexResult = lexicalAnalysis("../../program.txt");
+     20: 
+=>   21:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+     22: 
+     23:     if (programTree.rootNode)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 10 2025 20:03:10, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 10 2025 20:03:19
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF7660D172B в функции main() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp на строке 21. Попытка прочесть данные по адресу 0x0000000000000010 в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF7661A8050 (64-bit), Flags: Cmdre0, Thread: 0x68A8 (Main), GetLastError(): 2 (РќРµ СѓРґР°РµС‚СЃСЏ РЅР°Р№С‚Рё СѓРєР°Р·Р°РЅРЅС‹Р№ С„Р°Р№Р»), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF7660D172B in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:21:
+
+     19:     struct lexAnalysisResult* lexResult = lexicalAnalysis("../../program.txt");
+     20: 
+=>   21:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+     22: 
+     23:     if (programTree.rootNode)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 10 2025 20:03:10, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 10 2025 20:03:19
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF7660D172B в функции main() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp на строке 21. Попытка прочесть данные по адресу 0x0000000000000010 в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF7661A8050 (64-bit), Flags: Cmdre0, Thread: 0x4AE0 (Main), GetLastError(): 2 (РќРµ СѓРґР°РµС‚СЃСЏ РЅР°Р№С‚Рё СѓРєР°Р·Р°РЅРЅС‹Р№ С„Р°Р№Р»), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF7660D172B in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:21:
+
+     19:     struct lexAnalysisResult* lexResult = lexicalAnalysis("../../program.txt");
+     20: 
+=>   21:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+     22: 
+     23:     if (programTree.rootNode)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 10 2025 20:03:10, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 10 2025 20:03:49
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF7660D172B в функции main() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp на строке 21. Попытка прочесть данные по адресу 0x0000000000000010 в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF7661A8050 (64-bit), Flags: Cmdre0, Thread: 0x4AE0 (Main), GetLastError(): 2 (РќРµ СѓРґР°РµС‚СЃСЏ РЅР°Р№С‚Рё СѓРєР°Р·Р°РЅРЅС‹Р№ С„Р°Р№Р»), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF7660D172B in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:21:
+
+     19:     struct lexAnalysisResult* lexResult = lexicalAnalysis("../../program.txt");
+     20: 
+=>   21:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+     22: 
+     23:     if (programTree.rootNode)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 10 2025 20:03:10, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 10 2025 20:03:49
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF7660D172B в функции main() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp на строке 21. Попытка прочесть данные по адресу 0x0000000000000010 в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF7661A8050 (64-bit), Flags: Cmdre0, Thread: 0x70BC (Main), GetLastError(): 2 (РќРµ СѓРґР°РµС‚СЃСЏ РЅР°Р№С‚Рё СѓРєР°Р·Р°РЅРЅС‹Р№ С„Р°Р№Р»), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF7660D172B in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:21:
+
+     19:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     20: 
+=>   21:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+     22: 
+     23:     if (programTree.rootNode)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 10 2025 20:03:10, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 10 2025 20:04:21
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF7660D172B в функции main() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp на строке 21. Попытка прочесть данные по адресу 0x0000000000000010 в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF7661A8050 (64-bit), Flags: Cmdre0, Thread: 0x70BC (Main), GetLastError(): 2 (РќРµ СѓРґР°РµС‚СЃСЏ РЅР°Р№С‚Рё СѓРєР°Р·Р°РЅРЅС‹Р№ С„Р°Р№Р»), errno: 2 (No such file or directory), _doserrno: 2 (No such file or directory). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF7660D172B in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:21:
+
+     19:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     20: 
+=>   21:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+     22: 
+     23:     if (programTree.rootNode)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 10 2025 20:03:10, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 10 2025 20:04:21
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF7EEFF9050 (64-bit), Flags: Cmdre0, Thread: 0x6570 (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚), errno: 22 (Invalid argument), _doserrno: 3 (No such process). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF7EEF692BC in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: (anonymous namespace)::TX::_txError() at C:/Users/Admin/Downloads/CodeBlocks/TX/TXLib.h:11090
+# 1 0x00007FF7EEF69824 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: (anonymous namespace)::TX::_txOnSignal() at C:/Users/Admin/Downloads/CodeBlocks/TX/TXLib.h:11171
+# 2 0x00007FF8F3E01989 in C:\WINDOWS\System32\ucrtbase.dll: raise()
+# 3 0x00007FF8F3DE4AB1 in C:\WINDOWS\System32\ucrtbase.dll: abort()
+# 4 0x00007FF8F3DA1049 in C:\WINDOWS\System32\ucrtbase.dll: isctype_l()
+# 5 0x00007FF8F3E02AE1 in C:\WINDOWS\System32\ucrtbase.dll: assert()
+
+# 6 0x00007FF7EEF25D34 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: fprintfNode() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/saveTreeInFile.cpp:33:
+
+     31: 
+     32: void fprintfNode(node_t* node, FILE* file) {
+=>   33:     assert(node);
+     34:     assert(file);
+     35: 
+
+# 7 0x00007FF7EEF25C8A in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: saveTreeInFile() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/saveTreeInFile.cpp:21:
+
+     19:     }
+     20: 
+=>   21:     fprintfNode(*treeRoot(tree), saveFile);
+     22: 
+     23:     if (fclose(saveFile) != 0) {
+
+# 8 0x00007FF7EEF2177D in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:26:
+
+     24:         treeDump (&programTree, &dumpInfo, "programTree");
+     25: 
+=>   26:     saveTreeInFile(&programTree, "ast.txt");
+     27: 
+     28:     if (programTree.rootNode)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 11 2025 18:26:47, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 11 2025 18:32:41
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF6BAF230B6 в функции getFunction() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp на строке 106. Попытка прочесть данные по адресу 0x0000000000000020 в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF6BAFF9050 (64-bit), Flags: Cmdre0, Thread: 0x5CEC (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚), errno: 22 (Invalid argument), _doserrno: 3 (No such process). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF6BAF230B6 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getFunction() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:106:
+
+    104:     (*curNodeNum)++;
+    105: 
+=>  106:     size_t numOfFuncParamsExpected = funcId->paramCount;
+    107:     size_t curNumOfParams = 0;
+    108: 
+
+# 1 0x00007FF6BAF22E65 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getProgramTree() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:60:
+
+     58:     node_t* firstOperator = NULL;
+     59:     if (NODE_IS_ID)
+=>   60:         firstOperator = getFunction(tree, nodeArr, curNodeNum);
+     61:     else {
+     62:         syntaxError(tree, nodeArr, curNodeNum, __func__);
+
+# 2 0x00007FF6BAF21746 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:21:
+
+     19:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     20: 
+=>   21:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+     22: 
+     23:     if (programTree.rootNode)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 11 2025 18:34:25, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 11 2025 18:34:34
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF6BAF230B6 в функции getFunction() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp на строке 106. Попытка прочесть данные по адресу 0x0000000000000020 в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF6BAFF9050 (64-bit), Flags: Cmdre0, Thread: 0x5CEC (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚), errno: 22 (Invalid argument), _doserrno: 3 (No such process). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF6BAF230B6 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getFunction() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:106:
+
+    104:     (*curNodeNum)++;
+    105: 
+=>  106:     size_t numOfFuncParamsExpected = funcId->paramCount;
+    107:     size_t curNumOfParams = 0;
+    108: 
+
+# 1 0x00007FF6BAF22E65 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getProgramTree() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:60:
+
+     58:     node_t* firstOperator = NULL;
+     59:     if (NODE_IS_ID)
+=>   60:         firstOperator = getFunction(tree, nodeArr, curNodeNum);
+     61:     else {
+     62:         syntaxError(tree, nodeArr, curNodeNum, __func__);
+
+# 2 0x00007FF6BAF21746 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:21:
+
+     19:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     20: 
+=>   21:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+     22: 
+     23:     if (programTree.rootNode)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 11 2025 18:34:25, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 11 2025 18:34:34
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF6BAF230B6 в функции getFunction() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp на строке 106. Попытка прочесть данные по адресу 0x0000000000000020 в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF6BAFF9050 (64-bit), Flags: Cmdre0, Thread: 0x5F68 (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚), errno: 22 (Invalid argument), _doserrno: 3 (No such process). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF6BAF230B6 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getFunction() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:106:
+
+    104:     (*curNodeNum)++;
+    105: 
+=>  106:     size_t numOfFuncParamsExpected = funcId->paramCount;
+    107:     size_t curNumOfParams = 0;
+    108: 
+
+# 1 0x00007FF6BAF22E65 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getProgramTree() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:60:
+
+     58:     node_t* firstOperator = NULL;
+     59:     if (NODE_IS_ID)
+=>   60:         firstOperator = getFunction(tree, nodeArr, curNodeNum);
+     61:     else {
+     62:         syntaxError(tree, nodeArr, curNodeNum, __func__);
+
+# 2 0x00007FF6BAF21746 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:21:
+
+     19:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     20: 
+=>   21:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+     22: 
+     23:     if (programTree.rootNode)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 11 2025 18:34:25, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 11 2025 18:36:14
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF6BAF230B6 в функции getFunction() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp на строке 106. Попытка прочесть данные по адресу 0x0000000000000020 в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF6BAFF9050 (64-bit), Flags: Cmdre0, Thread: 0x5F68 (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚), errno: 22 (Invalid argument), _doserrno: 3 (No such process). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF6BAF230B6 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getFunction() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:106:
+
+    104:     (*curNodeNum)++;
+    105: 
+=>  106:     size_t numOfFuncParamsExpected = funcId->paramCount;
+    107:     size_t curNumOfParams = 0;
+    108: 
+
+# 1 0x00007FF6BAF22E65 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getProgramTree() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:60:
+
+     58:     node_t* firstOperator = NULL;
+     59:     if (NODE_IS_ID)
+=>   60:         firstOperator = getFunction(tree, nodeArr, curNodeNum);
+     61:     else {
+     62:         syntaxError(tree, nodeArr, curNodeNum, __func__);
+
+# 2 0x00007FF6BAF21746 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:21:
+
+     19:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     20: 
+=>   21:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+     22: 
+     23:     if (programTree.rootNode)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 11 2025 18:34:25, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 11 2025 18:36:14
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF645C05AD8 в функции getFunctionsDeclarations() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp на строке 632. Попытка прочесть данные по адресу 0x0000000000000010 в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF645CD9050 (64-bit), Flags: Cmdre0, Thread: 0x6EEC (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚), errno: 22 (Invalid argument), _doserrno: 3 (No such process). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF645C05AD8 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getFunctionsDeclarations() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:632:
+
+    630:         printf("[%d] == {%d} \"%s\"\n", i, tree->nameTableStack->data[0]->idArray->identifierHash, tree->nameTableStack->data[0]->idArray->identifierName);
+    631:     }
+=>  632:     for(int i = 0; i < tree->nameTableStack->data[1]->capacity; i++) {
+    633:         printf("[%d] == {%d} \"%s\"\n", i, tree->nameTableStack->data[0]->idArray->identifierHash, tree->nameTableStack->data[0]->idArray->identifierName);
+    634:     }
+
+# 1 0x00007FF645C02FF2 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getProgramTree() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:54:
+
+     52: 
+     53:     while (NODE_IS_OP_(opINIT)) {
+=>   54:         if (getFunctionsDeclarations(tree, nodeArr, curNodeNum))
+     55:             return NULL;
+     56:     }
+
+# 2 0x00007FF645C01746 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:21:
+
+     19:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     20: 
+=>   21:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+     22: 
+     23:     if (programTree.rootNode)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 11 2025 20:45:33, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 11 2025 20:45:38
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF645C05AD8 в функции getFunctionsDeclarations() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp на строке 632. Попытка прочесть данные по адресу 0x0000000000000010 в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF645CD9050 (64-bit), Flags: Cmdre0, Thread: 0x6EEC (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚), errno: 22 (Invalid argument), _doserrno: 3 (No such process). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF645C05AD8 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getFunctionsDeclarations() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:632:
+
+    630:         printf("[%d] == {%d} \"%s\"\n", i, tree->nameTableStack->data[0]->idArray->identifierHash, tree->nameTableStack->data[0]->idArray->identifierName);
+    631:     }
+=>  632:     for(int i = 0; i < tree->nameTableStack->data[1]->capacity; i++) {
+    633:         printf("[%d] == {%d} \"%s\"\n", i, tree->nameTableStack->data[0]->idArray->identifierHash, tree->nameTableStack->data[0]->idArray->identifierName);
+    634:     }
+
+# 1 0x00007FF645C02FF2 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getProgramTree() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:54:
+
+     52: 
+     53:     while (NODE_IS_OP_(opINIT)) {
+=>   54:         if (getFunctionsDeclarations(tree, nodeArr, curNodeNum))
+     55:             return NULL;
+     56:     }
+
+# 2 0x00007FF645C01746 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:21:
+
+     19:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     20: 
+=>   21:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+     22: 
+     23:     if (programTree.rootNode)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 11 2025 20:45:33, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 11 2025 20:45:39
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF645C02A4F в функции fprintfLexAnalysisDump() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp на строке 266. Попытка прочесть данные по адресу 0x000057C7A9D6D165 в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF645CD9050 (64-bit), Flags: Cmdre0, Thread: 0x5890 (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚), errno: 22 (Invalid argument), _doserrno: 3 (No such process). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF645C02A4F in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: fprintfLexAnalysisDump() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp:266:
+
+    264:     for (size_t i = 0; i < numOfNodes; i++) {
+    265:         fprintf (dumpFile, "[%lld] == ", i);
+=>  266:         switch ((nodeArray[i])->type) {
+    267:             case typeOperator:
+    268:                 fprintf(dumpFile, "operator {%d}\n", ((nodeArray[i])->value).opCode);
+
+# 1 0x00007FF645C018E5 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp:38:
+
+     36: 
+     37:         FILE* dumpFile = fopen("lexDump.txt", "a");
+=>   38:         fprintfLexAnalysisDump (dumpFile, bufPos, nodeArray, numOfNodes);
+     39:         fclose(dumpFile);
+     40: 
+
+# 2 0x00007FF645C01723 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:19:
+
+     17:     dumpInfo.nameOfGraphFile = "frontend/DUMPS/graph.txt";
+     18: 
+=>   19:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     20: 
+     21:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 11 2025 20:45:33, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 11 2025 20:47:11
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF645C02A4F в функции fprintfLexAnalysisDump() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp на строке 266. Попытка прочесть данные по адресу 0x000057C7A9D6D165 в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF645CD9050 (64-bit), Flags: Cmdre0, Thread: 0x5890 (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚), errno: 22 (Invalid argument), _doserrno: 3 (No such process). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF645C02A4F in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: fprintfLexAnalysisDump() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp:266:
+
+    264:     for (size_t i = 0; i < numOfNodes; i++) {
+    265:         fprintf (dumpFile, "[%lld] == ", i);
+=>  266:         switch ((nodeArray[i])->type) {
+    267:             case typeOperator:
+    268:                 fprintf(dumpFile, "operator {%d}\n", ((nodeArray[i])->value).opCode);
+
+# 1 0x00007FF645C018E5 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp:38:
+
+     36: 
+     37:         FILE* dumpFile = fopen("lexDump.txt", "a");
+=>   38:         fprintfLexAnalysisDump (dumpFile, bufPos, nodeArray, numOfNodes);
+     39:         fclose(dumpFile);
+     40: 
+
+# 2 0x00007FF645C01723 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:19:
+
+     17:     dumpInfo.nameOfGraphFile = "frontend/DUMPS/graph.txt";
+     18: 
+=>   19:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     20: 
+     21:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 11 2025 20:45:33, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 11 2025 20:47:11
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: #2: РљСѓС‡Р° Р±С‹Р»Р° РїРѕРІСЂРµР¶РґРµРЅР°. (0xC0000374) при выполнении кода по адресу 0x00007FF8F6237885 в функции RtlpMuiRegCreateRegistryInfo() в модуле C:\WINDOWS\SYSTEM32\ntdll.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Ой, всё (EXCEPTION_NONCONTINUABLE).
+
+#3: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF645CD9050 (64-bit), Flags: Cmdre0, Thread: 0x5890 (Main), errno: 22 (Invalid argument), _doserrno: 3 (No such process). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF8F6237885 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlpMuiRegCreateRegistryInfo()
+# 2 0x00007FF8F6146742 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlSetProcessPreferredUILanguages()
+# 3 0x00007FF8F623D9AA in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlLengthCurrentClearRunForwardEx()
+# 4 0x00007FF8F613ED2B in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlAllocateHeap()
+# 5 0x00007FF8F6142258 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlAllocateHeap()
+# 6 0x00007FF8F6199300 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlFreeHeap()
+# 7 0x00007FF82D9ABEE2 in C:\Users\Admin\Downloads\CodeBlocks\TX\Windows\DbgHelp64.dll: ImageRvaToVa()
+# 8 0x00007FF82D9C432F in C:\Users\Admin\Downloads\CodeBlocks\TX\Windows\DbgHelp64.dll: ImagehlpApiVersionEx()
+# 9 0x00007FF82D9B3A35 in C:\Users\Admin\Downloads\CodeBlocks\TX\Windows\DbgHelp64.dll: SymInitialize()
+#10 0x00007FF82D9B3B6F in C:\Users\Admin\Downloads\CodeBlocks\TX\Windows\DbgHelp64.dll: SymCleanup()
+#17 0x00007FF8F3DF156F in C:\WINDOWS\System32\ucrtbase.dll: _C_specific_handler()
+#18 0x00007FF8F62863FF in C:\WINDOWS\SYSTEM32\ntdll.dll: _chkstk()
+#19 0x00007FF8F6132327 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlLocateExtendedFeature()
+#20 0x00007FF8F6285D3E in C:\WINDOWS\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#26 0x00007FF8F516E8D7 in C:\WINDOWS\System32\KERNEL32.dll: BaseThreadInitThunk()
+#27 0x00007FF8F61AC53C in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+TXLib печалится: Нет информации об исходных файлах. Вы не забыли опцию -g при компиляции?
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txSymGetFromAddr(void*, Win32::SYMBOL_INFO**, Win32::IMAGEHLP_LINE64**, const char**, const char**, int) at C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h:12457:
+
+  12455: $   if (!addr && process)
+  12456:         {
+=>12457: $       _TX_CALL (LIB_::SymCleanup, (process));
+  12458: 
+  12459: $       process = NULL;
+
+# 1 in void {anonymous}::TX::_txCleanup() at C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h:9232:
+
+   9230: $   _flushall();
+   9231: 
+=> 9232: $   _txSymGetFromAddr (NULL);
+   9233: 
+   9234:     // That's all, folks
+
+# 2 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h:12748:
+
+  12746:                                  what);
+  12747:     if (stkTrace)
+=>12748:         {$ fprintf (stderr, "\n" "--------------------------------------------------\n"
+  12749:                                  "Стек вызовов:\n\n"
+  12750:                                  "%s\n\n"
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 11 2025 20:45:33, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 11 2025 20:47:12
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: #2: РљСѓС‡Р° Р±С‹Р»Р° РїРѕРІСЂРµР¶РґРµРЅР°. (0xC0000374) при выполнении кода по адресу 0x00007FF8F6237885 в функции RtlpMuiRegCreateRegistryInfo() в модуле C:\WINDOWS\SYSTEM32\ntdll.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Ой, всё (EXCEPTION_NONCONTINUABLE).
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#4: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF645CD9050 (64-bit), Flags: Cmdre0, Thread: 0x5890 (Main), errno: 22 (Invalid argument), _doserrno: 3 (No such process). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF8F6237885 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlpMuiRegCreateRegistryInfo()
+# 2 0x00007FF8F6146742 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlSetProcessPreferredUILanguages()
+# 3 0x00007FF8F623D9AA in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlLengthCurrentClearRunForwardEx()
+# 4 0x00007FF8F613ED2B in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlAllocateHeap()
+# 5 0x00007FF8F6142258 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlAllocateHeap()
+# 6 0x00007FF8F6199300 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlFreeHeap()
+# 7 0x00007FF82D9ABEE2 in C:\Users\Admin\Downloads\CodeBlocks\TX\Windows\DbgHelp64.dll: ImageRvaToVa()
+# 8 0x00007FF82D9C432F in C:\Users\Admin\Downloads\CodeBlocks\TX\Windows\DbgHelp64.dll: ImagehlpApiVersionEx()
+# 9 0x00007FF82D9B3A35 in C:\Users\Admin\Downloads\CodeBlocks\TX\Windows\DbgHelp64.dll: SymInitialize()
+#10 0x00007FF82D9B3B6F in C:\Users\Admin\Downloads\CodeBlocks\TX\Windows\DbgHelp64.dll: SymCleanup()
+#17 0x00007FF8F3DF156F in C:\WINDOWS\System32\ucrtbase.dll: _C_specific_handler()
+#18 0x00007FF8F62863FF in C:\WINDOWS\SYSTEM32\ntdll.dll: _chkstk()
+#19 0x00007FF8F6132327 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlLocateExtendedFeature()
+#20 0x00007FF8F6285D3E in C:\WINDOWS\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#26 0x00007FF8F516E8D7 in C:\WINDOWS\System32\KERNEL32.dll: BaseThreadInitThunk()
+#27 0x00007FF8F61AC53C in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+TXLib печалится: Нет информации об исходных файлах. Вы не забыли опцию -g при компиляции?
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txSymGetFromAddr(void*, Win32::SYMBOL_INFO**, Win32::IMAGEHLP_LINE64**, const char**, const char**, int) at C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h:12457:
+
+  12455: $   if (!addr && process)
+  12456:         {
+=>12457: $       _TX_CALL (LIB_::SymCleanup, (process));
+  12458: 
+  12459: $       process = NULL;
+
+# 1 in void {anonymous}::TX::_txCleanup() at C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h:9232:
+
+   9230: $   _flushall();
+   9231: 
+=> 9232: $   _txSymGetFromAddr (NULL);
+   9233: 
+   9234:     // That's all, folks
+
+# 2 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h:12748:
+
+  12746:                                  what);
+  12747:     if (stkTrace)
+=>12748:         {$ fprintf (stderr, "\n" "--------------------------------------------------\n"
+  12749:                                  "Стек вызовов:\n\n"
+  12750:                                  "%s\n\n"
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 11 2025 20:45:33, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 11 2025 20:47:12
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF7E1FE2A4F в функции fprintfLexAnalysisDump() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp на строке 266. Попытка прочесть данные по адресу 0x00006E9ED5F9BC6D в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF7E20B9050 (64-bit), Flags: Cmdre0, Thread: 0x3A30 (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚), errno: 22 (Invalid argument), _doserrno: 3 (No such process). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF7E1FE2A4F in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: fprintfLexAnalysisDump() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp:266:
+
+    264:     for (size_t i = 0; i < numOfNodes; i++) {
+    265:         fprintf (dumpFile, "[%lld] == ", i);
+=>  266:         switch ((nodeArray[i])->type) {
+    267:             case typeOperator:
+    268:                 fprintf(dumpFile, "operator {%d}\n", ((nodeArray[i])->value).opCode);
+
+# 1 0x00007FF7E1FE18E5 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp:38:
+
+     36: 
+     37:         FILE* dumpFile = fopen("lexDump.txt", "a");
+=>   38:         fprintfLexAnalysisDump (dumpFile, bufPos, nodeArray, numOfNodes);
+     39:         fclose(dumpFile);
+     40: 
+
+# 2 0x00007FF7E1FE1723 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:19:
+
+     17:     dumpInfo.nameOfGraphFile = "frontend/DUMPS/graph.txt";
+     18: 
+=>   19:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     20: 
+     21:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 11 2025 20:47:47, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 11 2025 20:47:53
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF7E1FE2A4F в функции fprintfLexAnalysisDump() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp на строке 266. Попытка прочесть данные по адресу 0x00006E9ED5F9BC6D в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF7E20B9050 (64-bit), Flags: Cmdre0, Thread: 0x3A30 (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚), errno: 22 (Invalid argument), _doserrno: 3 (No such process). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF7E1FE2A4F in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: fprintfLexAnalysisDump() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp:266:
+
+    264:     for (size_t i = 0; i < numOfNodes; i++) {
+    265:         fprintf (dumpFile, "[%lld] == ", i);
+=>  266:         switch ((nodeArray[i])->type) {
+    267:             case typeOperator:
+    268:                 fprintf(dumpFile, "operator {%d}\n", ((nodeArray[i])->value).opCode);
+
+# 1 0x00007FF7E1FE18E5 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp:38:
+
+     36: 
+     37:         FILE* dumpFile = fopen("lexDump.txt", "a");
+=>   38:         fprintfLexAnalysisDump (dumpFile, bufPos, nodeArray, numOfNodes);
+     39:         fclose(dumpFile);
+     40: 
+
+# 2 0x00007FF7E1FE1723 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:19:
+
+     17:     dumpInfo.nameOfGraphFile = "frontend/DUMPS/graph.txt";
+     18: 
+=>   19:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     20: 
+     21:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 11 2025 20:47:47, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 11 2025 20:47:53
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF7E1FE2A4F в функции fprintfLexAnalysisDump() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp на строке 266. Попытка прочесть данные по адресу 0x00006A44C73E5170 в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF7E20B9050 (64-bit), Flags: Cmdre0, Thread: 0x373C (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚), errno: 22 (Invalid argument), _doserrno: 3 (No such process). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF7E1FE2A4F in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: fprintfLexAnalysisDump() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp:266:
+
+    264:     for (size_t i = 0; i < numOfNodes; i++) {
+    265:         fprintf (dumpFile, "[%lld] == ", i);
+=>  266:         switch ((nodeArray[i])->type) {
+    267:             case typeOperator:
+    268:                 fprintf(dumpFile, "operator {%d}\n", ((nodeArray[i])->value).opCode);
+
+# 1 0x00007FF7E1FE18E5 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp:38:
+
+     36: 
+     37:         FILE* dumpFile = fopen("lexDump.txt", "a");
+=>   38:         fprintfLexAnalysisDump (dumpFile, bufPos, nodeArray, numOfNodes);
+     39:         fclose(dumpFile);
+     40: 
+
+# 2 0x00007FF7E1FE1723 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:19:
+
+     17:     dumpInfo.nameOfGraphFile = "frontend/DUMPS/graph.txt";
+     18: 
+=>   19:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     20: 
+     21:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 11 2025 20:47:47, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 11 2025 20:49:08
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF7E1FE2A4F в функции fprintfLexAnalysisDump() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp на строке 266. Попытка прочесть данные по адресу 0x00006A44C73E5170 в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF7E20B9050 (64-bit), Flags: Cmdre0, Thread: 0x373C (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚), errno: 22 (Invalid argument), _doserrno: 3 (No such process). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF7E1FE2A4F in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: fprintfLexAnalysisDump() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp:266:
+
+    264:     for (size_t i = 0; i < numOfNodes; i++) {
+    265:         fprintf (dumpFile, "[%lld] == ", i);
+=>  266:         switch ((nodeArray[i])->type) {
+    267:             case typeOperator:
+    268:                 fprintf(dumpFile, "operator {%d}\n", ((nodeArray[i])->value).opCode);
+
+# 1 0x00007FF7E1FE18E5 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp:38:
+
+     36: 
+     37:         FILE* dumpFile = fopen("lexDump.txt", "a");
+=>   38:         fprintfLexAnalysisDump (dumpFile, bufPos, nodeArray, numOfNodes);
+     39:         fclose(dumpFile);
+     40: 
+
+# 2 0x00007FF7E1FE1723 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:19:
+
+     17:     dumpInfo.nameOfGraphFile = "frontend/DUMPS/graph.txt";
+     18: 
+=>   19:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     20: 
+     21:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 11 2025 20:47:47, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 11 2025 20:49:08
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF7E1FE2A4F в функции fprintfLexAnalysisDump() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp на строке 266. Попытка прочесть данные по адресу 0xFFFFFFFFFFFFFFFF в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF7E20B9050 (64-bit), Flags: Cmdre0, Thread: 0x5C80 (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚), errno: 22 (Invalid argument), _doserrno: 3 (No such process). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF7E1FE2A4F in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: fprintfLexAnalysisDump() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp:266:
+
+    264:     for (size_t i = 0; i < numOfNodes; i++) {
+    265:         fprintf (dumpFile, "[%lld] == ", i);
+=>  266:         switch ((nodeArray[i])->type) {
+    267:             case typeOperator:
+    268:                 fprintf(dumpFile, "operator {%d}\n", ((nodeArray[i])->value).opCode);
+
+# 1 0x00007FF7E1FE18E5 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp:38:
+
+     36: 
+     37:         FILE* dumpFile = fopen("lexDump.txt", "a");
+=>   38:         fprintfLexAnalysisDump (dumpFile, bufPos, nodeArray, numOfNodes);
+     39:         fclose(dumpFile);
+     40: 
+
+# 2 0x00007FF7E1FE1723 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:19:
+
+     17:     dumpInfo.nameOfGraphFile = "frontend/DUMPS/graph.txt";
+     18: 
+=>   19:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     20: 
+     21:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 11 2025 20:47:47, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 11 2025 20:50:11
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF7E1FE2A4F в функции fprintfLexAnalysisDump() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp на строке 266. Попытка прочесть данные по адресу 0xFFFFFFFFFFFFFFFF в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF7E20B9050 (64-bit), Flags: Cmdre0, Thread: 0x5C80 (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚), errno: 22 (Invalid argument), _doserrno: 3 (No such process). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF7E1FE2A4F in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: fprintfLexAnalysisDump() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp:266:
+
+    264:     for (size_t i = 0; i < numOfNodes; i++) {
+    265:         fprintf (dumpFile, "[%lld] == ", i);
+=>  266:         switch ((nodeArray[i])->type) {
+    267:             case typeOperator:
+    268:                 fprintf(dumpFile, "operator {%d}\n", ((nodeArray[i])->value).opCode);
+
+# 1 0x00007FF7E1FE18E5 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp:38:
+
+     36: 
+     37:         FILE* dumpFile = fopen("lexDump.txt", "a");
+=>   38:         fprintfLexAnalysisDump (dumpFile, bufPos, nodeArray, numOfNodes);
+     39:         fclose(dumpFile);
+     40: 
+
+# 2 0x00007FF7E1FE1723 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:19:
+
+     17:     dumpInfo.nameOfGraphFile = "frontend/DUMPS/graph.txt";
+     18: 
+=>   19:     struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+     20: 
+     21:     programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 11 2025 20:47:47, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 11 2025 20:50:11
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: #2: РљСѓС‡Р° Р±С‹Р»Р° РїРѕРІСЂРµР¶РґРµРЅР°. (0xC0000374) при выполнении кода по адресу 0x00007FF8F6237885 в функции RtlpMuiRegCreateRegistryInfo() в модуле C:\WINDOWS\SYSTEM32\ntdll.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Ой, всё (EXCEPTION_NONCONTINUABLE).
+
+#3: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF7E20B9050 (64-bit), Flags: Cmdre0, Thread: 0x5C80 (Main), errno: 22 (Invalid argument), _doserrno: 3 (No such process). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF8F6237885 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlpMuiRegCreateRegistryInfo()
+# 2 0x00007FF8F6146742 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlSetProcessPreferredUILanguages()
+# 3 0x00007FF8F623D9AA in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlLengthCurrentClearRunForwardEx()
+# 4 0x00007FF8F613ED2B in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlAllocateHeap()
+# 5 0x00007FF8F6142258 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlAllocateHeap()
+# 6 0x00007FF8F6199300 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlFreeHeap()
+# 7 0x00007FF82D9ABEE2 in C:\Users\Admin\Downloads\CodeBlocks\TX\Windows\DbgHelp64.dll: ImageRvaToVa()
+# 8 0x00007FF82D9C432F in C:\Users\Admin\Downloads\CodeBlocks\TX\Windows\DbgHelp64.dll: ImagehlpApiVersionEx()
+# 9 0x00007FF82D9B3A35 in C:\Users\Admin\Downloads\CodeBlocks\TX\Windows\DbgHelp64.dll: SymInitialize()
+#10 0x00007FF82D9B3B6F in C:\Users\Admin\Downloads\CodeBlocks\TX\Windows\DbgHelp64.dll: SymCleanup()
+#17 0x00007FF8F3DF156F in C:\WINDOWS\System32\ucrtbase.dll: _C_specific_handler()
+#18 0x00007FF8F62863FF in C:\WINDOWS\SYSTEM32\ntdll.dll: _chkstk()
+#19 0x00007FF8F6132327 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlLocateExtendedFeature()
+#20 0x00007FF8F6285D3E in C:\WINDOWS\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#26 0x00007FF8F516E8D7 in C:\WINDOWS\System32\KERNEL32.dll: BaseThreadInitThunk()
+#27 0x00007FF8F61AC53C in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+TXLib печалится: Нет информации об исходных файлах. Вы не забыли опцию -g при компиляции?
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txSymGetFromAddr(void*, Win32::SYMBOL_INFO**, Win32::IMAGEHLP_LINE64**, const char**, const char**, int) at C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h:12457:
+
+  12455: $   if (!addr && process)
+  12456:         {
+=>12457: $       _TX_CALL (LIB_::SymCleanup, (process));
+  12458: 
+  12459: $       process = NULL;
+
+# 1 in void {anonymous}::TX::_txCleanup() at C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h:9232:
+
+   9230: $   _flushall();
+   9231: 
+=> 9232: $   _txSymGetFromAddr (NULL);
+   9233: 
+   9234:     // That's all, folks
+
+# 2 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h:12748:
+
+  12746:                                  what);
+  12747:     if (stkTrace)
+=>12748:         {$ fprintf (stderr, "\n" "--------------------------------------------------\n"
+  12749:                                  "Стек вызовов:\n\n"
+  12750:                                  "%s\n\n"
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 11 2025 20:47:47, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 11 2025 20:50:11
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: #2: РљСѓС‡Р° Р±С‹Р»Р° РїРѕРІСЂРµР¶РґРµРЅР°. (0xC0000374) при выполнении кода по адресу 0x00007FF8F6237885 в функции RtlpMuiRegCreateRegistryInfo() в модуле C:\WINDOWS\SYSTEM32\ntdll.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Ой, всё (EXCEPTION_NONCONTINUABLE).
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#4: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF7E20B9050 (64-bit), Flags: Cmdre0, Thread: 0x5C80 (Main), errno: 22 (Invalid argument), _doserrno: 3 (No such process). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF8F6237885 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlpMuiRegCreateRegistryInfo()
+# 2 0x00007FF8F6146742 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlSetProcessPreferredUILanguages()
+# 3 0x00007FF8F623D9AA in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlLengthCurrentClearRunForwardEx()
+# 4 0x00007FF8F613ED2B in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlAllocateHeap()
+# 5 0x00007FF8F6142258 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlAllocateHeap()
+# 6 0x00007FF8F6199300 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlFreeHeap()
+# 7 0x00007FF82D9ABEE2 in C:\Users\Admin\Downloads\CodeBlocks\TX\Windows\DbgHelp64.dll: ImageRvaToVa()
+# 8 0x00007FF82D9C432F in C:\Users\Admin\Downloads\CodeBlocks\TX\Windows\DbgHelp64.dll: ImagehlpApiVersionEx()
+# 9 0x00007FF82D9B3A35 in C:\Users\Admin\Downloads\CodeBlocks\TX\Windows\DbgHelp64.dll: SymInitialize()
+#10 0x00007FF82D9B3B6F in C:\Users\Admin\Downloads\CodeBlocks\TX\Windows\DbgHelp64.dll: SymCleanup()
+#17 0x00007FF8F3DF156F in C:\WINDOWS\System32\ucrtbase.dll: _C_specific_handler()
+#18 0x00007FF8F62863FF in C:\WINDOWS\SYSTEM32\ntdll.dll: _chkstk()
+#19 0x00007FF8F6132327 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlLocateExtendedFeature()
+#20 0x00007FF8F6285D3E in C:\WINDOWS\SYSTEM32\ntdll.dll: KiUserExceptionDispatcher()
+#26 0x00007FF8F516E8D7 in C:\WINDOWS\System32\KERNEL32.dll: BaseThreadInitThunk()
+#27 0x00007FF8F61AC53C in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlUserThreadStart()
+
+TXLib печалится: Нет информации об исходных файлах. Вы не забыли опцию -g при компиляции?
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txSymGetFromAddr(void*, Win32::SYMBOL_INFO**, Win32::IMAGEHLP_LINE64**, const char**, const char**, int) at C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h:12457:
+
+  12455: $   if (!addr && process)
+  12456:         {
+=>12457: $       _TX_CALL (LIB_::SymCleanup, (process));
+  12458: 
+  12459: $       process = NULL;
+
+# 1 in void {anonymous}::TX::_txCleanup() at C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h:9232:
+
+   9230: $   _flushall();
+   9231: 
+=> 9232: $   _txSymGetFromAddr (NULL);
+   9233: 
+   9234:     // That's all, folks
+
+# 2 in const char* {anonymous}::TX::_txProcessError(const char*, int, const char*, unsigned int, const char*, va_list) at C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h:12748:
+
+  12746:                                  what);
+  12747:     if (stkTrace)
+=>12748:         {$ fprintf (stderr, "\n" "--------------------------------------------------\n"
+  12749:                                  "Стек вызовов:\n\n"
+  12750:                                  "%s\n\n"
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 11 2025 20:47:47, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 11 2025 20:50:11
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF647299050 (64-bit), Flags: Cmdre0, Thread: 0x5AEC (Main), GetLastError(): 183 (РќРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р», С‚Р°Рє РєР°Рє РѕРЅ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF64720969C in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: (anonymous namespace)::TX::_txError() at C:/Users/Admin/Downloads/CodeBlocks/TX/TXLib.h:11090
+# 1 0x00007FF647209C04 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: (anonymous namespace)::TX::_txOnSignal() at C:/Users/Admin/Downloads/CodeBlocks/TX/TXLib.h:11171
+# 2 0x00007FF8F3E01989 in C:\WINDOWS\System32\ucrtbase.dll: raise()
+# 3 0x00007FF8F3DE4AB1 in C:\WINDOWS\System32\ucrtbase.dll: abort()
+# 4 0x00007FF8F3DA1049 in C:\WINDOWS\System32\ucrtbase.dll: isctype_l()
+# 5 0x00007FF8F3E02AE1 in C:\WINDOWS\System32\ucrtbase.dll: assert()
+
+# 6 0x00007FF6471C60A5 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: fprintfNode() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/saveTreeInFile.cpp:35:
+
+     33: 
+     34: void fprintfNode(node_t* node, FILE* file) {
+=>   35:     assert(node);
+     36:     assert(file);
+     37: 
+
+# 7 0x00007FF6471C5FFA in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: saveTreeInFile() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/saveTreeInFile.cpp:23:
+
+     21:     }
+     22: 
+=>   23:     fprintfNode(*treeRoot(tree), saveFile);
+     24: 
+     25:     if (fclose(saveFile) != 0) {
+
+# 8 0x00007FF6471C17B9 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:30:
+
+     28:         treeDump (&programTree, &dumpInfo, "programTree");
+     29: 
+=>   30:     saveTreeInFile(&programTree, "ast.txt");
+     31: 
+     32:     if (programTree.rootNode)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 11 2025 22:10:40, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 11 2025 22:11:28
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------

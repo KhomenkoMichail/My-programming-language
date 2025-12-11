@@ -31,7 +31,8 @@
 
     void exitScope(tree_t* tree);
 
-    identifierInfo* addSymbolToCurrentScope(tree_t* tree, const char* name, idType_t idType);
+    identifierInfo* addIdToCurrentScope(tree_t* tree, const char* name, idType_t idType);
 
+    identifierInfo* findIdInAllScopes(tree_t* tree, const char* idName);
 
 #endif

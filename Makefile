@@ -16,7 +16,7 @@ front_all = frontend/include/DSL.h frontend/include/lexicalAnalysis.h frontend/i
 # Компиляция frontend
 build-f: $(front_all) $(common_cpp) $(common_all)
 	@echo -------------------------------------------------------------------------
-	g++ $(front_cpp) $(common_cpp) $(flags) -o /frontend/build/frontend.exe
+	g++ $(front_cpp) $(common_cpp) $(flags) -o frontend/build/frontend.exe
 
 # Запуск assembler
 run-f:

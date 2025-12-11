@@ -197,7 +197,7 @@ void createGraphImageForDump (struct tree_t* tree, FILE* dumpFile, const char* n
     fprintfTreeGraphDump(tree, nameOfTextGraphFile);
 
     char graphvizCallCommand[STR_SIZE] = {};
-    snprintf(graphvizCallCommand, sizeof(graphvizCallCommand), "dot -Tpng %s -o DUMPS/graph%d.png", nameOfTextGraphFile, graphImageCounter);
+    snprintf(graphvizCallCommand, sizeof(graphvizCallCommand), "dot -Tpng %s -o frontend/DUMPS/graph%d.png", nameOfTextGraphFile, graphImageCounter); //FIXME
     system(graphvizCallCommand);
     fprintf(dumpFile, "Image:\n <img src=graph%d.png width=1000px>\n", graphImageCounter);
 

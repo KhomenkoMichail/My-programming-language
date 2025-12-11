@@ -17,6 +17,8 @@ const size_t COMMAND_LENGTH = 512;
 
 const size_t STR_SIZE = 64;
 
+#define MAIN_FUNCTION "atti"
+
 struct shyriiwookNum {
     const char* pronunciation;
     size_t length;
@@ -57,6 +59,7 @@ enum operatorCode_t {
     opNOT_EQUAL = 22,
     opE_BELOW = 23,
     opE_ABOVE = 24,
+    opINIT = 25,
 };
 
 union nodeValue_t {
@@ -112,6 +115,7 @@ enum treeErr_t {
     badRight = 0x04,
     tooManyRecursiveCalls = 0x08,
     treeSyntaxError = 0x10,
+    treeNameTableError = 0x20,
 };
 
 struct operatorInfo {

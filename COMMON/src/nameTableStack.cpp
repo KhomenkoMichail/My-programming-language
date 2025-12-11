@@ -116,7 +116,7 @@ void nameTableDtor (nameTable_t* nameTable) {
     free(nameTable);
 }
 
-identifierInfo* addIdentifierInNameTable (nameTable_t* nameTable, const char* name, idType_t idType, size_t scopeLevel) { //FIXME scopeLavel
+identifierInfo* addIdentifierInNameTable (nameTable_t* nameTable, const char* name, idType_t idType, size_t scopeLevel) {
     assert(nameTable);
     assert(name);
 
@@ -129,14 +129,11 @@ identifierInfo* addIdentifierInNameTable (nameTable_t* nameTable, const char* na
             return NULL;
         }
 
-
         nameTable->idArray = newIdArr;
         nameTable->capacity = newCapacity;
-
-        qsort(nameTable->idArray, nameTable->capacity, sizeof(identifierInfo), structIdentifierComparator);
     }
 
-    identifierInfo* newID = nameTable->idArray;
+    identifierInfo* newID = nameTable->idArray + nameTable->size;
 
     newID->identifierName = name;
     newID->identifierHash = getStringHash(name);
@@ -144,12 +141,12 @@ identifierInfo* addIdentifierInNameTable (nameTable_t* nameTable, const char* na
     newID->idType = idType;
     newID->scopeLevel = scopeLevel;
 
-    newID->paramCount = 0;
-
-    qsort(nameTable->idArray, nameTable->capacity, sizeof(identifierInfo), structIdentifierComparator);
-
+    newID->idInfo.funcInfo.paramCount = 0;
     nameTable->size++;
-    return newID;
+
+    qsort(nameTable->idArray, nameTable->size, sizeof(identifierInfo), structIdentifierComparator);
+
+    return findIdInTable (nameTable, name);
 }
 
 identifierInfo* findIdInTable (const nameTable_t* nameTable, const char* idName) {
@@ -159,7 +156,7 @@ identifierInfo* findIdInTable (const nameTable_t* nameTable, const char* idName)
     size_t searchedIdHash = getStringHash(idName);
 
     identifierInfo* searchedId = (identifierInfo*)bsearch(&searchedIdHash,
-    nameTable->idArray, nameTable->capacity, sizeof(identifierInfo), bsearchHashComparator);
+    nameTable->idArray, nameTable->size, sizeof(identifierInfo), bsearchHashComparator);
 
     if  (searchedId && !(strcmp(searchedId->identifierName, idName)))
         return searchedId;
@@ -217,7 +214,7 @@ void exitScope(tree_t* tree) {
     }
 }
 
-identifierInfo* addSymbolToCurrentScope(tree_t* tree, const char* name, idType_t idType) {
+identifierInfo* addIdToCurrentScope(tree_t* tree, const char* name, idType_t idType) {
     assert(tree);
     assert(tree->nameTableStack);
 
@@ -226,4 +223,20 @@ identifierInfo* addSymbolToCurrentScope(tree_t* tree, const char* name, idType_t
     identifierInfo* newID = addIdentifierInNameTable(currentTable, name, idType, tree->currentScopeLevel);
 
     return newID;
+}
+
+identifierInfo* findIdInAllScopes(tree_t* tree, const char* idName) {
+    assert(tree);
+    assert(tree->nameTableStack);
+    assert(idName);
+
+    for (int curScope = (int)tree->nameTableStack->size - 1; curScope >= 0; curScope--) {
+        nameTable_t* currentTable = tree->nameTableStack->data[curScope];
+        identifierInfo* searchedId = findIdInTable(currentTable, idName);
+        if (searchedId) {
+            return searchedId;
+        }
+    }
+
+    return NULL;
 }

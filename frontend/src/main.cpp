@@ -9,26 +9,32 @@
 #include "../include/saveTreeInFile.h"
 
 
-int main(void) {
+int main(int argc, const char* argv[]) {
+
+    if (argc != 3) return printf("Usage: %s source_file destination_file\n", argv[0]), 1;
+
+    const char* inputFile = argv[1];
+    const char* outputFile = argv[2];
+
+    dump dumpInfo = {};
+    dumpInfo.nameOfDumpFile = "frontend/DUMPS/treeDump.html";
+    dumpInfo.nameOfGraphFile = "frontend/DUMPS/graph.txt";
+
+    struct lexAnalysisResult* lexResult = lexicalAnalysis(inputFile);
+    if  (!lexResult) return printf("Error lexical Analysis.\n");
 
     tree_t programTree = {};
-    dump dumpInfo = {};
-    dumpInfo.nameOfDumpFile = "DUMPS/treeDump.html";
-    dumpInfo.nameOfGraphFile = "DUMPS/graph.txt";
+    programTree.rootNode = getProgramTree(&programTree, lexResult);
 
-    struct lexAnalysisResult* lexResult = lexicalAnalysis("program.txt");
+    if (!programTree.rootNode) {
+        free(lexResult->programBuffer);
+        free(lexResult->nodesArray);
+        return printf("Error syntactic Analysis.\n");
+    }
 
-    programTree.rootNode = getProgramTree(&programTree, lexResult->nodesArray, lexResult->numOfNodes);
+    treeDump (&programTree, &dumpInfo, "programTree");
+    saveTreeInFile(&programTree, outputFile);
 
-    if (programTree.rootNode)
-        treeDump (&programTree, &dumpInfo, "programTree");
-
-    if (programTree.rootNode)
-        deleteTree (&programTree);
-
-    free(lexResult->programBuffer);
-    free(lexResult->nodesArray);
-
-
+    endFrontendProgram (&programTree, lexResult);
     return 0;
 }
