@@ -15,8 +15,6 @@ atti() [
 factorial(n) [
     yaag (n uma ah)
         ruow ah!
-    yaag (n ~uma ah) [
-        wyaaaaaa nMinis1 wuahh n muawa ah!
-        ruow n muaarga factorial(nMinis1)!
-    ]!
+    yaag (n ~uma ah)
+        ruow n muaarga factorial(n muawa ah)!
 ]!

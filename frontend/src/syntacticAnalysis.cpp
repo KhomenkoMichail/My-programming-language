@@ -215,8 +215,11 @@ node_t* getOperator (tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
             if (((nodeArr[*curNodeNum + 1])->value).opCode == opASSIGN)
                 return getOpAssign(tree, nodeArr, curNodeNum);
 
-            if (((nodeArr[*curNodeNum + 1])->value).opCode == opBRACK_ON)
-                return getCall(tree, nodeArr, curNodeNum);
+            if (((nodeArr[*curNodeNum + 1])->value).opCode == opBRACK_ON) {
+                node_t* callNode = getCall(tree, nodeArr, curNodeNum);
+                CHECK_THE_NODE_IS_(opSEPARATOR);
+                return callNode;
+            }
         }
        syntaxError(tree, nodeArr, curNodeNum, __func__);
        return NULL;
@@ -382,17 +385,21 @@ node_t* getCall(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
     node_t* funcParam = NULL;
     size_t numOfCallParams = 0;
 
-    if (NODE_IS_ID) {
-        funcParam = getVarIDNode(tree, nodeArr, curNodeNum);
+    //if (NODE_IS_ID) {
+    if (!NODE_IS_OP_(opBRACK_OFF)) {
+        //funcParam = getVarIDNode(tree, nodeArr, curNodeNum);
+        funcParam = getExpressionNode(tree, nodeArr, curNodeNum);
         numOfCallParams++;
     }
 
-    while(NODE_IS_OP_(opCOMMA)) {
-
+    while (NODE_IS_OP_(opCOMMA)) {
+        node_t* nodeComma = (nodeArr[*curNodeNum]);
         (*curNodeNum)++;
-        node_t* secondParam = getVarIDNode(tree, nodeArr, curNodeNum);
 
-        node_t* nodeComma = (nodeArr[*curNodeNum - 2]);
+        //node_t* secondParam = getVarIDNode(tree, nodeArr, curNodeNum);
+        node_t* secondParam = getExpressionNode(tree, nodeArr, curNodeNum);
+
+        //node_t* nodeComma = (nodeArr[*curNodeNum - 2]);
         *nodeLeft(nodeComma) = funcParam;
         *nodeRight(nodeComma) = secondParam;
 

@@ -69,6 +69,7 @@ int rewriteOpNodeToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
         case opDIV:
         case opSQRT:
         case opSEPARATOR:
+        case opCOMMA:
             return rewriteOpCalcToAsmCode(tree, node, asmFile);
 
         case opASSIGN: return rewriteOpAssignToAsmCode (tree, node, asmFile);
@@ -88,7 +89,6 @@ int rewriteOpNodeToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
         case opE_ABOVE:
             return rewriteOpCompareToAsmCode(tree, node, asmFile);
 
-        case opCOMMA:
         case opUNITED_ON:
         case opUNITED_OFF:
         case opQUOTES:
@@ -441,7 +441,7 @@ int rewriteFuncCallNodeToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
     int errorCode = 0;
 
     if (*nodeLeft(node))
-        errorCode = fprintfPushingCallParams(tree, *nodeLeft(node), asmFile);
+        errorCode = rewriteNodeToAsmCode (tree, *nodeLeft(node), asmFile);
 
     fprintf(asmFile, "CALL :%s\n", nodeValue(node)->id.identifierName);
 
