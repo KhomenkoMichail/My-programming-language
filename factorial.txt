@@ -1,0 +1,22 @@
+wyaaaaaa factorial(n)!
+
+atti() [
+    wyaaaaaa n wuahh aohwawh!
+    wyaaaaaa fact wuahh  aohwawh!
+
+    haaag "n"!
+    fact wuahh factorial(n)!
+
+    lanna "fact"!
+    mu!
+]!
+
+
+factorial(n) [
+    yaag (n uma ah)
+        ruow ah!
+    yaag (n ~uma ah) [
+        wyaaaaaa nMinis1 wuahh n muawa ah!
+        ruow n muaarga factorial(nMinis1)!
+    ]!
+]!
