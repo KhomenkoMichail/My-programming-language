@@ -18,4 +18,6 @@
     size_t getSize_t (void);
 
     unsigned long long getFactorial(size_t num);
+
+    int my_strcmp(const char* s1, const char* s2);
 #endif

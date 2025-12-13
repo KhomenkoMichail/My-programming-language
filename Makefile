@@ -14,10 +14,10 @@ front_cpp = frontend/src/main.cpp frontend/src/lexicalAnalysis.cpp frontend/src/
 front_all = frontend/include/DSL.h frontend/include/lexicalAnalysis.h frontend/include/syntacticAnalysis.h frontend/include/saveTreeInFile.h
 
 # Файлы .cpp для сборки backend
-back_cpp = backend/src/backendMain.cpp backend/src/backendTreeCtor.cpp
+back_cpp = backend/src/backendMain.cpp backend/src/backendTreeCtor.cpp backend/src/asmProgramWriter.cpp
 
 # Файлы backend
-back_all = backend/include/backendTreeCtor.h
+back_all = backend/include/backendTreeCtor.h backend/include/asmProgramWriter.h
 
 # Компиляция frontend
 build-f: $(front_all) $(common_cpp) $(common_all)

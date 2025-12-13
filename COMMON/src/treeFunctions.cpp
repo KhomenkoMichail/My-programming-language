@@ -81,7 +81,14 @@ int fprintfNodeGraph (node_t* node, int rank, FILE* graphFile, size_t* nodesPass
             if ((operatorsArray[numOfOp]).opCode == (nodeValue(node))->opCode)
                 break;
 
-        fprintf(graphFile, "    node0x%p [rank = %d, label = \"{ <addr>type: %s| val = %s|{<left>LEFT| <right>RIGHT}}\", style = filled, fillcolor = \"%s\", color = black];\n",
+        if (numOfOp == opBELOW)
+            fprintf(graphFile, "    node0x%p [rank = %d, label = \"{ <addr>type: BELOW| val = %s|{<left>LEFT| <right>RIGHT}}\", style = filled, fillcolor = \"%s\", color = black];\n",
+                node, rank, typeName, (operatorsArray[numOfOp]).dumpColor);
+        else if (numOfOp == opABOVE)
+            fprintf(graphFile, "    node0x%p [rank = %d, label = \"{ <addr>type: ABOVE| val = %s|{<left>LEFT| <right>RIGHT}}\", style = filled, fillcolor = \"%s\", color = black];\n",
+                node, rank, typeName, (operatorsArray[numOfOp]).dumpColor);
+        else
+            fprintf(graphFile, "    node0x%p [rank = %d, label = \"{ <addr>type: %s| val = %s|{<left>LEFT| <right>RIGHT}}\", style = filled, fillcolor = \"%s\", color = black];\n",
                 node, rank, typeName, (operatorsArray[numOfOp]).opCLangName, (operatorsArray[numOfOp]).dumpColor);
     }
 
@@ -197,7 +204,7 @@ void createGraphImageForDump (struct tree_t* tree, FILE* dumpFile, const char* n
     fprintfTreeGraphDump(tree, nameOfTextGraphFile);
 
     char graphvizCallCommand[STR_SIZE] = {};
-    snprintf(graphvizCallCommand, sizeof(graphvizCallCommand), "dot -Tpng %s -o backend/DUMPS/graph%d.png", nameOfTextGraphFile, graphImageCounter); //FIXME
+    snprintf(graphvizCallCommand, sizeof(graphvizCallCommand), "dot -Tpng %s -o DUMPS/graph%d.png", nameOfTextGraphFile, graphImageCounter); //FIXME
     system(graphvizCallCommand);
     fprintf(dumpFile, "Image:\n <img src=graph%d.png width=1000px>\n", graphImageCounter);
 

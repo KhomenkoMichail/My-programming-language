@@ -1560,3 +1560,609 @@ Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\f
 Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: #1: РљСѓС‡Р° Р±С‹Р»Р° РїРѕРІСЂРµР¶РґРµРЅР°. (0xC0000374) при выполнении кода по адресу 0x00007FF8F6237885 в функции RtlpMuiRegCreateRegistryInfo() в модуле C:\WINDOWS\SYSTEM32\ntdll.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Ой, всё (EXCEPTION_NONCONTINUABLE).
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF7143A6090 (64-bit), Flags: Cmdre0, Thread: 0x6A48 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF8F6237885 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlpMuiRegCreateRegistryInfo()
+# 1 0x00007FF8F61BDA69 in C:\WINDOWS\SYSTEM32\ntdll.dll: LdrResSearchResource()
+# 2 0x00007FF8F6146742 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlSetProcessPreferredUILanguages()
+# 3 0x00007FF8F623D9AA in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlLengthCurrentClearRunForwardEx()
+# 4 0x00007FF8F613ED2B in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlAllocateHeap()
+# 5 0x00007FF8F61443A7 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlTryEnterCriticalSection()
+# 6 0x00007FF8F6144AD7 in C:\WINDOWS\SYSTEM32\ntdll.dll: DbgPrint()
+# 7 0x00007FF8F61456AA in C:\WINDOWS\SYSTEM32\ntdll.dll: DbgPrint()
+# 8 0x00007FF8F6175445 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlReAllocateHeap()
+# 9 0x00007FF8F6174895 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlReAllocateHeap()
+#10 0x00007FF8F61745ED in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlReAllocateHeap()
+#11 0x00007FF8F3D7D235 in C:\WINDOWS\System32\ucrtbase.dll: realloc_base()
+
+#12 0x00007FF71421221F in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp:36:
+
+     34:         if (numOfNodes > sizeOfNodeArr) {
+     35:             sizeOfNodeArr *= 2;
+=>   36:             nodeArray = (node_t**)realloc(nodeArray, sizeOfNodeArr);
+     37:             if (!nodeArray) {
+     38:                 printf("ERROR realloc!\n");
+
+#13 0x00007FF71421074C in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:24:
+
+     22:     dumpInfo.nameOfGraphFile = "DUMPS/graph.txt";
+     23: 
+=>   24:     struct lexAnalysisResult* lexResult = lexicalAnalysis(inputFile);
+     25:     if  (!lexResult) return printf("Error lexical Analysis.\n");
+     26: $$
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 12 2025 23:16:31, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 12 2025 23:16:41
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: #1: РљСѓС‡Р° Р±С‹Р»Р° РїРѕРІСЂРµР¶РґРµРЅР°. (0xC0000374) при выполнении кода по адресу 0x00007FF8F6237885 в функции RtlpMuiRegCreateRegistryInfo() в модуле C:\WINDOWS\SYSTEM32\ntdll.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+Ой, всё (EXCEPTION_NONCONTINUABLE).
+
+С помощью функции _set_se_translator() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF7143A6090 (64-bit), Flags: Cmdre0, Thread: 0x6A48 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF8F6237885 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlpMuiRegCreateRegistryInfo()
+# 1 0x00007FF8F61BDA69 in C:\WINDOWS\SYSTEM32\ntdll.dll: LdrResSearchResource()
+# 2 0x00007FF8F6146742 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlSetProcessPreferredUILanguages()
+# 3 0x00007FF8F623D9AA in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlLengthCurrentClearRunForwardEx()
+# 4 0x00007FF8F613ED2B in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlAllocateHeap()
+# 5 0x00007FF8F61443A7 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlTryEnterCriticalSection()
+# 6 0x00007FF8F6144AD7 in C:\WINDOWS\SYSTEM32\ntdll.dll: DbgPrint()
+# 7 0x00007FF8F61456AA in C:\WINDOWS\SYSTEM32\ntdll.dll: DbgPrint()
+# 8 0x00007FF8F6175445 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlReAllocateHeap()
+# 9 0x00007FF8F6174895 in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlReAllocateHeap()
+#10 0x00007FF8F61745ED in C:\WINDOWS\SYSTEM32\ntdll.dll: RtlReAllocateHeap()
+#11 0x00007FF8F3D7D235 in C:\WINDOWS\System32\ucrtbase.dll: realloc_base()
+
+#12 0x00007FF71421221F in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: lexicalAnalysis() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/lexicalAnalysis.cpp:36:
+
+     34:         if (numOfNodes > sizeOfNodeArr) {
+     35:             sizeOfNodeArr *= 2;
+=>   36:             nodeArray = (node_t**)realloc(nodeArray, sizeOfNodeArr);
+     37:             if (!nodeArray) {
+     38:                 printf("ERROR realloc!\n");
+
+#13 0x00007FF71421074C in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:24:
+
+     22:     dumpInfo.nameOfGraphFile = "DUMPS/graph.txt";
+     23: 
+=>   24:     struct lexAnalysisResult* lexResult = lexicalAnalysis(inputFile);
+     25:     if  (!lexResult) return printf("Error lexical Analysis.\n");
+     26: $$
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 12 2025 23:16:31, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 12 2025 23:16:41
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF609865971 в функции getBracketExpressionNodes() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp на строке 497. Попытка прочесть данные по адресу NULL в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF6099C6090 (64-bit), Flags: Cmdre0, Thread: 0xCA0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF609865971 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getBracketExpressionNodes() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:497:
+
+    495:         return NULL;
+    496: 
+=>  497:     if (NODE_IS_OP_(opBRACK_ON)) {
+    498:         (*curNodeNum)++;
+    499:         node_t* newNode = getADDandSUBnodes(tree, nodeArr, curNodeNum);
+
+# 1 0x00007FF6098657A3 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getMULandDIVnodes() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:474:
+
+    472:         return NULL;
+    473: 
+=>  474:     node_t* nodeExpression = getBracketExpressionNodes(tree, nodeArr, curNodeNum);
+    475: 
+    476:     while ((NODE_IS_OP_(opMUL)) || (NODE_IS_OP_(opDIV))) {
+
+# 2 0x00007FF6098655D5 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getADDandSUBnodes() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:451:
+
+    449:         return NULL;
+    450: 
+=>  451:     node_t* nodeExpression = getMULandDIVnodes(tree, nodeArr, curNodeNum);
+    452: 
+    453:     while ((NODE_IS_OP_(opADD)) || (NODE_IS_OP_(opSUB))) {
+
+# 3 0x00007FF6098652F3 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getExpressionNode() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:426:
+
+    424:         return NULL;
+    425: 
+=>  426:     node_t* newExpressionNode = getADDandSUBnodes(tree, nodeArr, curNodeNum);
+    427: 
+    428:     if (NODE_IS_COMPARE) {
+
+# 4 0x00007FF609864452 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getOpIfOrWhile() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:242:
+
+    240:     CHECK_THE_NODE_IS_(opBRACK_ON);
+    241: 
+=>  242:     *nodeLeft(newNode) = getExpressionNode(tree, nodeArr, curNodeNum);
+    243: 
+    244: 
+
+# 5 0x00007FF609864079 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getOperator() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:171:
+
+    169:         switch (((nodeArr[*curNodeNum])->value).opCode) {
+    170:             case opIF:
+=>  171:                 return getOpIfOrWhile(tree, nodeArr, curNodeNum);
+    172:             case opWHILE:
+    173:                 return getOpIfOrWhile(tree, nodeArr, curNodeNum);
+
+# 6 0x00007FF609864B2B in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getOpUnited() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:322:
+
+    320:         node_t* secondOperator = NULL;
+    321: 
+=>  322:         secondOperator = getOperator(tree, nodeArr, curNodeNum);
+    323: 
+    324:         node_t* linkNode = nodeArr[*curNodeNum - 1];
+
+# 7 0x00007FF609864105 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getOperator() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:181:
+
+    179:                 return getOpRet(tree, nodeArr, curNodeNum);
+    180:             case opUNITED_ON:
+=>  181:                 return getOpUnited(tree, nodeArr, curNodeNum);
+    182:             case opINIT:
+    183:                 return getOpInit(tree, nodeArr, curNodeNum);
+
+# 8 0x00007FF609863EFF in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getFunction() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:154:
+
+    152:     CHECK_THE_NODE_IS_(opBRACK_OFF);
+    153: 
+=>  154:     *nodeRight(funcNode) = getOperator(tree, nodeArr, curNodeNum);
+    155:     exitScope(tree);
+    156: 
+
+# 9 0x00007FF60986370B in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getProgramTree() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:64:
+
+     62:     node_t* firstOperator = NULL;
+     63:     if (NODE_IS_ID)
+=>   64:         firstOperator = getFunction(tree, nodeArr, curNodeNum);
+     65:     else {
+     66:         syntaxError(tree, nodeArr, curNodeNum, __func__);
+
+#10 0x00007FF609830863 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:28:
+
+     26: $$
+     27:     tree_t programTree = {};
+=>   28:     programTree.rootNode = getProgramTree(&programTree, lexResult);
+     29: $$
+     30:     if (!programTree.rootNode) {
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 12 2025 23:29:35, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 12 2025 23:30:08
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF609865971 в функции getBracketExpressionNodes() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp на строке 497. Попытка прочесть данные по адресу NULL в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF6099C6090 (64-bit), Flags: Cmdre0, Thread: 0xCA0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF609865971 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getBracketExpressionNodes() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:497:
+
+    495:         return NULL;
+    496: 
+=>  497:     if (NODE_IS_OP_(opBRACK_ON)) {
+    498:         (*curNodeNum)++;
+    499:         node_t* newNode = getADDandSUBnodes(tree, nodeArr, curNodeNum);
+
+# 1 0x00007FF6098657A3 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getMULandDIVnodes() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:474:
+
+    472:         return NULL;
+    473: 
+=>  474:     node_t* nodeExpression = getBracketExpressionNodes(tree, nodeArr, curNodeNum);
+    475: 
+    476:     while ((NODE_IS_OP_(opMUL)) || (NODE_IS_OP_(opDIV))) {
+
+# 2 0x00007FF6098655D5 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getADDandSUBnodes() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:451:
+
+    449:         return NULL;
+    450: 
+=>  451:     node_t* nodeExpression = getMULandDIVnodes(tree, nodeArr, curNodeNum);
+    452: 
+    453:     while ((NODE_IS_OP_(opADD)) || (NODE_IS_OP_(opSUB))) {
+
+# 3 0x00007FF6098652F3 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getExpressionNode() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:426:
+
+    424:         return NULL;
+    425: 
+=>  426:     node_t* newExpressionNode = getADDandSUBnodes(tree, nodeArr, curNodeNum);
+    427: 
+    428:     if (NODE_IS_COMPARE) {
+
+# 4 0x00007FF609864452 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getOpIfOrWhile() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:242:
+
+    240:     CHECK_THE_NODE_IS_(opBRACK_ON);
+    241: 
+=>  242:     *nodeLeft(newNode) = getExpressionNode(tree, nodeArr, curNodeNum);
+    243: 
+    244: 
+
+# 5 0x00007FF609864079 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getOperator() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:171:
+
+    169:         switch (((nodeArr[*curNodeNum])->value).opCode) {
+    170:             case opIF:
+=>  171:                 return getOpIfOrWhile(tree, nodeArr, curNodeNum);
+    172:             case opWHILE:
+    173:                 return getOpIfOrWhile(tree, nodeArr, curNodeNum);
+
+# 6 0x00007FF609864B2B in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getOpUnited() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:322:
+
+    320:         node_t* secondOperator = NULL;
+    321: 
+=>  322:         secondOperator = getOperator(tree, nodeArr, curNodeNum);
+    323: 
+    324:         node_t* linkNode = nodeArr[*curNodeNum - 1];
+
+# 7 0x00007FF609864105 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getOperator() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:181:
+
+    179:                 return getOpRet(tree, nodeArr, curNodeNum);
+    180:             case opUNITED_ON:
+=>  181:                 return getOpUnited(tree, nodeArr, curNodeNum);
+    182:             case opINIT:
+    183:                 return getOpInit(tree, nodeArr, curNodeNum);
+
+# 8 0x00007FF609863EFF in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getFunction() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:154:
+
+    152:     CHECK_THE_NODE_IS_(opBRACK_OFF);
+    153: 
+=>  154:     *nodeRight(funcNode) = getOperator(tree, nodeArr, curNodeNum);
+    155:     exitScope(tree);
+    156: 
+
+# 9 0x00007FF60986370B in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getProgramTree() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:64:
+
+     62:     node_t* firstOperator = NULL;
+     63:     if (NODE_IS_ID)
+=>   64:         firstOperator = getFunction(tree, nodeArr, curNodeNum);
+     65:     else {
+     66:         syntaxError(tree, nodeArr, curNodeNum, __func__);
+
+#10 0x00007FF609830863 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:28:
+
+     26: $$
+     27:     tree_t programTree = {};
+=>   28:     programTree.rootNode = getProgramTree(&programTree, lexResult);
+     29: $$
+     30:     if (!programTree.rootNode) {
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 12 2025 23:29:35, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 12 2025 23:30:08
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF609865971 в функции getBracketExpressionNodes() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp на строке 497. Попытка прочесть данные по адресу NULL в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF6099C6090 (64-bit), Flags: Cmdre0, Thread: 0x6754 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF609865971 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getBracketExpressionNodes() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:497:
+
+    495:         return NULL;
+    496: 
+=>  497:     if (NODE_IS_OP_(opBRACK_ON)) {
+    498:         (*curNodeNum)++;
+    499:         node_t* newNode = getADDandSUBnodes(tree, nodeArr, curNodeNum);
+
+# 1 0x00007FF6098657A3 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getMULandDIVnodes() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:474:
+
+    472:         return NULL;
+    473: 
+=>  474:     node_t* nodeExpression = getBracketExpressionNodes(tree, nodeArr, curNodeNum);
+    475: 
+    476:     while ((NODE_IS_OP_(opMUL)) || (NODE_IS_OP_(opDIV))) {
+
+# 2 0x00007FF6098655D5 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getADDandSUBnodes() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:451:
+
+    449:         return NULL;
+    450: 
+=>  451:     node_t* nodeExpression = getMULandDIVnodes(tree, nodeArr, curNodeNum);
+    452: 
+    453:     while ((NODE_IS_OP_(opADD)) || (NODE_IS_OP_(opSUB))) {
+
+# 3 0x00007FF6098652F3 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getExpressionNode() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:426:
+
+    424:         return NULL;
+    425: 
+=>  426:     node_t* newExpressionNode = getADDandSUBnodes(tree, nodeArr, curNodeNum);
+    427: 
+    428:     if (NODE_IS_COMPARE) {
+
+# 4 0x00007FF609864452 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getOpIfOrWhile() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:242:
+
+    240:     CHECK_THE_NODE_IS_(opBRACK_ON);
+    241: 
+=>  242:     *nodeLeft(newNode) = getExpressionNode(tree, nodeArr, curNodeNum);
+    243: 
+    244: 
+
+# 5 0x00007FF609864079 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getOperator() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:171:
+
+    169:         switch (((nodeArr[*curNodeNum])->value).opCode) {
+    170:             case opIF:
+=>  171:                 return getOpIfOrWhile(tree, nodeArr, curNodeNum);
+    172:             case opWHILE:
+    173:                 return getOpIfOrWhile(tree, nodeArr, curNodeNum);
+
+# 6 0x00007FF609864B2B in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getOpUnited() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:322:
+
+    320:         node_t* secondOperator = NULL;
+    321: 
+=>  322:         secondOperator = getOperator(tree, nodeArr, curNodeNum);
+    323: 
+    324:         node_t* linkNode = nodeArr[*curNodeNum - 1];
+
+# 7 0x00007FF609864105 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getOperator() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:181:
+
+    179:                 return getOpRet(tree, nodeArr, curNodeNum);
+    180:             case opUNITED_ON:
+=>  181:                 return getOpUnited(tree, nodeArr, curNodeNum);
+    182:             case opINIT:
+    183:                 return getOpInit(tree, nodeArr, curNodeNum);
+
+# 8 0x00007FF609863EFF in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getFunction() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:154:
+
+    152:     CHECK_THE_NODE_IS_(opBRACK_OFF);
+    153: 
+=>  154:     *nodeRight(funcNode) = getOperator(tree, nodeArr, curNodeNum);
+    155:     exitScope(tree);
+    156: 
+
+# 9 0x00007FF60986370B in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getProgramTree() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:64:
+
+     62:     node_t* firstOperator = NULL;
+     63:     if (NODE_IS_ID)
+=>   64:         firstOperator = getFunction(tree, nodeArr, curNodeNum);
+     65:     else {
+     66:         syntaxError(tree, nodeArr, curNodeNum, __func__);
+
+#10 0x00007FF609830863 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:28:
+
+     26: $$
+     27:     tree_t programTree = {};
+=>   28:     programTree.rootNode = getProgramTree(&programTree, lexResult);
+     29: $$
+     30:     if (!programTree.rootNode) {
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 12 2025 23:29:35, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 12 2025 23:34:28
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF609865971 в функции getBracketExpressionNodes() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp на строке 497. Попытка прочесть данные по адресу NULL в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF6099C6090 (64-bit), Flags: Cmdre0, Thread: 0x6754 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF609865971 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getBracketExpressionNodes() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:497:
+
+    495:         return NULL;
+    496: 
+=>  497:     if (NODE_IS_OP_(opBRACK_ON)) {
+    498:         (*curNodeNum)++;
+    499:         node_t* newNode = getADDandSUBnodes(tree, nodeArr, curNodeNum);
+
+# 1 0x00007FF6098657A3 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getMULandDIVnodes() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:474:
+
+    472:         return NULL;
+    473: 
+=>  474:     node_t* nodeExpression = getBracketExpressionNodes(tree, nodeArr, curNodeNum);
+    475: 
+    476:     while ((NODE_IS_OP_(opMUL)) || (NODE_IS_OP_(opDIV))) {
+
+# 2 0x00007FF6098655D5 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getADDandSUBnodes() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:451:
+
+    449:         return NULL;
+    450: 
+=>  451:     node_t* nodeExpression = getMULandDIVnodes(tree, nodeArr, curNodeNum);
+    452: 
+    453:     while ((NODE_IS_OP_(opADD)) || (NODE_IS_OP_(opSUB))) {
+
+# 3 0x00007FF6098652F3 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getExpressionNode() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:426:
+
+    424:         return NULL;
+    425: 
+=>  426:     node_t* newExpressionNode = getADDandSUBnodes(tree, nodeArr, curNodeNum);
+    427: 
+    428:     if (NODE_IS_COMPARE) {
+
+# 4 0x00007FF609864452 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getOpIfOrWhile() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:242:
+
+    240:     CHECK_THE_NODE_IS_(opBRACK_ON);
+    241: 
+=>  242:     *nodeLeft(newNode) = getExpressionNode(tree, nodeArr, curNodeNum);
+    243: 
+    244: 
+
+# 5 0x00007FF609864079 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getOperator() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:171:
+
+    169:         switch (((nodeArr[*curNodeNum])->value).opCode) {
+    170:             case opIF:
+=>  171:                 return getOpIfOrWhile(tree, nodeArr, curNodeNum);
+    172:             case opWHILE:
+    173:                 return getOpIfOrWhile(tree, nodeArr, curNodeNum);
+
+# 6 0x00007FF609864B2B in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getOpUnited() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:322:
+
+    320:         node_t* secondOperator = NULL;
+    321: 
+=>  322:         secondOperator = getOperator(tree, nodeArr, curNodeNum);
+    323: 
+    324:         node_t* linkNode = nodeArr[*curNodeNum - 1];
+
+# 7 0x00007FF609864105 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getOperator() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:181:
+
+    179:                 return getOpRet(tree, nodeArr, curNodeNum);
+    180:             case opUNITED_ON:
+=>  181:                 return getOpUnited(tree, nodeArr, curNodeNum);
+    182:             case opINIT:
+    183:                 return getOpInit(tree, nodeArr, curNodeNum);
+
+# 8 0x00007FF609863EFF in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getFunction() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:154:
+
+    152:     CHECK_THE_NODE_IS_(opBRACK_OFF);
+    153: 
+=>  154:     *nodeRight(funcNode) = getOperator(tree, nodeArr, curNodeNum);
+    155:     exitScope(tree);
+    156: 
+
+# 9 0x00007FF60986370B in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: getProgramTree() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/syntacticAnalysis.cpp:64:
+
+     62:     node_t* firstOperator = NULL;
+     63:     if (NODE_IS_ID)
+=>   64:         firstOperator = getFunction(tree, nodeArr, curNodeNum);
+     65:     else {
+     66:         syntaxError(tree, nodeArr, curNodeNum, __func__);
+
+#10 0x00007FF609830863 in C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/frontend/src/main.cpp:28:
+
+     26: $$
+     27:     tree_t programTree = {};
+=>   28:     programTree.rootNode = getProgramTree(&programTree, lexResult);
+     29: $$
+     30:     if (!programTree.rootNode) {
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 12 2025 23:29:35, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 12 2025 23:34:28
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\frontend\build\frontend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------

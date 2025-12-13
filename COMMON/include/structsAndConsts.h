@@ -10,7 +10,7 @@ const size_t NUM_OF_PROGRAM_NODES = 128;
 
 const size_t NUM_OF_IDENTIFIERS = 256;
 
-const size_t MAX_OP_NAME_LEN = 5;
+const size_t MAX_OP_NAME_LEN = 32;
 
 const size_t NODE_DESCRIPTION_SIZE = 64;
 
@@ -19,6 +19,8 @@ const size_t MAX_TREE_SIZE = 500;
 const size_t COMMAND_LENGTH = 512;
 
 const size_t STR_SIZE = 64;
+
+const size_t AMOUNT_OF_RAM = 3*100*100;
 
 #define MAIN_FUNCTION "atti"
 
@@ -97,6 +99,7 @@ struct tree_t {
 
     stack_t* nameTableStack;
     size_t currentScopeLevel;
+    size_t numOfVars;
 
     int errorCode;
 };
@@ -128,6 +131,8 @@ struct operatorInfo {
 
     const char* opCLangName;
     const char* dumpColor;
+
+    const char* opAsmCommand;
 };
 
 #endif

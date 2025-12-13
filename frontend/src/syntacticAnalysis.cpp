@@ -1,3 +1,4 @@
+#include <txLib.h>
 #include <stdio.h>
 #include <assert.h>
 #include <string.h>
@@ -52,12 +53,12 @@ node_t* getProgramTree (tree_t* tree, lexAnalysisResult* lexResult) {
 
     if (tree->errorCode)
         return NULL;
-
+$$
     while (NODE_IS_OP_(opINIT)) {
         if (getFunctionsDeclarations(tree, nodeArr, curNodeNum))
             return NULL;
     }
-
+$$
     node_t* firstOperator = NULL;
     if (NODE_IS_ID)
         firstOperator = getFunction(tree, nodeArr, curNodeNum);
@@ -66,7 +67,7 @@ node_t* getProgramTree (tree_t* tree, lexAnalysisResult* lexResult) {
         return NULL;
     }
 
-
+$$
     while (nodeNum < numOfNodes - 1) {
         node_t* secondOperator = NULL;
 
@@ -78,10 +79,10 @@ node_t* getProgramTree (tree_t* tree, lexAnalysisResult* lexResult) {
 
         firstOperator = linkNode;
     }
-
+$$
     if (checkAllFunctionsHaveBodies (tree))
         return NULL;
-
+$$
     return firstOperator;
 }
 
@@ -176,12 +177,14 @@ node_t* getOperator (tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
                 return getOpInOrOut(tree, nodeArr, curNodeNum);
             case opRET:
                 return getOpRet(tree, nodeArr, curNodeNum);
-            case opHLT:
-                return nodeArr[*curNodeNum];
             case opUNITED_ON:
                 return getOpUnited(tree, nodeArr, curNodeNum);
             case opINIT:
                 return getOpInit(tree, nodeArr, curNodeNum);
+            case opHLT: {
+                node_t* hltNode = nodeArr[(*curNodeNum)++];
+                CHECK_THE_NODE_IS_(opSEPARATOR);
+                return hltNode; }
             case opUNKNOWN:
             case opADD:
             case opSUB:
@@ -202,8 +205,8 @@ node_t* getOperator (tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
             case opE_BELOW:
             case opE_ABOVE:
             default:
-            syntaxError(tree, nodeArr, curNodeNum, __func__);
-            return NULL;
+                syntaxError(tree, nodeArr, curNodeNum, __func__);
+                return NULL;
         }
     }
     else if (NODE_IS_ID) {
@@ -400,7 +403,7 @@ node_t* getCall(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
     *nodeLeft(funcNode) = funcParam;
 
     CHECK_THE_NODE_IS_(opBRACK_OFF);
-    CHECK_THE_NODE_IS_(opSEPARATOR);
+    //CHECK_THE_NODE_IS_(opSEPARATOR); //FIXME
 
     if (numOfCallParams != numOfFuncParams) {
         printf("Error! Incorrect number of func params of func \"%s\".\n", funcName);
@@ -510,7 +513,7 @@ node_t* getBracketExpressionNodes (tree_t* tree, node_t** nodeArr, size_t* curNo
         return newNode;
     }
     else if (NODE_IS_ID) {
-        if ((nodeArr[*curNodeNum])->type == typeOperator && ((nodeArr[*curNodeNum])->value).opCode == opBRACK_ON)
+        if ((nodeArr[*curNodeNum + 1])->type == typeOperator && ((nodeArr[*curNodeNum + 1])->value).opCode == opBRACK_ON)
             return getCall(tree, nodeArr, curNodeNum);
         else
             return getVarIDNode(tree, nodeArr, curNodeNum);

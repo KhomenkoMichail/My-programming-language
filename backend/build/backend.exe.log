@@ -1,0 +1,110 @@
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe,
+
+ВНЕЗАПНО: signal (22, 0x00): SIGABRT: Аварийное завершение программы, вызвана функция abort(). 
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF6AC1F7070 (64-bit), Flags: Cmdre0, Thread: 0x5B94 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF6AC167EEC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: (anonymous namespace)::TX::_txError() at C:/Users/Admin/Downloads/CodeBlocks/TX/TXLib.h:11090
+# 1 0x00007FF6AC168454 in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: (anonymous namespace)::TX::_txOnSignal() at C:/Users/Admin/Downloads/CodeBlocks/TX/TXLib.h:11171
+# 2 0x00007FF8F3E01989 in C:\WINDOWS\System32\ucrtbase.dll: raise()
+# 3 0x00007FF8F3DE4AB1 in C:\WINDOWS\System32\ucrtbase.dll: abort()
+# 4 0x00007FF8F3DA1049 in C:\WINDOWS\System32\ucrtbase.dll: isctype_l()
+# 5 0x00007FF8F3E02AE1 in C:\WINDOWS\System32\ucrtbase.dll: assert()
+
+# 6 0x00007FF6AC154AB5 in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: enterNewScope() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/nameTableStack.cpp:197:
+
+    195: void enterNewScope(tree_t* tree) {
+    196:     assert(tree);
+=>  197:     assert(tree->nameTableStack);
+    198: 
+    199:     tree->currentScopeLevel++;
+
+# 7 0x00007FF6AC1246D8 in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: rewriteFuncBodyToAsmCode() at C:/Users/Admin/Desktop/prodva/My-programming-language/backend/src/asmProgramWriter.cpp:393:
+
+    391: 
+    392:     fprintf(asmFile, ":%s\n", nodeValue(node)->id.identifierName);
+=>  393:     enterNewScope(tree);
+    394: 
+    395:     if (*nodeLeft(node))
+
+# 8 0x00007FF6AC124573 in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: rewriteIdNodeToAsmCode() at C:/Users/Admin/Desktop/prodva/My-programming-language/backend/src/asmProgramWriter.cpp:371:
+
+    369: 
+    370:     if(*nodeRight(node))
+=>  371:         return rewriteFuncBodyToAsmCode(tree, node, asmFile);
+    372: 
+    373:     const char* idName = nodeValue(node)->id.identifierName;
+
+# 9 0x00007FF6AC123337 in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: rewriteNodeToAsmCode() at C:/Users/Admin/Desktop/prodva/My-programming-language/backend/src/asmProgramWriter.cpp:52:
+
+     50:             return rewriteOpNodeToAsmCode(tree, node, asmFile);
+     51:         case typeIdentifier:
+=>   52:             return rewriteIdNodeToAsmCode(tree, node, asmFile);
+     53:         case typeError:
+     54:         default:
+
+#10 0x00007FF6AC1235B8 in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: rewriteOpCalcToAsmCode() at C:/Users/Admin/Desktop/prodva/My-programming-language/backend/src/asmProgramWriter.cpp:113:
+
+    111: 
+    112:     if(*nodeLeft(node))
+=>  113:         errorCode = rewriteNodeToAsmCode (tree, *nodeLeft(node), asmFile);
+    114: 
+    115:     if(*nodeRight(node))
+
+#11 0x00007FF6AC1233FC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: rewriteOpNodeToAsmCode() at C:/Users/Admin/Desktop/prodva/My-programming-language/backend/src/asmProgramWriter.cpp:71:
+
+     69:         case opSQRT:
+     70:         case opSEPARATOR:
+=>   71:             return rewriteOpCalcToAsmCode(tree, node, asmFile);
+     72: 
+     73:         case opASSIGN: return rewriteOpAssignToAsmCode (tree, node, asmFile);
+
+#12 0x00007FF6AC12331E in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: rewriteNodeToAsmCode() at C:/Users/Admin/Desktop/prodva/My-programming-language/backend/src/asmProgramWriter.cpp:50:
+
+     48:             return 0;
+     49:         case typeOperator:
+=>   50:             return rewriteOpNodeToAsmCode(tree, node, asmFile);
+     51:         case typeIdentifier:
+     52:             return rewriteIdNodeToAsmCode(tree, node, asmFile);
+
+#13 0x00007FF6AC1231D4 in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: rewriteAstToAsmCode() at C:/Users/Admin/Desktop/prodva/My-programming-language/backend/src/asmProgramWriter.cpp:26:
+
+     24:     }
+     25: 
+=>   26:     if (rewriteNodeToAsmCode (tree, *treeRoot(tree), asmFile)) {
+     27:         printf("Error of rewriting AST to Asm code.\n");
+     28:         return 1;
+
+#14 0x00007FF6AC12179C in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: main() at C:/Users/Admin/Desktop/prodva/My-programming-language/backend/src/backendMain.cpp:25:
+
+     23:     treeDump(&programTree, &dumpInfo, "program");
+     24: 
+=>   25:     rewriteAstToAsmCode(&programTree, outputFile);
+     26: 
+     27:     return 0;
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 12 2025 18:43:41, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 12 2025 18:43:50
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------

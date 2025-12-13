@@ -1,3 +1,4 @@
+#include <txLib.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -17,24 +18,24 @@ int main(int argc, const char* argv[]) {
     const char* outputFile = argv[2];
 
     dump dumpInfo = {};
-    dumpInfo.nameOfDumpFile = "frontend/DUMPS/treeDump.html";
-    dumpInfo.nameOfGraphFile = "frontend/DUMPS/graph.txt";
+    dumpInfo.nameOfDumpFile = "DUMPS/treeDump.html";
+    dumpInfo.nameOfGraphFile = "DUMPS/graph.txt";
 
     struct lexAnalysisResult* lexResult = lexicalAnalysis(inputFile);
     if  (!lexResult) return printf("Error lexical Analysis.\n");
-
+$$
     tree_t programTree = {};
     programTree.rootNode = getProgramTree(&programTree, lexResult);
-
+$$
     if (!programTree.rootNode) {
         free(lexResult->programBuffer);
         free(lexResult->nodesArray);
         return printf("Error syntactic Analysis.\n");
     }
-
+$$
     treeDump (&programTree, &dumpInfo, "programTree");
     saveTreeInFile(&programTree, outputFile);
-
+$$
     endFrontendProgram (&programTree, lexResult);
     return 0;
 }

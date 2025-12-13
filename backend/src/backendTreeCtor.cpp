@@ -31,9 +31,6 @@ int readFileAndCreateTree (tree_t* tree, dump* dumpInfo, const char* nameOfFile)
         return 1;
     }
 
-    //tree->variableArr = (variableInfo*)calloc(NUM_OF_VARS, sizeof(variableInfo));
-    //tree->variableArrSize = NUM_OF_VARS;
-
     char* bufferStart = copyFileContent(nameOfFile);
     if (bufferStart == NULL) {
         printf("Error of copying tree from file\n");

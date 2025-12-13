@@ -4,6 +4,7 @@
 #include "../../COMMON/include/treeFunctions.h"
 
 #include "../include/backendTreeCtor.h"
+#include "../include/asmProgramWriter.h"
 
 
 int main(int argc, const char* argv[]) {
@@ -15,11 +16,13 @@ int main(int argc, const char* argv[]) {
 
     tree_t programTree = {};
     dump dumpInfo = {};
-    dumpInfo.nameOfDumpFile = "backend/DUMPS/treeDump.html";
-    dumpInfo.nameOfGraphFile = "backend/DUMPS/graph.txt";
+    dumpInfo.nameOfDumpFile = "DUMPS/backendTreeDump.html";
+    dumpInfo.nameOfGraphFile = "DUMPS/backGraph.txt";
 
     readFileAndCreateTree (&programTree, &dumpInfo, inputFile);
     treeDump(&programTree, &dumpInfo, "program");
+
+    rewriteAstToAsmCode(&programTree, outputFile);
 
     return 0;
 }

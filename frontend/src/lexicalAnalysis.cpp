@@ -31,9 +31,9 @@ struct lexAnalysisResult* lexicalAnalysis (const char* nameOfProgramFile) {
         skipSpaces(&bufPos, &curLine);
         skipComments(&bufPos, &curLine);
 
-        if (numOfNodes > sizeOfNodeArr) {
+        if (numOfNodes == sizeOfNodeArr) {
             sizeOfNodeArr *= 2;
-            nodeArray = (node_t**)realloc(nodeArray, sizeOfNodeArr);
+            nodeArray = (node_t**)realloc(nodeArray, sizeOfNodeArr * sizeof(node_t*));
             if (!nodeArray) {
                 printf("ERROR realloc!\n");
                 return NULL;
