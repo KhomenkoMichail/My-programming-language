@@ -1,4 +1,3 @@
-#include <txLib.h>
 #include <stdio.h>
 #include <assert.h>
 #include <string.h>
@@ -7,11 +6,12 @@
 #include "../../COMMON/include/structsAndConsts.h"
 #include "../../COMMON/include/structAccessFunctions.h"
 #include "../../COMMON/include/nameTableStack.h"
+#include "../../COMMON/include/treeFunctions.h"
 
 #include "../include/syntacticAnalysis.h"
 #include "../include/DSL.h"
 
-void syntaxError (tree_t* tree, node_t** nodeArr, size_t* curNodeNum, const char* funcName) {
+node_t* syntaxError (tree_t* tree, node_t** nodeArr, size_t* curNodeNum, const char* funcName) {
     assert(nodeArr);
     assert(curNodeNum);
     assert(funcName);
@@ -37,6 +37,8 @@ void syntaxError (tree_t* tree, node_t** nodeArr, size_t* curNodeNum, const char
             break;
     }
     printf("Is unexpected.\n");
+
+    return NULL;
 }
 
 node_t* getProgramTree (tree_t* tree, lexAnalysisResult* lexResult) {
@@ -53,25 +55,27 @@ node_t* getProgramTree (tree_t* tree, lexAnalysisResult* lexResult) {
 
     if (tree->errorCode)
         return NULL;
-$$
+
     while (NODE_IS_OP_(opINIT)) {
-        if (getFunctionsDeclarations(tree, nodeArr, curNodeNum))
+        if (!getFunctionsDeclarations(tree, nodeArr, curNodeNum))
             return NULL;
     }
-$$
+
     node_t* firstOperator = NULL;
     if (NODE_IS_ID)
         firstOperator = getFunction(tree, nodeArr, curNodeNum);
-    else {
-        syntaxError(tree, nodeArr, curNodeNum, __func__);
-        return NULL;
-    }
+    else
+        return syntaxError(tree, nodeArr, curNodeNum, __func__);
 
-$$
+    if(!firstOperator)
+        return NULL;
+
     while (nodeNum < numOfNodes - 1) {
         node_t* secondOperator = NULL;
 
         secondOperator = getFunction(tree, nodeArr, curNodeNum);
+        if(!secondOperator)
+            return NULL;
 
         node_t* linkNode = nodeArr[*curNodeNum - 1];
         *nodeLeft(linkNode) = firstOperator;
@@ -79,10 +83,10 @@ $$
 
         firstOperator = linkNode;
     }
-$$
+
     if (checkAllFunctionsHaveBodies (tree))
         return NULL;
-$$
+
     return firstOperator;
 }
 
@@ -94,10 +98,8 @@ node_t* getFunction (tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
     if (tree->errorCode)
         return NULL;
 
-    if ((nodeArr[*curNodeNum])->type != typeIdentifier) {
-        syntaxError(tree, nodeArr, curNodeNum, __func__);
-        return NULL;
-    }
+    if ((nodeArr[*curNodeNum])->type != typeIdentifier)
+        return syntaxError(tree, nodeArr, curNodeNum, __func__);
 
     node_t* funcNode = nodeArr[*curNodeNum];
     const char* funcName = (funcNode->value).id.identifierName;
@@ -133,6 +135,9 @@ node_t* getFunction (tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
         (*curNodeNum)++;
 
         node_t* secondParam = getFuncParam (tree, nodeArr, curNodeNum);
+        if(!secondParam)
+            return NULL;
+
         curNumOfParams++;
 
         *nodeLeft(nodeComma) = funcParam;
@@ -143,8 +148,7 @@ node_t* getFunction (tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
 
     if (numOfFuncParamsExpected != curNumOfParams) {
         printf("Error! Incorrect number of func params of func \"%s\".\n", funcName);
-        syntaxError(tree, nodeArr, curNodeNum, __func__);
-        return NULL;
+        return syntaxError(tree, nodeArr, curNodeNum, __func__);
     }
 
     *nodeLeft(funcNode) = funcParam;
@@ -152,6 +156,10 @@ node_t* getFunction (tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
     CHECK_THE_NODE_IS_(opBRACK_OFF);
 
     *nodeRight(funcNode) = getOperator(tree, nodeArr, curNodeNum);
+
+    if(!(*nodeRight(funcNode)))
+        return NULL;
+
     exitScope(tree);
 
     return funcNode;
@@ -205,8 +213,7 @@ node_t* getOperator (tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
             case opE_BELOW:
             case opE_ABOVE:
             default:
-                syntaxError(tree, nodeArr, curNodeNum, __func__);
-                return NULL;
+                return syntaxError(tree, nodeArr, curNodeNum, __func__);
         }
     }
     else if (NODE_IS_ID) {
@@ -225,8 +232,7 @@ node_t* getOperator (tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
        return NULL;
     }
 
-    syntaxError(tree, nodeArr, curNodeNum, __func__);
-    return NULL;
+    return syntaxError(tree, nodeArr, curNodeNum, __func__);
 }
 
 node_t* getOpIfOrWhile(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
@@ -243,10 +249,15 @@ node_t* getOpIfOrWhile(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
     CHECK_THE_NODE_IS_(opBRACK_ON);
 
     *nodeLeft(newNode) = getExpressionNode(tree, nodeArr, curNodeNum);
+    if(!(*nodeLeft(newNode)))
+        return NULL;
 
 
     CHECK_THE_NODE_IS_(opBRACK_OFF);
     *nodeRight(newNode) = getOperator (tree, nodeArr, curNodeNum);
+
+    if(!(*nodeRight(newNode)))
+            return NULL;
 
     return newNode;
 }
@@ -266,6 +277,9 @@ node_t* getOpInOrOut(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
 
     *nodeLeft(newNode) = getVarIDNode(tree, nodeArr, curNodeNum);
 
+    if (!*nodeLeft(newNode))
+        return NULL;
+
     CHECK_THE_NODE_IS_(opQUOTES);
     CHECK_THE_NODE_IS_(opSEPARATOR);
 
@@ -284,6 +298,9 @@ node_t* getOpRet(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
     (*curNodeNum)++;
 
     *nodeLeft(nodeRet) = getExpressionNode(tree, nodeArr, curNodeNum);
+
+    if(!(*nodeLeft(nodeRet)))
+        return NULL;
 
     CHECK_THE_NODE_IS_(opSEPARATOR);
 
@@ -306,10 +323,8 @@ node_t* getOpUnited(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
             (*curNodeNum)++;
             return NULL;
         }
-        else {
-            syntaxError(tree, nodeArr, curNodeNum, __func__);
-            return NULL;
-        }
+        else
+            return syntaxError(tree, nodeArr, curNodeNum, __func__);
     }
 
     enterNewScope(tree);
@@ -317,12 +332,15 @@ node_t* getOpUnited(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
     node_t* firstOperator = NULL;
 
     firstOperator = getOperator(tree, nodeArr, curNodeNum);
-
+        if (!firstOperator)
+            return NULL;
 
     while (!(NODE_IS_OP_(opUNITED_OFF))) {
         node_t* secondOperator = NULL;
 
         secondOperator = getOperator(tree, nodeArr, curNodeNum);
+        if (!secondOperator)
+            return NULL;
 
         node_t* linkNode = nodeArr[*curNodeNum - 1];
         *nodeLeft(linkNode) = firstOperator;
@@ -345,12 +363,17 @@ node_t* getOpAssign(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
     assert(curNodeNum);
 
     node_t* varNode = getVarIDNode(tree, nodeArr, curNodeNum);
+        if (!varNode)
+            return NULL;
 
     node_t* assignNode = nodeArr[*curNodeNum];
     (*curNodeNum)++;
 
     *nodeLeft(assignNode) = varNode;
     *nodeRight(assignNode) = getExpressionNode(tree, nodeArr, curNodeNum);
+
+    if(!(*nodeRight(assignNode)))
+        return NULL;
 
     CHECK_THE_NODE_IS_(opSEPARATOR);
 
@@ -385,10 +408,10 @@ node_t* getCall(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
     node_t* funcParam = NULL;
     size_t numOfCallParams = 0;
 
-    //if (NODE_IS_ID) {
     if (!NODE_IS_OP_(opBRACK_OFF)) {
-        //funcParam = getVarIDNode(tree, nodeArr, curNodeNum);
         funcParam = getExpressionNode(tree, nodeArr, curNodeNum);
+        if(!funcParam)
+            return NULL;
         numOfCallParams++;
     }
 
@@ -396,10 +419,10 @@ node_t* getCall(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
         node_t* nodeComma = (nodeArr[*curNodeNum]);
         (*curNodeNum)++;
 
-        //node_t* secondParam = getVarIDNode(tree, nodeArr, curNodeNum);
         node_t* secondParam = getExpressionNode(tree, nodeArr, curNodeNum);
+        if (!secondParam)
+            return NULL;
 
-        //node_t* nodeComma = (nodeArr[*curNodeNum - 2]);
         *nodeLeft(nodeComma) = funcParam;
         *nodeRight(nodeComma) = secondParam;
 
@@ -410,14 +433,12 @@ node_t* getCall(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
     *nodeLeft(funcNode) = funcParam;
 
     CHECK_THE_NODE_IS_(opBRACK_OFF);
-    //CHECK_THE_NODE_IS_(opSEPARATOR); //FIXME
 
     if (numOfCallParams != numOfFuncParams) {
         printf("Error! Incorrect number of func params of func \"%s\".\n", funcName);
         syntaxError(tree, nodeArr, curNodeNum, __func__);
         return NULL;
     }
-
 
     return funcNode;
 }
@@ -431,7 +452,10 @@ node_t* getExpressionNode(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
         return NULL;
 
     node_t* newExpressionNode = getADDandSUBnodes(tree, nodeArr, curNodeNum);
+    if (!newExpressionNode)
+        return NULL;
 
+//NOTE
     if (NODE_IS_COMPARE) {
         node_t* leftOperand = newExpressionNode;
 
@@ -439,6 +463,8 @@ node_t* getExpressionNode(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
         (*curNodeNum)++;
 
         node_t* rightOperand = getADDandSUBnodes(tree, nodeArr, curNodeNum);
+        if(!rightOperand)
+            return NULL;
 
         *nodeLeft(newExpressionNode) = leftOperand;
         *nodeRight(newExpressionNode) = rightOperand;
@@ -456,7 +482,9 @@ node_t* getADDandSUBnodes (tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
         return NULL;
 
     node_t* nodeExpression = getMULandDIVnodes(tree, nodeArr, curNodeNum);
-
+    if (!nodeExpression)
+        return NULL;
+//NOTE
     while ((NODE_IS_OP_(opADD)) || (NODE_IS_OP_(opSUB))) {
         node_t* leftOperand = nodeExpression;
 
@@ -465,6 +493,8 @@ node_t* getADDandSUBnodes (tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
 
         *nodeLeft(nodeExpression) = leftOperand;
         *nodeRight(nodeExpression) = getMULandDIVnodes(tree, nodeArr, curNodeNum);
+        if (!(*nodeRight(nodeExpression)))
+            return NULL;
     }
 
     return nodeExpression;
@@ -479,6 +509,8 @@ node_t* getMULandDIVnodes (tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
         return NULL;
 
     node_t* nodeExpression = getBracketExpressionNodes(tree, nodeArr, curNodeNum);
+        if (!nodeExpression)
+            return NULL;
 
     while ((NODE_IS_OP_(opMUL)) || (NODE_IS_OP_(opDIV))) {
         node_t* leftOperand = nodeExpression;
@@ -488,6 +520,8 @@ node_t* getMULandDIVnodes (tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
 
         *nodeLeft(nodeExpression) = leftOperand;
         *nodeRight(nodeExpression) = getBracketExpressionNodes(tree, nodeArr, curNodeNum);
+        if (!(*nodeRight(nodeExpression)))
+            return NULL;
     }
 
     return nodeExpression;
@@ -503,14 +537,17 @@ node_t* getBracketExpressionNodes (tree_t* tree, node_t** nodeArr, size_t* curNo
 
     if (NODE_IS_OP_(opBRACK_ON)) {
         (*curNodeNum)++;
+
         node_t* newNode = getADDandSUBnodes(tree, nodeArr, curNodeNum);
+
         if (NODE_IS_OP_(opBRACK_OFF))
             (*curNodeNum)++;
         else
-            syntaxError(tree, nodeArr, curNodeNum, __func__);
+            return syntaxError(tree, nodeArr, curNodeNum, __func__);
 
         return newNode;
     }
+
     else if (NODE_IS_OP_(opSQRT))
         return getSQRTnode(tree, nodeArr, curNodeNum);
 
@@ -519,16 +556,17 @@ node_t* getBracketExpressionNodes (tree_t* tree, node_t** nodeArr, size_t* curNo
         (*curNodeNum)++;
         return newNode;
     }
+
     else if (NODE_IS_ID) {
         if ((nodeArr[*curNodeNum + 1])->type == typeOperator && ((nodeArr[*curNodeNum + 1])->value).opCode == opBRACK_ON)
             return getCall(tree, nodeArr, curNodeNum);
         else
             return getVarIDNode(tree, nodeArr, curNodeNum);
     }
-    else {
-        syntaxError(tree, nodeArr, curNodeNum, __func__);
-        return NULL;
-    }
+
+    else
+        return syntaxError(tree, nodeArr, curNodeNum, __func__);
+
 }
 
 node_t* getSQRTnode(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
@@ -545,6 +583,8 @@ node_t* getSQRTnode(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
     CHECK_THE_NODE_IS_(opBRACK_ON);
 
     *nodeLeft(sqrtNode) = getADDandSUBnodes(tree, nodeArr, curNodeNum);
+    if (!(*nodeLeft(sqrtNode)))
+        return NULL;
 
     CHECK_THE_NODE_IS_(opBRACK_OFF);
 
@@ -583,10 +623,8 @@ node_t* getOpInit(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
 
     (*curNodeNum)++;
 
-     if (!NODE_IS_ID) {
-        syntaxError(tree, nodeArr, curNodeNum, __func__);
-        return NULL;
-    }
+     if (!NODE_IS_ID)
+        return syntaxError(tree, nodeArr, curNodeNum, __func__);
 
     node_t* idNode = nodeArr[*curNodeNum];
     const char* idName = (idNode->value).id.identifierName;
@@ -607,10 +645,8 @@ node_t* getOpInit(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
 
     (*curNodeNum)++;
 
-    if (!NODE_IS_OP_(opASSIGN)) {
-        syntaxError(tree, nodeArr, curNodeNum, __func__);
-        return NULL;
-    }
+    if (!NODE_IS_OP_(opASSIGN))
+        return syntaxError(tree, nodeArr, curNodeNum, __func__);
 
     node_t* assignNode = nodeArr[*curNodeNum];
     (*curNodeNum)++;
@@ -618,25 +654,26 @@ node_t* getOpInit(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
     *nodeLeft(assignNode) = idNode;
     *nodeRight(assignNode) = getExpressionNode(tree, nodeArr, curNodeNum);
 
+    if (!(*nodeRight(assignNode)))
+        return NULL;
+
     CHECK_THE_NODE_IS_(opSEPARATOR);
 
     return assignNode;
 }
 
-int getFunctionsDeclarations(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
+node_t* getFunctionsDeclarations(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
     assert(tree);
     assert(nodeArr);
     assert(curNodeNum);
 
     if (tree->errorCode)
-        return 1;
+        return NULL;
 
     (*curNodeNum)++;
 
-    if (!NODE_IS_ID) {
-        syntaxError(tree, nodeArr, curNodeNum, __func__);
-        return 1;
-    }
+    if (!NODE_IS_ID)
+        return syntaxError(tree, nodeArr, curNodeNum, __func__);
 
     node_t* funcNode = nodeArr[*curNodeNum];
     const char* funcName = (funcNode->value).id.identifierName;
@@ -646,7 +683,7 @@ int getFunctionsDeclarations(tree_t* tree, node_t** nodeArr, size_t* curNodeNum)
     if (!newFunc) {
         printf("Failed to add identifier %s to name table\n", funcName);
         tree->errorCode |= treeNameTableError;
-        return 1;
+        return NULL;
     }
 
     (*curNodeNum)++;
@@ -666,10 +703,8 @@ int getFunctionsDeclarations(tree_t* tree, node_t** nodeArr, size_t* curNodeNum)
             numOfParams++;
             (*curNodeNum)++;
         }
-        else {
-            syntaxError(tree, nodeArr, curNodeNum, __func__);
-            return 1;
-        }
+        else
+            return syntaxError(tree, nodeArr, curNodeNum, __func__);
     }
 
     newFunc->idInfo.funcInfo.paramCount = numOfParams;
@@ -677,7 +712,7 @@ int getFunctionsDeclarations(tree_t* tree, node_t** nodeArr, size_t* curNodeNum)
     CHECK_THE_NODE_IS_(opBRACK_OFF);
     CHECK_THE_NODE_IS_(opSEPARATOR);
 
-    return 0;
+    return SUCCESS;
 }
 
 node_t* getFuncParam (tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
@@ -717,4 +752,13 @@ int checkAllFunctionsHaveBodies (tree_t* tree) {
             }
 
     return funcsWithoutBodies;
+}
+
+void endFrontendProgram (tree_t* tree, lexAnalysisResult* lexResult) {
+    assert(tree);
+    assert(lexResult);
+
+    deleteTree (tree);
+    free(lexResult->programBuffer);
+    free(lexResult->nodesArray);
 }

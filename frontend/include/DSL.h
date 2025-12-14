@@ -14,9 +14,9 @@
 #define CHECK_THE_NODE_IS_(opNameCode)  if (NODE_IS_OP_(opNameCode))\
                                             (*curNodeNum)++;\
                                         else {\
-                                            syntaxError(tree, nodeArr, curNodeNum, __func__);\
-                                            return NULL;\
-                                        }\
+                                            return syntaxError (tree, nodeArr, curNodeNum, __func__);\
+                                        }
+#define SUCCESS ((node_t*)1)
 
 
 

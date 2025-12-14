@@ -2,11 +2,10 @@
 #include <assert.h>
 #include <string.h>
 
-#include "../../COMMON/include/structsAndConsts.h"
-#include "../../COMMON/include/structAccessFunctions.h"
-#include "../../COMMON/include/helpingFunctions.h"
-#include "../../COMMON/include/treeFunctions.h"
-
+#include "../include/structsAndConsts.h"
+#include "../include/structAccessFunctions.h"
+#include "../include/helpingFunctions.h"
+#include "../include/treeFunctions.h"
 #include "../include/saveTreeInFile.h"
 
 int saveTreeInFile (tree_t* tree, const char* nameOfSaveFile) {
@@ -73,13 +72,4 @@ void fprintfNode(node_t* node, FILE* file) {
         fprintf(file, "nil ");
 
     fprintf(file, ") ");
-}
-
-void endFrontendProgram (tree_t* tree, lexAnalysisResult* lexResult) {
-    assert(tree);
-    assert(lexResult);
-
-    deleteTree (tree);
-    free(lexResult->programBuffer);
-    free(lexResult->nodesArray);
 }

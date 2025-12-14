@@ -1,0 +1,6 @@
+wyaaaaaa getDiscriminant(a, b, c)!
+
+wyaaaaaa getNumOfLinearRoots(b, c)!
+
+wyaaaaaa getLinearRoot(b, c)!
+

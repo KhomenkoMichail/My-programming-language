@@ -3,16 +3,15 @@
 #include <string.h>
 #include <ctype.h>
 
-#include "../../COMMON/include/structsAndConsts.h"
-#include "../../COMMON/include/helpingFunctions.h"
-#include "../../COMMON/include/treeFunctions.h"
-#include "../../COMMON/include/nameTableConsts.h"
-#include "../../COMMON/include/nameTableStack.h"
-#include "../../COMMON/include/structAccessFunctions.h"
+#include "../include/structsAndConsts.h"
+#include "../include/helpingFunctions.h"
+#include "../include/treeFunctions.h"
+#include "../include/nameTableConsts.h"
+#include "../include/nameTableStack.h"
+#include "../include/structAccessFunctions.h"
+#include "../include/readTreeFromFileFunc.h"
 
-#include "../include/backendTreeCtor.h"
-
-int readFileAndCreateTree (tree_t* tree, dump* dumpInfo, const char* nameOfFile) {
+char* readFileAndCreateTree (tree_t* tree, dump* dumpInfo, const char* nameOfFile) {
     assert(tree);
     assert(dumpInfo);
     assert(nameOfFile);
@@ -28,13 +27,15 @@ int readFileAndCreateTree (tree_t* tree, dump* dumpInfo, const char* nameOfFile)
     if (dumpFile == NULL) {
         fprintf(stderr, "Error of opening file \"%s\"", dumpInfo->nameOfDumpFile);
         perror("");
-        return 1;
+        return NULL;
     }
 
     char* bufferStart = copyFileContent(nameOfFile);
+    char* bufferForFree = bufferStart;
+
     if (bufferStart == NULL) {
         printf("Error of copying tree from file\n");
-        return 1;
+        return NULL;
     }
     else
         *treeRoot(tree) = nodeCtorByReadBuffer(&bufferStart, tree, NULL, dumpInfo, dumpFile);
@@ -42,12 +43,12 @@ int readFileAndCreateTree (tree_t* tree, dump* dumpInfo, const char* nameOfFile)
     if (fclose(dumpFile) != 0) {
         fprintf(stderr, "Error of closing file \"%s\"", dumpInfo->nameOfDumpFile);
         perror("");
-        return 1;
+        return NULL;
     }
 
     treeDump(tree, dumpInfo, "Вот созданное финальное дерево:");
 
-    return 0;
+    return bufferForFree;
 }
 
 node_t* nodeCtorByReadBuffer(char** bufPos, tree_t* tree, node_t* parentNode, dump* dumpInfo, FILE* dumpFile) {
@@ -150,20 +151,6 @@ int processNodeType (tree_t* tree, node_t* node, char** bufPos) {
             (**bufPos) = '\0';
             (*bufPos)++;
             (nodeValue(node))->id.identifierHash = getStringHash((nodeValue(node))->id.identifierName);
-
-            /*unsigned long long variableHash = getStringHash(valueString);
-            struct variableInfo* searchedVariable = (struct variableInfo*)bsearch(&variableHash,
-            tree->variableArr, tree->variableArrSize, sizeof(struct variableInfo), bsearchHashComparator);
-
-            if((searchedVariable != NULL) && (strcmp(searchedVariable->varName, valueString) == 0)) {
-                (nodeValue(node))->varHash = searchedVariable->varHash;
-            }
-            else {
-                strncpy(((tree->variableArr)[0]).varName, valueString, lenOfValue);
-                ((tree->variableArr)[0]).varHash = variableHash;
-                qsort(tree->variableArr, tree->variableArrSize, sizeof(struct variableInfo), structVariableComparator);
-                (nodeValue(node))->varHash = variableHash;
-            }*/
 
             break;
         }

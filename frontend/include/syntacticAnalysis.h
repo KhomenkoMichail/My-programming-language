@@ -1,7 +1,7 @@
 #ifndef SYNTACTIC_ANALYSIS_H
 #define SYNTACTIC_ANALYSIS_H
 
-void syntaxError (tree_t* tree, node_t** nodeArr, size_t* curNodeNum, const char* funcName);
+node_t* syntaxError (tree_t* tree, node_t** nodeArr, size_t* curNodeNum, const char* funcName);
 
 node_t* getProgramTree (tree_t* tree, lexAnalysisResult* lexResult);
 
@@ -37,10 +37,10 @@ node_t* getOpInit(tree_t* tree, node_t** nodeArr, size_t* curNodeNum);
 
 node_t* getFuncParam (tree_t* tree, node_t** nodeArr, size_t* curNodeNum);
 
-int getFunctionsDeclarations(tree_t* tree, node_t** nodeArr, size_t* curNodeNum);
+node_t* getFunctionsDeclarations(tree_t* tree, node_t** nodeArr, size_t* curNodeNum);
 
 int checkAllFunctionsHaveBodies (tree_t* tree);
 
-
+void endFrontendProgram (tree_t* tree, lexAnalysisResult* lexResult);
 
 #endif

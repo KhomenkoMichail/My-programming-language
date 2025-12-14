@@ -93,7 +93,7 @@ int stackDtor (stack_t* stack) {
 nameTable_t* nameTableCtor (size_t capacity) {
     nameTable_t* newTable = (nameTable_t*)calloc(1, sizeof(nameTable_t));
     if (!newTable) {
-        printf("ERROR nameTableCalloc!");
+        printf("ERROR name table calloc!");
         return NULL;
     }
 
