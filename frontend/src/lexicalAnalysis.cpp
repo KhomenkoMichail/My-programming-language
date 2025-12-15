@@ -123,7 +123,7 @@ int tokenIsIdentifier (char** bufPos) {
 
     char identifier[STR_SIZE] = {};
 
-    if (sscanf(*bufPos, "%[a-zA-Z0-9]", identifier))
+    if (sscanf(*bufPos, "%[a-zA-Z0-9а-яА-Я]", identifier))
         return 1;
 
     return 0;
@@ -214,7 +214,7 @@ node_t* processIdentifier(char** bufPos, size_t curLine) {
     char identifier[STR_SIZE] = {};
     int identifierLen = 0;
 
-    if (sscanf(*bufPos, "%[a-zA-Z0-9]%n", identifier, &identifierLen)) {
+    if (sscanf(*bufPos, "%[a-zA-Z0-9а-яА-Я]%n", identifier, &identifierLen)) {
 
         unsigned long long identifierHash = getStringHash(identifier);
 

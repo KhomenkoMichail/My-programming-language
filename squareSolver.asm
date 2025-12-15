@@ -1,44 +1,104 @@
+
+
+
+
+
+
 :main
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 PUSH 0
 PUSH 0
 POPREG Ax
 POPM [Ax]
+
+
 PUSH 0
 PUSH 1
 POPREG Ax
 POPM [Ax]
+
+
 PUSH 0
 PUSH 2
 POPREG Ax
 POPM [Ax]
+
+
 PUSH 0
 PUSH 3
 POPREG Ax
 POPM [Ax]
+
+
 PUSH 0
 PUSH 4
 POPREG Ax
 POPM [Ax]
+
+
 PUSH 0
 PUSH 5
 POPREG Ax
 POPM [Ax]
+
+
 PUSH 0
 PUSH 6
 POPREG Ax
 POPM [Ax]
+
+
 IN
 PUSH 0
 POPREG Ax
 POPM [Ax]
+
+
 IN
 PUSH 1
 POPREG Ax
 POPM [Ax]
+
+
 IN
 PUSH 2
 POPREG Ax
 POPM [Ax]
+
+
+
+
 PUSH 0
 POPREG Ax
 PUSHM [Ax]
@@ -52,6 +112,12 @@ POPREG Bx
 PUSHREG Bx
 PUSH 0
 JE :endif1
+
+
+
+
+
+
 PUSH 1
 POPREG Ax
 PUSHM [Ax]
@@ -62,10 +128,10 @@ CALL :getNumOfLinearRoots
 PUSH 4
 POPREG Ax
 POPM [Ax]
-PUSH 4
-POPREG Ax
-PUSHM [Ax]
-OUT
+
+
+
+
 PUSH 4
 POPREG Ax
 PUSHM [Ax]
@@ -79,6 +145,10 @@ POPREG Bx
 PUSHREG Bx
 PUSH 0
 JE :endif2
+
+
+
+
 PUSH 1
 POPREG Ax
 PUSHM [Ax]
@@ -89,12 +159,12 @@ CALL :getLinearRoot
 PUSH 5
 POPREG Ax
 POPM [Ax]
-PUSH 5
-POPREG Ax
-PUSHM [Ax]
-OUT
 :endif2
 :endif1
+
+
+
+
 PUSH 0
 POPREG Ax
 PUSHM [Ax]
@@ -108,6 +178,12 @@ POPREG Bx
 PUSHREG Bx
 PUSH 0
 JE :endif3
+
+
+
+
+
+
 PUSH 2
 POPREG Ax
 PUSHM [Ax]
@@ -121,10 +197,22 @@ POPREG Bx
 PUSHREG Bx
 PUSH 0
 JE :endif4
+
+
+
+
+
+
+
+
 PUSH 0
 PUSH 5
 POPREG Ax
 POPM [Ax]
+
+
+
+
 PUSH 0
 POPREG Ax
 PUSHM [Ax]
@@ -135,6 +223,10 @@ CALL :getNumOfLinearRoots
 PUSH 4
 POPREG Ax
 POPM [Ax]
+
+
+
+
 PUSH 4
 POPREG Ax
 PUSHM [Ax]
@@ -148,6 +240,10 @@ POPREG Bx
 PUSHREG Bx
 PUSH 0
 JE :endif5
+
+
+
+
 PUSH 0
 POPREG Ax
 PUSHM [Ax]
@@ -159,6 +255,10 @@ PUSH 6
 POPREG Ax
 POPM [Ax]
 :endif5
+
+
+
+
 PUSH 5
 POPREG Ax
 PUSHM [Ax]
@@ -174,12 +274,18 @@ POPREG Bx
 PUSHREG Bx
 PUSH 0
 JE :endif6
+
+
 PUSH 2
 PUSH 4
 POPREG Ax
 POPM [Ax]
 :endif6
 :endif4
+
+
+
+
 PUSH 2
 POPREG Ax
 PUSHM [Ax]
@@ -193,6 +299,18 @@ POPREG Bx
 PUSHREG Bx
 PUSH 0
 JE :endif7
+
+
+
+
+
+
+
+
+
+
+
+
 PUSH 0
 POPREG Ax
 PUSHM [Ax]
@@ -206,6 +324,10 @@ CALL :getDiscriminant
 PUSH 3
 POPREG Ax
 POPM [Ax]
+
+
+
+
 PUSH 3
 POPREG Ax
 PUSHM [Ax]
@@ -219,11 +341,17 @@ POPREG Bx
 PUSHREG Bx
 PUSH 0
 JE :endif8
+
+
 PUSH 0
 PUSH 4
 POPREG Ax
 POPM [Ax]
 :endif8
+
+
+
+
 PUSH 3
 POPREG Ax
 PUSHM [Ax]
@@ -237,15 +365,27 @@ POPREG Bx
 PUSHREG Bx
 PUSH 0
 JE :endif9
+
+
+
+
 PUSH 1
 PUSH 4
 POPREG Ax
 POPM [Ax]
+
+
+
+
+
+
 PUSH 0
 PUSH 1
 POPREG Ax
 PUSHM [Ax]
 SUB
+
+
 PUSH 2
 PUSH 0
 POPREG Ax
@@ -256,6 +396,10 @@ PUSH 5
 POPREG Ax
 POPM [Ax]
 :endif9
+
+
+
+
 PUSH 3
 POPREG Ax
 PUSHM [Ax]
@@ -269,20 +413,38 @@ POPREG Bx
 PUSHREG Bx
 PUSH 0
 JE :endif10
+
+
+
+
+
+
 PUSH 2
 PUSH 4
 POPREG Ax
 POPM [Ax]
+
+
+
+
+
+
+
+
 PUSH 0
 PUSH 1
 POPREG Ax
 PUSHM [Ax]
 SUB
+
+
 PUSH 3
 POPREG Ax
 PUSHM [Ax]
 SQRT
 SUB
+
+
 PUSH 2
 PUSH 0
 POPREG Ax
@@ -292,16 +454,28 @@ DIV
 PUSH 5
 POPREG Ax
 POPM [Ax]
+
+
+
+
+
+
+
+
 PUSH 0
 PUSH 1
 POPREG Ax
 PUSHM [Ax]
 SUB
+
+
 PUSH 3
 POPREG Ax
 PUSHM [Ax]
 SQRT
 ADD
+
+
 PUSH 2
 PUSH 0
 POPREG Ax
@@ -314,10 +488,16 @@ POPM [Ax]
 :endif10
 :endif7
 :endif3
+
+
 PUSH 4
 POPREG Ax
 PUSHM [Ax]
 OUT
+
+
+
+
 PUSH 4
 POPREG Ax
 PUSHM [Ax]
@@ -331,11 +511,17 @@ POPREG Bx
 PUSHREG Bx
 PUSH 0
 JE :endif11
+
+
 PUSH 5
 POPREG Ax
 PUSHM [Ax]
 OUT
 :endif11
+
+
+
+
 PUSH 4
 POPREG Ax
 PUSHM [Ax]
@@ -349,15 +535,23 @@ POPREG Bx
 PUSHREG Bx
 PUSH 0
 JE :endif12
+
+
+
+
 PUSH 5
 POPREG Ax
 PUSHM [Ax]
 OUT
+
+
 PUSH 6
 POPREG Ax
 PUSHM [Ax]
 OUT
 :endif12
+
+
 HLT
 :getDiscriminant
 PUSH 7
@@ -369,6 +563,14 @@ POPM [Ax]
 PUSH 9
 POPREG Ax
 POPM [Ax]
+
+
+
+
+
+
+
+
 PUSH 8
 POPREG Ax
 PUSHM [Ax]
@@ -376,6 +578,10 @@ PUSH 8
 POPREG Ax
 PUSHM [Ax]
 MUL
+
+
+
+
 PUSH 4
 PUSH 7
 POPREG Ax
@@ -389,6 +595,8 @@ SUB
 PUSH 10
 POPREG Ax
 POPM [Ax]
+
+
 PUSH 10
 POPREG Ax
 PUSHM [Ax]
@@ -400,6 +608,14 @@ POPM [Ax]
 PUSH 12
 POPREG Ax
 POPM [Ax]
+
+
+
+
+
+
+
+
 PUSH 11
 POPREG Ax
 PUSHM [Ax]
@@ -413,6 +629,12 @@ POPREG Bx
 PUSHREG Bx
 PUSH 0
 JE :endif13
+
+
+
+
+
+
 PUSH 12
 POPREG Ax
 PUSHM [Ax]
@@ -426,9 +648,15 @@ POPREG Bx
 PUSHREG Bx
 PUSH 0
 JE :endif14
+
+
 PUSH -1
 RET
 :endif14
+
+
+
+
 PUSH 12
 POPREG Ax
 PUSHM [Ax]
@@ -442,10 +670,16 @@ POPREG Bx
 PUSHREG Bx
 PUSH 0
 JE :endif15
+
+
 PUSH 0
 RET
 :endif15
 :endif13
+
+
+
+
 PUSH 11
 POPREG Ax
 PUSHM [Ax]
@@ -459,9 +693,13 @@ POPREG Bx
 PUSHREG Bx
 PUSH 0
 JE :endif16
+
+
 PUSH 1
 RET
 :endif16
+
+
 PUSH 0
 RET
 :getLinearRoot
@@ -471,6 +709,14 @@ POPM [Ax]
 PUSH 14
 POPREG Ax
 POPM [Ax]
+
+
+
+
+
+
+
+
 PUSH 0
 PUSH 14
 POPREG Ax
@@ -483,10 +729,8 @@ DIV
 PUSH 15
 POPREG Ax
 POPM [Ax]
-PUSH 15
-POPREG Ax
-PUSHM [Ax]
-OUT
+
+
 PUSH 15
 POPREG Ax
 PUSHM [Ax]

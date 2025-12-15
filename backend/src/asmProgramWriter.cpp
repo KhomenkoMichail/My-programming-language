@@ -61,6 +61,8 @@ int rewriteOpNodeToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
     assert(node);
     assert(asmFile);
 
+    fprintf(asmFile, "\n\n");
+
     switch ((*nodeValue(node)).opCode) {
 
         case opADD:
