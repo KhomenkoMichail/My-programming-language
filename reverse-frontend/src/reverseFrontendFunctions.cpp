@@ -20,10 +20,10 @@ int fprintfFunctionSignatures (FILE* programFile, tree_t* tree, node_t* node) {
 
     if (NODE_IS_OP_(opSEPARATOR)) {
         if (*nodeLeft(node))
-            errorCode = fprintfFunctionSignatures(programFile, *nodeLeft(node));
+            errorCode = fprintfFunctionSignatures(programFile, tree, *nodeLeft(node));
 
         if (*nodeRight(node))
-            errorCode = fprintfFunctionSignatures(programFile, *nodeRight(node));
+            errorCode = fprintfFunctionSignatures(programFile, tree, *nodeRight(node));
     }
     else if (*nodeType(node) == typeIdentifier) {
         if (strcmp(ID_NAME, "main")) {
@@ -93,12 +93,16 @@ int fprintfAstToShiriiwookLang (const char* outputFileName, tree_t* tree) {
         return UnexpectedFuncSignNode;
     }
 
-    int leftIndent = 0;
+    size_t leftIndent = 0;
 
-    if (rewriteNodeToShiriwookLang (outputFile, tree, *treeRoot(tree), &leftIndent)) {
+    if (rewriteNodeToShiriiwookLang (outputFile, tree, *treeRoot(tree), &leftIndent)) {
         printf("Error of rewriting AST to shiriiWook.\n");
         return 1;
     }
+    #include "../../COMMON/include/operatorsArray.h"
+    (void)NUM_OF_OPERATORS;
+
+    fprintf(outputFile, "%s", OP_NAME_(opSEPARATOR));
 
 
     if (fclose(outputFile) != 0) {
@@ -110,7 +114,7 @@ int fprintfAstToShiriiwookLang (const char* outputFileName, tree_t* tree) {
     return 0;
 }
 
-int rewriteNodeToShiriiwookLang (FILE* outputFile, tree_t* tree, node_t* node, int* leftIndent) {
+int rewriteNodeToShiriiwookLang (FILE* outputFile, tree_t* tree, node_t* node, size_t* leftIndent) {
     assert(outputFile);
     assert(tree);
     assert(node);
@@ -137,6 +141,7 @@ int rewriteNumNodeToShiriwookLang(FILE* outputFile, node_t* node) {
     sprintf(numberString, "%d", nodeValue(node)->constValue);
 
     #include "../../COMMON/include/numbersArray.h"
+    (void)NUM_OF_NUMBERS;
 
     for (size_t i = 0; numberString[i]; i++) {
         if(i != 0)
@@ -147,7 +152,7 @@ int rewriteNumNodeToShiriwookLang(FILE* outputFile, node_t* node) {
             i++;
         }
 
-        fprintf(outputFile, "%s", numbersArray[numberString[i] - '0']);
+        fprintf(outputFile, "%s", (numbersArray[numberString[i] - '0']).pronunciation);
     }
 
     return 0;
@@ -185,7 +190,10 @@ int rewriteFuncBodyToShiriiwookLang (FILE* outputFile, tree_t* tree, node_t* nod
     #include"../../COMMON/include/operatorsArray.h"
     (void)NUM_OF_OPERATORS;
 
-    fprintf(outputFile, "%s%s", ID_NAME, OP_NAME_(opBRACK_ON));
+    if(!strcmp(ID_NAME, "main"))
+        fprintf(outputFile, "\n\n%s%s", MAIN_FUNCTION, OP_NAME_(opBRACK_ON));
+    else
+        fprintf(outputFile, "\n\n%s%s", ID_NAME, OP_NAME_(opBRACK_ON));
 
     enterNewScope(tree);
 
@@ -206,6 +214,7 @@ int rewriteFuncBodyToShiriiwookLang (FILE* outputFile, tree_t* tree, node_t* nod
     (*leftIndent)--;
     exitScope(tree);
 
+    fprintf(outputFile, "%s\n", OP_NAME_(opSEPARATOR));
     fprintf(outputFile, "%s", OP_NAME_(opUNITED_OFF));
 
     return errorCode;
@@ -214,8 +223,8 @@ int rewriteFuncBodyToShiriiwookLang (FILE* outputFile, tree_t* tree, node_t* nod
 void fprintfLeftIndent (FILE* outputFile, size_t leftIndent) {
     assert(outputFile);
 
-    for (int i = 0; i < leftIndent; i++)
-        fprintf(outputFile, "\t")
+    for (size_t i = 0; i < leftIndent; i++)
+        fprintf(outputFile, "\t");
 }
 
 int rewriteFuncCallNodeToShiriiwookLang (FILE* outputFile, tree_t* tree, node_t* node, size_t* leftIndent) {
@@ -226,12 +235,15 @@ int rewriteFuncCallNodeToShiriiwookLang (FILE* outputFile, tree_t* tree, node_t*
 
     int errorCode = 0;
 
+    #include"../../COMMON/include/operatorsArray.h"
+    (void)NUM_OF_OPERATORS;
+
     fprintf(outputFile, "%s%s", ID_NAME, OP_NAME_(opBRACK_ON));
 
     if (*nodeLeft(node))
-        errorCode = rewriteNodeToAsmCode (tree, *nodeLeft(node), asmFile);
+        errorCode = rewriteNodeToShiriiwookLang(outputFile, tree, *nodeLeft(node), leftIndent);
 
-    fprintf(outputFile, "%s", OP_NAME_(opBRACK_OFF))
+    fprintf(outputFile, "%s", OP_NAME_(opBRACK_OFF));
 
     return errorCode;
 }
@@ -304,6 +316,7 @@ int rewriteOpNodeToShiriiwookLang (FILE* outputFile, tree_t* tree, node_t* node,
         case opUNITED_OFF:
         case opQUOTES:
         case opINIT:
+        case opUNKNOWN:
         default:
             printf("Error! Unexpected operator in AST!\n");
             return UnexpectedOperator;
@@ -321,6 +334,9 @@ int rewriteInfixOpNodeToShiriiwookLang (FILE* outputFile, tree_t* tree, node_t* 
 
     #include "../../COMMON/include/operatorsArray.h"
     (void)NUM_OF_OPERATORS;
+
+    if (needBrackets(node))
+        fprintf(outputFile, "%s", OP_NAME_(opBRACK_ON));
 
     if (*nodeLeft(node))
         errorCode = rewriteNodeToShiriiwookLang (outputFile, tree, *nodeLeft(node), leftIndent);
@@ -340,6 +356,9 @@ int rewriteInfixOpNodeToShiriiwookLang (FILE* outputFile, tree_t* tree, node_t* 
         errorCode = rewriteNodeToShiriiwookLang (outputFile, tree, *nodeRight(node), leftIndent);
     else
         return printf("Error! Infix op {%s} does not have LEFT!\n", OP_C_NAME_(curOp)), TreeConstructionError;
+
+    if (needBrackets(node))
+        fprintf(outputFile, "%s", OP_NAME_(opBRACK_OFF));
 
     return errorCode;
 }
@@ -361,19 +380,19 @@ int rewriteAssignNodeToShiriiwookLang(FILE* outputFile, tree_t* tree, node_t* no
         identifierInfo* searchedVar = findIdInAllScopes(tree, varName);
 
         if (!searchedVar)
-            fprintf("%s ", OP_NAME_(opINIT));
+            fprintf(outputFile, "%s ", OP_NAME_(opINIT));
 
         errorCode = rewriteVarNodeToShiriiwookLang(outputFile, tree, *nodeLeft(node), leftIndent);
     }
     else
-        return printf("Error! Infix op {%s} does not have LEFT!\n", OP_C_NAME_(curOp)), TreeConstructionError;
+        return printf("Error! Infix op {%s} does not have LEFT!\n", OP_C_NAME_(opASSIGN)), TreeConstructionError;
 
-    fprintf(" %s ", OP_NAME_(opASSIGN));
+    fprintf(outputFile, " %s ", OP_NAME_(opASSIGN));
 
     if (*nodeRight(node))
         errorCode = rewriteNodeToShiriiwookLang (outputFile, tree, *nodeRight(node), leftIndent);
     else
-        return printf("Error! Infix op {%s} does not have LEFT!\n", OP_C_NAME_(curOp)), TreeConstructionError;
+        return printf("Error! Infix op {%s} does not have LEFT!\n", OP_C_NAME_(opASSIGN)), TreeConstructionError;
 
     return errorCode;
 }
@@ -391,7 +410,10 @@ int rewriteOpIfOrWhileToShiriiwookLang (FILE* outputFile, tree_t* tree, node_t* 
 
     operatorCode_t curOp = nodeValue(node)->opCode;
 
-    fprintf(outputFile, "%s %s", OP_NAME_(curOP), OP_NAME(opBRACK_ON));
+    fprintf(outputFile, "\n");
+    fprintfLeftIndent(outputFile, *leftIndent);
+
+    fprintf(outputFile, "%s %s", OP_NAME_(curOp), OP_NAME_(opBRACK_ON));
 
     if (*nodeLeft(node))
         errorCode = rewriteNodeToShiriiwookLang (outputFile, tree, *nodeLeft(node), leftIndent);
@@ -414,8 +436,11 @@ int rewriteOpIfOrWhileToShiriiwookLang (FILE* outputFile, tree_t* tree, node_t* 
         errorCode = rewriteNodeToShiriiwookLang (outputFile, tree, *nodeRight(node), leftIndent);
         (*leftIndent)--;
 
-        if ((*nodeType(rightNode) == typeOperator) && (nodeValue(rightNode)->opCode == opSEPARATOR))
-            fprintf(outputFile, "\b\b\b\b%s", OP_NAME_(opUNITED_OFF)); //FIXME
+        if ((*nodeType(rightNode) == typeOperator) && (nodeValue(rightNode)->opCode == opSEPARATOR)) {
+            fprintf(outputFile, "%s\n", OP_NAME_(opSEPARATOR));
+            fprintfLeftIndent(outputFile, *leftIndent);
+            fprintf(outputFile, "%s", OP_NAME_(opUNITED_OFF)); //FIXME
+        }
     }//NOTE problem place
     else
         return printf("Error! Operator {%s} does not have RIGHT!\n", OP_C_NAME_(curOp)), TreeConstructionError;
@@ -454,4 +479,60 @@ int rewritePrefixOpNodeToShiriiwookLang (FILE* outputFile, tree_t* tree, node_t*
         fprintf(outputFile, "%s", OP_NAME_(opBRACK_OFF));
 
     return errorCode;
+}
+
+
+int needBrackets(node_t* node) {
+    assert(node);
+
+    int currentPriority = getOperatorPriority((nodeValue(node))->opCode);
+    int parentPriority = 0;
+
+    if(*nodeParent(node))
+        parentPriority = getOperatorPriority((nodeValue(*nodeParent(node)))->opCode);
+
+    return (currentPriority < parentPriority);
+}
+
+int getOperatorPriority(operatorCode_t opCode) {
+    /*switch (opCode) {
+        case opADD:
+        case opSUB:
+            return 1;
+        case opMUL:
+        case opDIV:
+            return 2;
+        case opSQRT:
+            return 3;
+        case opSEPARATOR:
+        case opBRACK_ON:
+        case opBRACK_OFF:
+        case opASSIGN:
+        case opWHILE:
+        case opIF:
+        case opIN:
+        case opOUT:
+        case opRET:
+        case opHLT:
+        case opSQRT:
+        case opCOMMA:
+        case opUNITED_ON:
+        case opUNITED_OFF:
+        case opQUOTES:
+        case opEQUAL:
+        case opABOVE:
+        case opBELOW:
+        case opNOT_EQUAL:
+        case opE_BELOW:
+        case opE_ABOVE:
+        case opINIT:
+        default:
+            return 0;
+    }*/
+    if (opCode == opADD || opCode == opSUB)
+        return 1;
+    else if (opCode == opMUL || opCode == opDIV)
+        return 2;
+    else
+        return 0;
 }

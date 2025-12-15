@@ -91,7 +91,7 @@ int tokenIsNumber (char** bufPos) {
     if (*curPos == '~')
         curPos++;
 
-    #include "../include/numbersArray.h"
+    #include "../../COMMON/include/numbersArray.h"
 
     for (int i = NUM_OF_NUMBERS - 1; i >= 0; i--)
             if (!strncmp(curPos, (numbersArray[i]).pronunciation, (numbersArray[i]).length))
@@ -175,7 +175,7 @@ node_t* processNumber(char** bufPos, size_t curLine) {
     assert(bufPos);
     assert(*bufPos);
 
-    #include "../include/numbersArray.h"
+    #include "../../COMMON/include/numbersArray.h"
 
     int sign = 1;
     int value = 0;

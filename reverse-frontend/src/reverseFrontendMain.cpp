@@ -22,7 +22,7 @@ int main(int argc, const char* argv[]) {
 
     char* fileBuffer = readFileAndCreateTree (&programTree, &dumpInfo, inputFile);
 
-
+    fprintfAstToShiriiwookLang(outputFile, &programTree);
 
     deleteTree(&programTree);
     free(fileBuffer);

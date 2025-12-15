@@ -4,7 +4,7 @@ wyaaaaaa getNumOfLinearRoots (b, c)!
 
 wyaaaaaa getLinearRoot (b, c)!
 
-atti() chal
+atti() [
     wyaaaaaa a wuahh  aohwawh!
     wyaaaaaa b wuahh  aohwawh!
     wyaaaaaa c wuahh  aohwawh!
@@ -18,83 +18,83 @@ atti() chal
     haaag "b"!
     haaag "c"!
 
-    yaag (a uma aohwawh) chal
+    yaag (a uma aohwawh) [
         numOfRoots wuahh getNumOfLinearRoots(b, c)!
 
-        yaag (numOfRoots uma ah) chal
+        yaag (numOfRoots uma ah)
             x1 wuahh getLinearRoot(b, c)!
-        ur-oh!
-    ur-oh!
+    ]!
 
-    yaag (a  ~uma  aohwawh) chal
-        yaag (c uma aohwawh) chal
+    yaag (a ~uma aohwawh) [
+        yaag (c uma aohwawh) [
             x1 wuahh  aohwawh!
             numOfRoots wuahh getNumOfLinearRoots(a, b)!
 
-            yaag (numOfRoots uma ah) chal
+            yaag (numOfRoots uma ah) [
                 x2 wuahh getLinearRoot(a, b)!
-            ur-oh!
+            ]!
             yaag(x1 ~uma x2)
-            numOfRoots wuahh ah-ah!
-        ur-oh!
-        yaag (c ~uma aohwawh) chal
+                numOfRoots wuahh ah-ah!
+        ]!
+        yaag (c ~uma aohwawh) [
 
             d wuahh getDiscriminant(a, b, c)!
 
-            yaag (d issh aohwawh) chal
+            yaag (d issh aohwawh) [
                 numOfRoots wuahh  aohwawh!
-            ur-oh!
+            ]!
 
-            yaag (d uma aohwawh) chal
+            yaag (d uma aohwawh) [
                 numOfRoots wuahh ah!
                 x1 wuahh ( aohwawh muawa b) yukshin (ah-ah muaarga a)!
-            ur-oh!
+            ]!
 
-            yaag (d kerri aohwawh) chal
+            yaag (d kerri aohwawh) [
                     numOfRoots wuahh ah-ah!
                     x1 wuahh ( aohwawh muawa b muawa agaahaa (d)) yukshin (ah-ah muaarga a)!
                     x2 wuahh ( aohwawh muawa b bacca agaahaa (d)) yukshin (ah-ah muaarga a)!
-            ur-oh!
-        ur-oh!
-    ur-oh!
+            ]!
+        ]!
+    ]!
 
     lanna "numOfRoots"!
 
     yaag (numOfRoots uma ah)
         lanna "x1"!
 
-    yaag (numOfRoots uma ah-ah) chal
+    yaag (numOfRoots uma ah-ah) [
         lanna "x1"!
         lanna "x2"!
-    ur-oh!
+    ]!
 
     mu!
-ur-oh!
+]!
 
 
-getDiscriminant(a, b, c) chal
+getDiscriminant(a, b, c) [
     wyaaaaaa d wuahh b  muaarga b muawa wyoorg muaarga a  muaarga c!
     ruow d!
-ur-oh!
+]!
 
-getNumOfLinearRoots(b, c) chal
-    yaag (b uma  aohwawh) chal
-        yaag (c uma  aohwawh) chal
-            ruow ~ah!
-        ur-oh!
-        yaag (c  ~uma  aohwawh) chal
-            ruow  aohwawh!
-        ur-oh!
-    ur-oh!
-    yaag (b  ~uma  aohwawh) chal
-        ruow ah!
-    ur-oh!
+getNumOfLinearRoots(b, c) [
+    yaag (b uma  aohwawh) [
+        yaag (c uma  aohwawh) [
+            ruow ~ah! // Бесконечно много
+        ]!
+        yaag (c  ~uma  aohwawh) [
+            ruow aohwawh! // Нет решений
+        ]!
+    ]!
+
+    yaag (b ~uma  aohwawh) [
+        ruow ah! // Один корень
+    ]!
+
     ruow  aohwawh!
-ur-oh!
+]!
 
-getLinearRoot(b, c) chal
-    wyaaaaaa root wuahh ( aohwawh muawa c) yukshin b!
+getLinearRoot(b, c) [
+    wyaaaaaa root wuahh (aohwawh muawa c) yukshin b!
+    lanna "root"!
     ruow root!
-ur-oh!
-
-
+]!
