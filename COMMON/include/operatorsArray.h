@@ -14,15 +14,15 @@ struct operatorInfo operatorsArray[] ={ { "bacca",     opADD,         sizeof("ba
                                         { "mu",        opHLT,         sizeof("mu") - 1,         "hlt",   "#f42424ff" },
                                         { "agaahaa",   opSQRT,        sizeof("agaahaa") - 1,    "sqrt",  "#f668e5ff" },
                                         { ",",         opCOMMA,       sizeof(",") - 1,          ",",     "#eceef0ff" },
-                                        { "[",      opUNITED_ON,   sizeof("[") - 1,          "{",     "#eceef0ff" },
-                                        { "]",     opUNITED_OFF,  sizeof("]") - 1,      "}",     "#eceef0ff" },
+                                        { "chal",      opUNITED_ON,   sizeof("chal") - 1,       "{",     "#eceef0ff" },
+                                        { "ur-oh",     opUNITED_OFF,  sizeof("ur-oh") - 1,      "}",     "#eceef0ff" },
                                         { "\"",        opQUOTES,      sizeof("\"") - 1,         "\"",    "#eceef0ff" },
                                         { "uma",       opEQUAL,       sizeof("uma") - 1,        "==",    "#efde9dff" },
                                         { "issh",      opBELOW,       sizeof("issh") - 1,       "<",     "#efde9dff" },
                                         { "kerri",     opABOVE,       sizeof("kerri") - 1,      ">",     "#efde9dff" },
                                         { "~uma",      opNOT_EQUAL,   sizeof("~uma") - 1,       "!=",    "#efde9dff" },
-                                        { "issh-uma",  opE_BELOW,     sizeof("issh-uma") - 1,   "<=",    "#efde9dff" },
-                                        { "kerri-uma", opE_ABOVE,     sizeof("kerri-uma") - 1,  ">=",    "#efde9dff" },
+                                        { "~issh~uma",  opE_BELOW,     sizeof("~issh~uma") - 1,   "<=",    "#efde9dff" },
+                                        { "~kerri~uma", opE_ABOVE,     sizeof("~kerri~uma") - 1,  ">=",    "#efde9dff" },
                                         { "wyaaaaaa",  opINIT,        sizeof("wyaaaaaa") - 1,   "decl",  "#c278e1ff" } };
 
 const size_t NUM_OF_OPERATORS = sizeof(operatorsArray) / sizeof(operatorInfo);

@@ -81,15 +81,14 @@ int fprintfNodeGraph (node_t* node, int rank, FILE* graphFile, size_t* nodesPass
             if ((operatorsArray[numOfOp]).opCode == (nodeValue(node))->opCode)
                 break;
 
-        if (numOfOp == opBELOW)
-            fprintf(graphFile, "    node0x%p [rank = %d, label = \"{ <addr>type: BELOW| val = %s|{<left>LEFT| <right>RIGHT}}\", style = filled, fillcolor = \"%s\", color = black];\n",
-                node, rank, typeName, (operatorsArray[numOfOp]).dumpColor);
-        else if (numOfOp == opABOVE)
-            fprintf(graphFile, "    node0x%p [rank = %d, label = \"{ <addr>type: ABOVE| val = %s|{<left>LEFT| <right>RIGHT}}\", style = filled, fillcolor = \"%s\", color = black];\n",
-                node, rank, typeName, (operatorsArray[numOfOp]).dumpColor);
+        if (nodeValue(node)->opCode == opBELOW || nodeValue(node)->opCode == opABOVE ||
+            nodeValue(node)->opCode == opE_BELOW || nodeValue(node)->opCode == opE_ABOVE)
+
+            fprintf(graphFile, "    node0x%p [rank = %d, label = \"{ <addr>type: %s| val = \\%s|{<left>LEFT| <right>RIGHT}}\", style = filled, fillcolor = \"%s\", color = black];\n",
+                node, rank, typeName, (operatorsArray[numOfOp]).opCLangName, (operatorsArray[numOfOp]).dumpColor);
         else
             fprintf(graphFile, "    node0x%p [rank = %d, label = \"{ <addr>type: %s| val = %s|{<left>LEFT| <right>RIGHT}}\", style = filled, fillcolor = \"%s\", color = black];\n",
-                node, rank, typeName, (operatorsArray[numOfOp]).opCLangName, (operatorsArray[numOfOp]).dumpColor);
+                    node, rank, typeName, (operatorsArray[numOfOp]).opCLangName, (operatorsArray[numOfOp]).dumpColor);
     }
 
     else if (*nodeType(node) == typeIdentifier)

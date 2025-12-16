@@ -20,7 +20,7 @@ union idInfo_t {
 };
 
 struct identifierInfo {
-    const char* identifierName;
+    char* identifierName; //NOTE const
     unsigned long long identifierHash;
 
     idType_t idType;

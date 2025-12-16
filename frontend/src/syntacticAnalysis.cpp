@@ -627,7 +627,7 @@ node_t* getOpInit(tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
         return syntaxError(tree, nodeArr, curNodeNum, __func__);
 
     node_t* idNode = nodeArr[*curNodeNum];
-    const char* idName = (idNode->value).id.identifierName;
+    char* idName = (idNode->value).id.identifierName;
 
     if (findIdInTable ((tree->nameTableStack->data)[(tree->nameTableStack->size) - 1], idName)) {
         printf("Error! Redeclaration of identifier \"%s\".\n", idName);
@@ -676,7 +676,7 @@ node_t* getFunctionsDeclarations(tree_t* tree, node_t** nodeArr, size_t* curNode
         return syntaxError(tree, nodeArr, curNodeNum, __func__);
 
     node_t* funcNode = nodeArr[*curNodeNum];
-    const char* funcName = (funcNode->value).id.identifierName;
+    char* funcName = (funcNode->value).id.identifierName;
 
     identifierInfo* newFunc = addIdToCurrentScope(tree, funcName, idFUNC);
 
@@ -721,7 +721,7 @@ node_t* getFuncParam (tree_t* tree, node_t** nodeArr, size_t* curNodeNum) {
     assert(curNodeNum);
 
     node_t* paramNode = nodeArr[*curNodeNum];
-    const char* paramName = paramNode->value.id.identifierName;
+    char* paramName = paramNode->value.id.identifierName;
 
     identifierInfo* paramId = addIdToCurrentScope(tree, paramName, idVAR);
     if (!paramId) {

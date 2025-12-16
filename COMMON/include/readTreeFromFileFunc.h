@@ -18,4 +18,6 @@ nodeType_t getNodeType (char** bufPos);
 
 int processNodeType (tree_t* tree, node_t* node, char** bufPos);
 
+char* translateRussianWorlds (char* str);
+
 #endif

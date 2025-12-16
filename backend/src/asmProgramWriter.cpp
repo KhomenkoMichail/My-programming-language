@@ -170,7 +170,7 @@ int writeVarAddressToAsm (tree_t* tree, node_t* varNode, FILE* asmFile) {
         return 1;
     }
 
-    const char* varName = nodeValue(varNode)->id.identifierName;
+    char* varName = nodeValue(varNode)->id.identifierName;
 
     size_t numOfCurNameTable = tree->nameTableStack->size - 1;
     nameTable_t* curNameTable = (tree->nameTableStack->data)[numOfCurNameTable];

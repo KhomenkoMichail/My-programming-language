@@ -26,14 +26,14 @@ int fprintfFunctionSignatures (FILE* programFile, tree_t* tree, node_t* node) {
             errorCode = fprintfFunctionSignatures(programFile, tree, *nodeRight(node));
     }
     else if (*nodeType(node) == typeIdentifier) {
-        if (strcmp(ID_NAME, "main")) {
+        if (strcmp( ID_NAME, "main")) {
             #include "../../COMMON/include/operatorsArray.h"
             (void)NUM_OF_OPERATORS;
 
-            fprintf(programFile, "%s %s", OP_NAME_(opINIT), ID_NAME);
+            fprintf(programFile, "%s %s", OP_NAME_(opINIT),  ID_NAME);
             fprintf(programFile, "%s", OP_NAME_(opBRACK_ON));
 
-            identifierInfo* newFunc = addIdToCurrentScope(tree, ID_NAME, idFUNC);
+            identifierInfo* newFunc = addIdToCurrentScope(tree,  ID_NAME, idFUNC);
             if (!newFunc) {
                 printf("Error of adding func signature to name table!\n");
                 errorCode = CantAddFuncToNameTable;
@@ -67,7 +67,7 @@ int fprintfParamsForSignatures (FILE* programFile, node_t* node) {
             errorCode = fprintfParamsForSignatures(programFile, *nodeRight(node));
     }
     else if (*nodeType(node) == typeIdentifier)
-        fprintf(programFile, "%s", ID_NAME);
+        fprintf(programFile, "%s",  ID_NAME);
     else
         errorCode = UnexpectedFuncSignNode;
 
@@ -190,10 +190,10 @@ int rewriteFuncBodyToShiriiwookLang (FILE* outputFile, tree_t* tree, node_t* nod
     #include"../../COMMON/include/operatorsArray.h"
     (void)NUM_OF_OPERATORS;
 
-    if(!strcmp(ID_NAME, "main"))
+    if(!strcmp( ID_NAME, "main"))
         fprintf(outputFile, "\n\n%s%s", MAIN_FUNCTION, OP_NAME_(opBRACK_ON));
     else
-        fprintf(outputFile, "\n\n%s%s", ID_NAME, OP_NAME_(opBRACK_ON));
+        fprintf(outputFile, "\n\n%s%s",  ID_NAME, OP_NAME_(opBRACK_ON));
 
     enterNewScope(tree);
 
@@ -238,7 +238,7 @@ int rewriteFuncCallNodeToShiriiwookLang (FILE* outputFile, tree_t* tree, node_t*
     #include"../../COMMON/include/operatorsArray.h"
     (void)NUM_OF_OPERATORS;
 
-    fprintf(outputFile, "%s%s", ID_NAME, OP_NAME_(opBRACK_ON));
+    fprintf(outputFile, "%s%s",  ID_NAME, OP_NAME_(opBRACK_ON));
 
     if (*nodeLeft(node))
         errorCode = rewriteNodeToShiriiwookLang(outputFile, tree, *nodeLeft(node), leftIndent);
@@ -263,14 +263,14 @@ int rewriteVarNodeToShiriiwookLang (FILE* outputFile, tree_t* tree, node_t* node
     identifierInfo* searchedId = findIdInTable(curNameTable, idName);
 
     if (!searchedId) {
-        identifierInfo* newVar = addIdToCurrentScope(tree, ID_NAME, idVAR);
+        identifierInfo* newVar = addIdToCurrentScope(tree,  ID_NAME, idVAR);
             if (!newVar) {
                 printf("Error of adding variable to name table!\n");
                 errorCode = CantAddVarToNameTable;
             }
     }
 
-    fprintf(outputFile, "%s", ID_NAME);
+    fprintf(outputFile, "%s",  ID_NAME);
 
     return errorCode;
 }
