@@ -27,10 +27,10 @@ HLT
 PUSH 2
 POPREG Ax
 POPM [Ax]
+PUSH 1
 PUSH 2
 POPREG Ax
 PUSHM [Ax]
-PUSH 1
 PUSH 0
 POPREG Bx
 JNE :endCompare1
@@ -43,10 +43,10 @@ JE :endif1
 PUSH 1
 RET
 :endif1
+PUSH 1
 PUSH 2
 POPREG Ax
 PUSHM [Ax]
-PUSH 1
 PUSH 0
 POPREG Bx
 JE :endCompare2

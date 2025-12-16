@@ -94,6 +94,5 @@ getNumOfLinearRoots(b, c) [
 
 getLinearRoot(b, c) [
 	wyaaaaaa root wuahh (aohwawh muawa c) yukshin b!
-	lanna "root"!
 	ruow root!
 ]!

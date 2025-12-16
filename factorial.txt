@@ -1,6 +1,6 @@
 wyaaaaaa factorial(n)!
 
-atti() chal
+atti() [
     wyaaaaaa n wuahh aohwawh!
     wyaaaaaa fact wuahh  aohwawh!
 
@@ -11,7 +11,7 @@ atti() chal
     mu!
 ]!
 
-factorial(n) chal
+factorial(n) [
     yaag (n uma ah)
         ruow ah!
     yaag (n ~uma ah)

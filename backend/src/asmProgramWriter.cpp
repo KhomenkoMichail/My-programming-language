@@ -329,13 +329,6 @@ int rewriteOpCompareToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
 
     int curCompareNum = compareCounter;
 
-    if (*nodeLeft(node))
-        errorCode = rewriteNodeToAsmCode(tree, *nodeLeft(node), asmFile);
-    else {
-        printf("Error! Compare node does not have LEFT.\n");
-        return 1;
-    }
-
     if (*nodeRight(node))
         errorCode = rewriteNodeToAsmCode(tree, *nodeRight(node), asmFile);
     else {
@@ -343,6 +336,12 @@ int rewriteOpCompareToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
         return 1;
     }
 
+    if (*nodeLeft(node))
+        errorCode = rewriteNodeToAsmCode(tree, *nodeLeft(node), asmFile);
+    else {
+        printf("Error! Compare node does not have LEFT.\n");
+        return 1;
+    }
     fprintf(asmFile, "PUSH 0\n");
     fprintf(asmFile, "POPREG %s\n", COMPARE_VALUE_REG);
 
@@ -351,13 +350,13 @@ int rewriteOpCompareToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
     if (nodeValue(node)->opCode == opNOT_EQUAL)
         fprintf(asmFile, "JE ");
     if (nodeValue(node)->opCode == opBELOW)
-        fprintf(asmFile, "JB ");
-    if (nodeValue(node)->opCode == opABOVE)
-        fprintf(asmFile, "JA ");
-    if (nodeValue(node)->opCode == opE_BELOW)
-        fprintf(asmFile, "JBE ");
-    if (nodeValue(node)->opCode == opE_ABOVE)
         fprintf(asmFile, "JAE ");
+    if (nodeValue(node)->opCode == opABOVE)
+        fprintf(asmFile, "JBE ");
+    if (nodeValue(node)->opCode == opE_BELOW)
+        fprintf(asmFile, "JA ");
+    if (nodeValue(node)->opCode == opE_ABOVE)
+        fprintf(asmFile, "JB ");
 
     fprintf(asmFile, ":endCompare%d\n", curCompareNum);
     fprintf(asmFile, "PUSH 1\n");
@@ -422,8 +421,8 @@ int fprintfGettingParamsToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
     int errorCode = 0;
 
     if(*nodeLeft(node) && *nodeRight(node)) {
-        errorCode = fprintfGettingParamsToAsmCode (tree, *nodeLeft(node), asmFile);
         errorCode = fprintfGettingParamsToAsmCode (tree, *nodeRight(node), asmFile);
+        errorCode = fprintfGettingParamsToAsmCode (tree, *nodeLeft(node), asmFile);
     }
     else {
         errorCode = writeVarAddressToAsm (tree, node, asmFile);
