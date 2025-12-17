@@ -14,10 +14,10 @@ front_cpp = frontend/src/main.cpp frontend/src/lexicalAnalysis.cpp frontend/src/
 front_all = frontend/include/DSL.h frontend/include/lexicalAnalysis.h frontend/include/syntacticAnalysis.h
 
 # Файлы .cpp для сборки backend
-back_cpp = backend/src/backendMain.cpp backend/src/asmProgramWriter.cpp
+back_cpp = backend/src/backendMain.cpp backend/src/asmProgramWriter.cpp backend/src/sourceFileParser.cpp
 
 # Файлы backend
-back_all = backend/include/asmProgramWriter.h
+back_all = backend/include/asmProgramWriter.h backend/include/backendConsts.h backend/include/sourceFileParser.h
 
 # Файлы .cpp для сборки middleend
 middle_cpp = middleend/src/middleEndMain.cpp middleend/src/middleendOptimization.cpp

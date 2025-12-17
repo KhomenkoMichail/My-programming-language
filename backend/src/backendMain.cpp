@@ -5,15 +5,17 @@
 #include "../../COMMON/include/treeFunctions.h"
 #include "../../COMMON/include/readTreeFromFileFunc.h"
 
+#include "../include/sourceFileParser.h"
 #include "../include/asmProgramWriter.h"
 
 
 int main(int argc, const char* argv[]) {
 
-    if (argc != 3) return printf("Usage: %s source.txt destination.asm\n", argv[0]), 1;
+    if (argc != 4) return printf("Usage: %s source.txt destination.asm programSource.txt\n", argv[0]), 1;
 
     const char* inputFile = argv[1];
     const char* outputFile = argv[2];
+    const char* sourceFileName = argv[3];
 
     tree_t programTree = {};
     dump dumpInfo = {};
@@ -22,7 +24,7 @@ int main(int argc, const char* argv[]) {
 
     char* fileBuffer = readFileAndCreateTree (&programTree, &dumpInfo, inputFile);
 
-    rewriteAstToAsmCode(&programTree, outputFile);
+    rewriteAstToAsmCode(&programTree, outputFile, sourceFileName);
 
     deleteTree(&programTree);
     free(fileBuffer);

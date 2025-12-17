@@ -8,10 +8,11 @@
 #include "../../COMMON/include/nameTableStack.h"
 #include "../../COMMON/include/helpingFunctions.h"
 
+#include "../include/sourceFileParser.h"
 #include "../include/asmProgramWriter.h"
 #include "../include/backendConsts.h"
 
-int rewriteAstToAsmCode (tree_t* tree, const char* nameOfAsmFile) {
+int rewriteAstToAsmCode (tree_t* tree, const char* nameOfAsmFile, const char* nameOfSourceFile) {
     assert(tree);
     assert(nameOfAsmFile);
 
@@ -23,12 +24,17 @@ int rewriteAstToAsmCode (tree_t* tree, const char* nameOfAsmFile) {
         return 1;
     }
 
+    sourceFile* srcFile = (sourceFile*)calloc(1, sizeof(sourceFile));
+    getStructSourceFile(srcFile, nameOfSourceFile);
+    srcFile->fileName = nameOfSourceFile;
+
     initNameTables(tree);
 
-    if (rewriteNodeToAsmCode (tree, *treeRoot(tree), asmFile)) {
+    if (rewriteNodeToAsmCode (tree, *treeRoot(tree), asmFile, srcFile))
         printf("Error of rewriting AST to Asm code.\n");
-        return 1;
-    }
+
+    destroyNameTables(tree);
+    freeStructSourceFile(srcFile);
 
     if (fclose(asmFile) != 0) {
         fprintf(stderr, "Error of closing file \"%s\"", nameOfAsmFile);
@@ -39,26 +45,32 @@ int rewriteAstToAsmCode (tree_t* tree, const char* nameOfAsmFile) {
     return 0;
 }
 
-int rewriteNodeToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
+int rewriteNodeToAsmCode (tree_t* tree, node_t* node, FILE* asmFile, sourceFile* srcFile) {
     assert(node);
+    assert(tree);
+    assert(srcFile);
     assert(asmFile);
+
+    fprintfCommentsToAsm(node, srcFile, asmFile);
 
     switch (*nodeType(node)) {
         case typeNumber:
             fprintf(asmFile, "PUSH %d\n", nodeValue(node)->constValue);
             return 0;
         case typeOperator:
-            return rewriteOpNodeToAsmCode(tree, node, asmFile);
+            return rewriteOpNodeToAsmCode(tree, node, asmFile, srcFile);
         case typeIdentifier:
-            return rewriteIdNodeToAsmCode(tree, node, asmFile);
+            return rewriteIdNodeToAsmCode(tree, node, asmFile, srcFile);
         case typeError:
         default:
             return 1;
     }
 }
 
-int rewriteOpNodeToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
+int rewriteOpNodeToAsmCode (tree_t* tree, node_t* node, FILE* asmFile, sourceFile* srcFile) {
+    assert(tree);
     assert(node);
+    assert(srcFile);
     assert(asmFile);
 
     switch ((*nodeValue(node)).opCode) {
@@ -70,14 +82,14 @@ int rewriteOpNodeToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
         case opSQRT:
         case opSEPARATOR:
         case opCOMMA:
-            return rewriteOpCalcToAsmCode(tree, node, asmFile);
+            return rewriteOpCalcToAsmCode(tree, node, asmFile, srcFile);
 
-        case opASSIGN: return rewriteOpAssignToAsmCode (tree, node, asmFile);
-        case opWHILE: return rewriteOpWhileToAsmCode (tree, node, asmFile);
-        case opIF: return rewriteOpIfToAsmCode (tree, node, asmFile);
+        case opASSIGN: return rewriteOpAssignToAsmCode (tree, node, asmFile, srcFile);
+        case opWHILE: return rewriteOpWhileToAsmCode (tree, node, asmFile, srcFile);
+        case opIF: return rewriteOpIfToAsmCode (tree, node, asmFile, srcFile);
         case opIN: return rewriteOpInToAsmCode (tree, node, asmFile);
         case opOUT: return rewriteOpOutToAsmCode (tree, node, asmFile);
-        case opRET: return rewriteOpRetToAsmCode (tree, node, asmFile);
+        case opRET: return rewriteOpRetToAsmCode (tree, node, asmFile, srcFile);
 
         case opHLT: fprintf (asmFile, "HLT\n"); return 0;
 
@@ -87,7 +99,7 @@ int rewriteOpNodeToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
         case opNOT_EQUAL:
         case opE_BELOW:
         case opE_ABOVE:
-            return rewriteOpCompareToAsmCode(tree, node, asmFile);
+            return rewriteOpCompareToAsmCode(tree, node, asmFile, srcFile);
 
         case opUNITED_ON:
         case opUNITED_OFF:
@@ -104,17 +116,19 @@ int rewriteOpNodeToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
     return 0;
 }
 
-int rewriteOpCalcToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
+int rewriteOpCalcToAsmCode (tree_t* tree, node_t* node, FILE* asmFile, sourceFile* srcFile) {
     assert(node);
+    assert(tree);
+    assert(srcFile);
     assert(asmFile);
 
     int errorCode = 0;
 
     if(*nodeLeft(node))
-        errorCode = rewriteNodeToAsmCode (tree, *nodeLeft(node), asmFile);
+        errorCode = rewriteNodeToAsmCode (tree, *nodeLeft(node), asmFile, srcFile);
 
     if(*nodeRight(node))
-        errorCode = rewriteNodeToAsmCode (tree, *nodeRight(node), asmFile);
+        errorCode = rewriteNodeToAsmCode (tree, *nodeRight(node), asmFile, srcFile);
 
     if (nodeValue(node)->opCode == opADD)
         fprintf(asmFile, "ADD\n");
@@ -134,15 +148,16 @@ int rewriteOpCalcToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
     return errorCode;
 }
 
-int rewriteOpAssignToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
+int rewriteOpAssignToAsmCode (tree_t* tree, node_t* node, FILE* asmFile, sourceFile* srcFile) {
     assert(tree);
     assert(node);
     assert(asmFile);
+    assert(srcFile);
 
     int errorCode = 0;
 
     if (*nodeRight(node))
-        errorCode = rewriteNodeToAsmCode(tree, *nodeRight(node), asmFile);
+        errorCode = rewriteNodeToAsmCode(tree, *nodeRight(node), asmFile, srcFile);
     else {
         printf("Error! Assign node does not have LEFT.\n");
         return 1;
@@ -189,9 +204,10 @@ int writeVarAddressToAsm (tree_t* tree, node_t* varNode, FILE* asmFile) {
     return 0;
 }
 
-int rewriteOpWhileToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
+int rewriteOpWhileToAsmCode (tree_t* tree, node_t* node, FILE* asmFile, sourceFile* srcFile) {
     assert(tree);
     assert(node);
+    assert(srcFile);
     assert(asmFile);
 
     int errorCode = 0;
@@ -204,7 +220,7 @@ int rewriteOpWhileToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
     fprintf(asmFile, ":while%d\n", curWhileNum);
 
     if (*nodeLeft(node))
-        errorCode = rewriteNodeToAsmCode(tree, *nodeLeft(node), asmFile);
+        errorCode = rewriteNodeToAsmCode(tree, *nodeLeft(node), asmFile, srcFile);
     else {
         printf("Error! While node does not have LEFT.\n");
         return 1;
@@ -214,7 +230,7 @@ int rewriteOpWhileToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
     fprintf(asmFile, "JE :endwhile%d\n", curWhileNum);
 
     if (*nodeRight(node))
-        errorCode = rewriteNodeToAsmCode(tree, *nodeRight(node), asmFile);
+        errorCode = rewriteNodeToAsmCode(tree, *nodeRight(node), asmFile, srcFile);
     else {
         printf("Error! While node does not have RIGHT.\n");
         return 1;
@@ -226,9 +242,10 @@ int rewriteOpWhileToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
     return errorCode;
 }
 
-int rewriteOpIfToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
+int rewriteOpIfToAsmCode (tree_t* tree, node_t* node, FILE* asmFile, sourceFile* srcFile) {
     assert(tree);
     assert(node);
+    assert(srcFile);
     assert(asmFile);
 
     int errorCode = 0;
@@ -239,7 +256,7 @@ int rewriteOpIfToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
     int curIfNum = ifCounter;
 
     if (*nodeLeft(node))
-        errorCode = rewriteNodeToAsmCode(tree, *nodeLeft(node), asmFile);
+        errorCode = rewriteNodeToAsmCode(tree, *nodeLeft(node), asmFile, srcFile);
     else {
         printf("Error! If node does not have LEFT.\n");
         return 1;
@@ -249,7 +266,7 @@ int rewriteOpIfToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
     fprintf(asmFile, "JE :endif%d\n", curIfNum);
 
     if (*nodeRight(node))
-        errorCode = rewriteNodeToAsmCode(tree, *nodeRight(node), asmFile);
+        errorCode = rewriteNodeToAsmCode(tree, *nodeRight(node), asmFile, srcFile);
     else {
         printf("Error! If node does not have RIGHT.\n");
         return 1;
@@ -302,25 +319,27 @@ int rewriteOpOutToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
     return errorCode;
 }
 
-int rewriteOpRetToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
+int rewriteOpRetToAsmCode (tree_t* tree, node_t* node, FILE* asmFile, sourceFile* srcFile) {
     assert(tree);
     assert(node);
+    assert(srcFile);
     assert(asmFile);
 
     int errorCode = 0;
 
     if (*nodeLeft(node))
-        errorCode = rewriteNodeToAsmCode(tree, *nodeLeft(node), asmFile);
+        errorCode = rewriteNodeToAsmCode(tree, *nodeLeft(node), asmFile, srcFile);
 
     fprintf(asmFile, "RET\n");
 
     return errorCode;
 }
 
-int rewriteOpCompareToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
+int rewriteOpCompareToAsmCode (tree_t* tree, node_t* node, FILE* asmFile, sourceFile* srcFile) {
     assert(tree);
     assert(node);
     assert(asmFile);
+    assert(srcFile);
 
     int errorCode = 0;
 
@@ -330,14 +349,14 @@ int rewriteOpCompareToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
     int curCompareNum = compareCounter;
 
     if (*nodeRight(node))
-        errorCode = rewriteNodeToAsmCode(tree, *nodeRight(node), asmFile);
+        errorCode = rewriteNodeToAsmCode(tree, *nodeRight(node), asmFile, srcFile);
     else {
         printf("Error! Compare node does not have RIGHT.\n");
         return 1;
     }
 
     if (*nodeLeft(node))
-        errorCode = rewriteNodeToAsmCode(tree, *nodeLeft(node), asmFile);
+        errorCode = rewriteNodeToAsmCode(tree, *nodeLeft(node), asmFile, srcFile);
     else {
         printf("Error! Compare node does not have LEFT.\n");
         return 1;
@@ -368,13 +387,14 @@ int rewriteOpCompareToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
     return errorCode;
 }
 
-int rewriteIdNodeToAsmCode(tree_t* tree, node_t* node, FILE* asmFile) {
+int rewriteIdNodeToAsmCode(tree_t* tree, node_t* node, FILE* asmFile, sourceFile* srcFile) {
     assert(tree);
     assert(node);
+    assert(srcFile);
     assert(asmFile);
 
     if(*nodeRight(node))
-        return rewriteFuncBodyToAsmCode(tree, node, asmFile);
+        return rewriteFuncBodyToAsmCode(tree, node, asmFile, srcFile);
 
     const char* idName = nodeValue(node)->id.identifierName;
     size_t numOfCurNameTable = tree->nameTableStack->size - 1;
@@ -385,12 +405,13 @@ int rewriteIdNodeToAsmCode(tree_t* tree, node_t* node, FILE* asmFile) {
     if (searchedId)
         return rewriteVarNodeToAsmCode (tree, node, asmFile);
     else
-        return rewriteFuncCallNodeToAsmCode (tree, node, asmFile);
+        return rewriteFuncCallNodeToAsmCode (tree, node, asmFile, srcFile);
 }
 
-int rewriteFuncBodyToAsmCode(tree_t* tree, node_t* node, FILE* asmFile) {
+int rewriteFuncBodyToAsmCode(tree_t* tree, node_t* node, FILE* asmFile, sourceFile* srcFile) {
     assert(tree);
     assert(node);
+    assert(srcFile);
     assert(asmFile);
 
     int errorCode = 0;
@@ -402,7 +423,7 @@ int rewriteFuncBodyToAsmCode(tree_t* tree, node_t* node, FILE* asmFile) {
         errorCode = fprintfGettingParamsToAsmCode(tree, *nodeLeft(node), asmFile);
 
     if (*nodeRight(node))
-        errorCode = rewriteNodeToAsmCode(tree, *nodeRight(node), asmFile);
+        errorCode = rewriteNodeToAsmCode(tree, *nodeRight(node), asmFile, srcFile);
     else {
         printf("Error! Func body does not have RIGHT!\n");
         return 1;
@@ -432,34 +453,18 @@ int fprintfGettingParamsToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
     return errorCode;
 }
 
-int rewriteFuncCallNodeToAsmCode (tree_t* tree, node_t* node, FILE* asmFile) {
+int rewriteFuncCallNodeToAsmCode (tree_t* tree, node_t* node, FILE* asmFile, sourceFile* srcFile) {
     assert(tree);
     assert(node);
+    assert(srcFile);
     assert(asmFile);
 
     int errorCode = 0;
 
     if (*nodeLeft(node))
-        errorCode = rewriteNodeToAsmCode (tree, *nodeLeft(node), asmFile);
+        errorCode = rewriteNodeToAsmCode (tree, *nodeLeft(node), asmFile, srcFile);
 
     fprintf(asmFile, "CALL :%s\n", nodeValue(node)->id.identifierName);
-
-    return errorCode;
-}
-
-int fprintfPushingCallParams (tree_t* tree, node_t* node, FILE* asmFile) {
-    assert(tree);
-    assert(node);
-    assert(asmFile);
-
-    int errorCode = 0;
-
-    if(*nodeLeft(node) && *nodeRight(node)) {
-        errorCode = fprintfPushingCallParams (tree, *nodeRight(node), asmFile);
-        errorCode = fprintfPushingCallParams (tree, *nodeLeft(node), asmFile);
-    }
-    else
-        errorCode = rewriteVarNodeToAsmCode (tree, node, asmFile);
 
     return errorCode;
 }

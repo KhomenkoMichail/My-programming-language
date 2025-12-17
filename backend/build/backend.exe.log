@@ -202,3 +202,409 @@ Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\ba
 Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00007FF678EA85AC в функции nodeCtorByReadBuffer() в файле C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp на строке 71. Попытка записать данные по адресу 0x000000000000001A в модуле C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400], Instance: 0x00007FF678F1A070 (64-bit), Flags: Cmdre0, Thread: 0x55D0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+# 1 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+# 2 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+# 3 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+# 4 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+# 5 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+# 6 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+# 7 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+# 8 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+# 9 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#10 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#11 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#12 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#13 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#14 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#15 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#16 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#17 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#18 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#19 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#20 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#21 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#22 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#23 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#24 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#25 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#26 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#27 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#28 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#29 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#30 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#31 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#32 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#33 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#34 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#35 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#36 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#37 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#38 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#39 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#40 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#41 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#42 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#43 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#44 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#45 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufPos);
+     73: 
+
+#46 0x00007FF678EA85AC in C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe: nodeCtorByReadBuffer() at C:/Users/Admin/Desktop/prodva/My-programming-language/COMMON/src/readTreeFromFileFunc.cpp:71:
+
+     69:         node_t* newNode = (node_t*)calloc(1, sizeof(node_t));
+     70: 
+=>   71:         *nodeType(newNode) = getNodeType(bufPos);
+     72:         processNodeType(tree, newNode, bufP...
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 174, Date: 2025-08-17 06:00:49 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	C:\Users\Admin\Downloads\CodeBlocks\TX\TXLib.h
+Compiled:	Dec 17 2025 18:19:14, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 11.0.1 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Dec 17 2025 18:21:00
+
+Run file:	C:\Users\Admin\Desktop\prodva\My-programming-language\backend\build\backend.exe
+Directory:	C:\Users\Admin\Desktop\prodva\My-programming-language
+
+--------------------------------------------------

@@ -42,19 +42,19 @@ void fprintfNode(node_t* node, FILE* file) {
             #include "../../COMMON/include/operatorsArray.h"
             (void)NUM_OF_OPERATORS;
 
-            fprintf (file, "%s ", (operatorsArray[(node->value).opCode]).opCLangName);
+            fprintf (file, "%s:%lld ", (operatorsArray[(node->value).opCode]).opCLangName, *nodeLine(node));
             break;
         }
         case typeNumber:
-            fprintf (file, "%d ", (node->value).constValue);
+            fprintf (file, "%d:%lld ", (node->value).constValue, *nodeLine(node));
             break;
         case typeIdentifier:
             if ((node->value).id.identifierHash == getStringHash(MAIN_FUNCTION)) {
                 if(!strcmp(MAIN_FUNCTION, (node->value).id.identifierName))
-                    fprintf (file, "main ");
+                    fprintf (file, "main:%lld ", *nodeLine(node));
             }
             else
-                fprintf (file, "%s ", (node->value).id.identifierName);
+                fprintf (file, "%s:%lld ", (node->value).id.identifierName, *nodeLine(node));
             break;
         case typeError:
         default:
